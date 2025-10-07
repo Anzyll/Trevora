@@ -1,5 +1,7 @@
 // src/pages/Signup.jsx
 import React from "react";
+import axios from "axios";
+import bcrypt from "bcryptjs";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -23,31 +25,65 @@ const Signup = () => {
     const newErrors = {};
     if (!form.fullName.trim()) newErrors.fullName = "name is required";
     if (!form.email.includes("@")) newErrors.email = "invalid email";
-    if (form.password.length < 8)
+    if (form.password.length < 8) {
       newErrors.password = "password must be atleast 8 charecters";
+    } else if (!/[A-Z]/.test(form.password)) {
+      newErrors.password =
+        "Password must include at least one uppercase letter";
+    } else if (!/[a-z]/.test(form.password)) {
+      newErrors.password =
+        "Password must include at least one uppercase letter";
+    } else if (!/\d/.test(form.password)) {
+      newErrors.password = "Password must include at least one number";
+    } else if (!/[@#$%&*]/.test(form.password)) {
+      newErrors.password =
+        "Password must include at least one special charecter";
+    }
     if (form.password !== form.confirmPassword)
       newErrors.confirmPassword = "password do not match";
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateSignup();
     setError(newErrors);
     if (Object.keys(newErrors).length === 0) {
-      alert("signup succesfully");
+      try {
+        const existingUsers = await axios.get("http://localhost:5001/users");
+        if (existingUsers.data.some((user) => user.email === form.email)) {
+          setError({ email: "Email already exists" });
+          return;
+        }
+
+        const hashedPassword = await bcrypt.hash(form.password, 10);
+        const newUser = {
+          fullName: form.fullName,
+          email: form.email,
+          password: hashedPassword,
+        };
+        const response = await axios.post(
+          "http://localhost:5001/users",
+          newUser
+        );
+        console.log("user data saved", response.data);
+        alert("registered succesfully");
+        setError({});
+        navigate("/login");
+      } catch (err) {
+        console.error(err);
+        alert("Something went wrong. Please try again.");
+      }
     }
   };
 
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-md mx-auto px-6 py-20">
-        {/* Title - Exact match with period */}
         <h1 className="text-3xl font-normal text-gray-900 mb-8">
           Create an Account.
         </h1>
 
-        {/* Signup Form */}
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div>
             <label className="block text-sm font-normal text-gray-700 mb-2">

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "9ea0",
+      "fullName": "irfan",
+      "email": "irfan@gmail.com",
+      "password": "$2b$10$3akLWWaW8MhFY11SkhcZKel9o2RrcDGQmHp.FWukeTkYXomAdbAN2"
+    },
+    {
+      "id": "6163",
+      "fullName": "nimshi",
+      "email": "nimshi@gmail.com",
+      "password": "$2b$10$thuLSrGS.u121uVHudEGOeUxidpq0T76wU6/qAJBA8ePV7qzuDbvK"
+    },
+    {
+      "id": "7091",
+      "fullName": "naheel",
+      "email": "naheel@gmail.com",
+      "password": "$2b$10$C53OkCA0C5fawXo6eN.Ed.Y.wBHI6EkDHUqR8XKD.Y.kBbkJNBPk."
+    },
+    {
+      "id": "0bd0",
+      "fullName": "anzill",
+      "email": "anzilq@gmail.com",
+      "password": "$2b$10$hRAgsNQCz9K3ho.lK3bh.OhbtysHVzonzAhrsevfHTcRceyh2fx1O"
+    }
+  ]
+}
