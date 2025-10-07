@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Men's",
+      "slug": "mens",
+      "image": "/images/mens-category.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Women's",
+      "slug": "womens",
+      "image": "/images/womens-category.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Kids'",
+      "slug": "kids",
+      "image": "/images/kids-category.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Bags & Luggage",
+      "slug": "bags-luggage",
+      "image": "/images/bags-category.jpg"
+    }
+  ]
+}

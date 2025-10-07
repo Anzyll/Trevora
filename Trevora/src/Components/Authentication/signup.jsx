@@ -1,0 +1,143 @@
+// src/pages/Signup.jsx
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
+const Signup = () => {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  });
+  const [error, setError] = useState({});
+  const navigate = useNavigate();
+  const loginForm = () => {
+    navigate("/login");
+  };
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const validateSignup = () => {
+    const newErrors = {};
+    if (!form.fullName.trim()) newErrors.fullName = "name is required";
+    if (!form.email.includes("@")) newErrors.email = "invalid email";
+    if (form.password.length < 8)
+      newErrors.password = "password must be atleast 8 charecters";
+    if (form.password !== form.confirmPassword)
+      newErrors.confirmPassword = "password do not match";
+    return newErrors;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = validateSignup();
+    setError(newErrors);
+    if (Object.keys(newErrors).length === 0) {
+      alert("signup succesfully");
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      <main className="max-w-md mx-auto px-6 py-20">
+        {/* Title - Exact match with period */}
+        <h1 className="text-3xl font-normal text-gray-900 mb-8">
+          Create an Account.
+        </h1>
+
+        {/* Signup Form */}
+        <form className="space-y-6" onSubmit={handleSubmit}>
+          <div>
+            <label className="block text-sm font-normal text-gray-700 mb-2">
+              Full Name *
+            </label>
+            <input
+              type="text"
+              className="w-full px-3 py-2 border-b-2 border-gray-900  focus:outline-none placeholder:text-sm"
+              name="fullName"
+              value={form.fullName}
+              onChange={handleChange}
+              placeholder="Enter your name"
+            />
+            {error.fullName && (
+              <p className="text-red-800 text-sm">{error.fullName}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-normal text-gray-700 mb-2">
+              Email *
+            </label>
+            <input
+              type="email"
+              className="w-full px-3 py-2 border-b-2 border-gray-900  focus:outline-none placeholder:text-sm"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="Enter your email address"
+            />
+            {error.email && (
+              <p className="text-red-800 text-sm">{error.email}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-normal text-gray-700 mb-2">
+              Password *
+            </label>
+            <input
+              type="password"
+              className="w-full px-3 py-2 border-b-2 border-gray-900  focus:outline-none placeholder:text-sm"
+              name="password"
+              value={form.password}
+              onChange={handleChange}
+              placeholder="Enter new Password"
+            />
+            {error.password && (
+              <p className="text-red-800 text-sm">{error.password}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="block text-sm font-normal text-gray-700 mb-2">
+              Confirm Password *
+            </label>
+            <input
+              type="password"
+              className="w-full px-3 py-2 border-b-2 border-gray-900 focus:outline-none placeholder:text-sm"
+              name="confirmPassword"
+              value={form.confirmPassword}
+              onChange={handleChange}
+              placeholder="confirm your new Password"
+            />
+            {error.confirmPassword && (
+              <p className="text-red-800 text-sm">{error.confirmPassword}</p>
+            )}
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition-colors font-normal text-base"
+            onClick={handleSubmit}
+          >
+            Create Account
+          </button>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-600 mb-2">Already have an account?</p>
+            <button
+              className="text-gray-900 hover:text-gray-700 underline font-normal text-base"
+              onClick={loginForm}
+            >
+              Login Now
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+  );
+};
+
+export default Signup;
