@@ -5,8 +5,14 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
   const [user, setUser] = useState(null); //state to store current logged in user
-  const mainCategories = ["Home","Hiking", " Biking", "Camping","Climbing"];
   const navigate = useNavigate();
+  const activities = [
+    { name: "Home", path: "/" },
+    { name: "Hiking", activity: "Hiking" },
+    { name: "Climbing", activity: "Climbing" },
+    { name: "Camping", activity: "Camping" },
+    { name: "Mountain Biking", activity: "Mountain Biking" },
+  ];
 
   //check if user is logged in via localStorage
   useEffect(() => {
@@ -19,16 +25,24 @@ const Header = () => {
   const loginForm = () => {
     setIsMenuOpen(!isMenuOpen);
     navigate("/login");
-    
   };
 
-const handleLogout = () => {
-  localStorage.removeItem("currentUser");
-  setIsMenuOpen(!isMenuOpen);
-  setUser(null);
-  window.location.href = "/login";
-  window.dispatchEvent(new Event("logout"));
-};
+  const filterByActivity = (activity) => {
+    if (activity.path) {
+      navigate(activity.path);
+    } else {
+      navigate(`/products?activity=${activity.activity}`);
+    }
+    setIsMenuOpen(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("currentUser");
+    setIsMenuOpen(!isMenuOpen);
+    setUser(null);
+    window.location.href = "/login";
+    window.dispatchEvent(new Event("logout"));
+  };
   const goToHome = () => {
     if (user) {
       navigate("/home");
@@ -111,12 +125,13 @@ const handleLogout = () => {
           </button>
 
           <div className="flex items-center space-x-8">
-            {mainCategories.map((category, index) => (
+            {activities.map((activity, index) => (
               <button
                 key={index}
                 className="text-sm font-medium text-gray-700 hover:text-gray-900 uppercase tracking-wide"
+                onClick={() => filterByActivity(activity)}
               >
-                {category}
+                {activity.name}
               </button>
             ))}
           </div>
@@ -259,12 +274,13 @@ const handleLogout = () => {
             </div>
 
             <div className="px-4 py-2">
-              {mainCategories.map((category, index) => (
+              {activities.map((activity, index) => (
                 <button
                   key={index}
                   className="block w-full text-left py-3 px-2 text-gray-700 hover:bg-gray-50 border-b border-gray-100 text-sm font-medium"
+                  onClick={() => filterByActivity(activity)}
                 >
-                  {category}
+                  {activity.name}
                 </button>
               ))}
             </div>

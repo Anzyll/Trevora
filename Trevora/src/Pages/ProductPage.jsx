@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
+import { useLocation } from "react-router-dom";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -8,6 +9,15 @@ const ProductPage = () => {
   const [error, setError] = useState(null);
   const [sortBy, setSortBy] = useState("");
   const [category, setCategory] = useState("all");
+  const location = useLocation();
+
+  const [selectedActivity, setSelectedActivity] = useState("");
+
+  useEffect(() => {
+    const urlParam = new URLSearchParams(location.search);
+    const activity = urlParam.get("activity");
+    setSelectedActivity(activity);
+  }, [location.search]);
 
   // Fetch products from backend on component mount
   useEffect(() => {
@@ -26,11 +36,14 @@ const ProductPage = () => {
 
   // Filter by category and sort by price
   const filteredAndSortedProducts = products
-    .filter(
-      (product) =>
+    .filter((product) => {
+      const categoryMatch =
         category === "all" ||
-        product.category?.toLowerCase() === category.toLowerCase()
-    )
+        product.category?.toLowerCase() === category.toLowerCase();
+      const activityMatch =
+        !selectedActivity || selectedActivity === product.activity;
+      return categoryMatch && activityMatch;
+    })
     .sort((a, b) => {
       if (sortBy === "lowtohigh") {
         return (
