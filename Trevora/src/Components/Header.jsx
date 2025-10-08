@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
   const [user, setUser] = useState(null); //state to store current logged in user
-  const mainCategories = ["Hiking", " Biking", "Camping", "Fishing","Climbing"];
+  const mainCategories = ["Home","Hiking", " Biking", "Camping","Climbing"];
   const navigate = useNavigate();
 
   //check if user is logged in via localStorage

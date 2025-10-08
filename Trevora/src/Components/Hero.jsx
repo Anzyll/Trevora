@@ -1,7 +1,9 @@
 // src/components/Hero/WarmUpHero.jsx (Pixel Perfect)
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate =useNavigate()
   return (
     <section className="relative min-h-screen flex items-center justify-center py-20 bg-no-repeat bg-cover bg-center">
       <video
@@ -31,7 +33,7 @@ const Hero = () => {
           <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40">
             Clothing
           </button>
-          <button className="border border-white text-white px-12 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40">
+          <button onClick={()=>navigate("/products")} className="border border-white text-white px-12 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40">
             Everything
 
           </button>

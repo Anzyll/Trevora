@@ -24,5 +24,192 @@
       "email": "anzilq@gmail.com",
       "password": "$2b$10$hRAgsNQCz9K3ho.lK3bh.OhbtysHVzonzAhrsevfHTcRceyh2fx1O"
     }
+  ],
+  
+
+  "products": [
+    {
+      "id": 1,
+      "title": "Men's Retro Pile Jacket",
+      "price": "₹12,000",
+      "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+      "category": "clothing",
+      "gender": "men",
+      "activity": "Hiking"
+    },
+    {
+      "id": 2,
+      "title": "Women's  Hiking Jacket",
+      "price": "₹10,500",
+      "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+      "category": "clothing",
+      "gender": "female",
+      "activity": "Hiking"
+    },
+    {
+      "id": 3,
+      "title": "Aluminum Trekking Poles",
+      "price": "₹5,200",
+      "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Hiking"
+    },
+
+    {
+      "id": 4,
+      "title": "Women's Climbing Shoes",
+      "price": "₹7,800",
+      "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
+      "category": "Gear",
+      "gender": "female",
+      "activity": "Climbing"
+    },
+    {
+      "id": 5,
+      "title": "Camping Tent 2-Person",
+      "price": "₹12,500",
+      "image": "https://www.mountainexperience.it/37286-medium_default/sea-to-summit-alto-tr2.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Camping"
+    },
+    {
+      "id": 6,
+      "title": "Camping Tent 6-Person",
+      "price": "₹21,000",
+      "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Camping"
+    },
+    {
+      "id": 7,
+      "title": "Sleeping Bag - Lightweight",
+      "price": "₹6,800",
+      "image": "https://www.hacer.in/media/catalog/product/1/_/1_176.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Camping"
+    },
+    {
+      "id": 8,
+      "title": "Mountain Biking Helmet",
+      "price": "₹6,000",
+      "image": "https://alpkit.com/cdn/shop/files/smith-convoy-mips-mtb-helmet-black-side.jpg?v=1744010852&width=768",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Mountain Biking"
+    },
+    {
+      "id": 9,
+      "title": "Men's Hiking Boots",
+      "price": "₹11,000",
+      "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/2024/AUGUST/3/pGAWAwqo_a6805a57052640a697e59380b5a68248.jpg",
+      "category": "clothing",
+      "gender": "men",
+      "activity": "Hiking"
+    },
+    {
+      "id": 10,
+      "title": "Women's Hiking Boots",
+      "price": "₹10,500",
+      "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
+      "category": "clothing",
+      "gender": "female",
+      "activity": "Hiking"
+    },
+    {
+      "id": 11,
+      "title": "Fishing Rod",
+      "price": "₹9,000",
+      "image": "https://pyxis.nymag.com/v1/imgs/1d9/b3b/524f93f27c86c53fc37747b38a77e4e9fa-fishing-6.rsquare.w600.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Fishing"
+    },
+    {
+      "id": 12,
+      "title": "Outdoor Backpack 40L",
+      "price": "₹8,000",
+      "image": "https://m.media-amazon.com/images/I/71zi7+fdf9L._UY1100_.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Hiking"
+    },
+    {
+      "id": 13,
+      "title": "Men's Softshell Pants",
+      "price": "₹7,000",
+      "image": "https://gokyo.in/cdn/shop/files/WhatsApp_Image_2024-12-11_at_15.40.21_1_bad8cc70-8bf6-4049-9ae9-cfc070ef9994.jpg?v=1757771898",
+      "category": "Clothing",
+      "gender": "men",
+      "activity": "Hiking"
+    },
+    {
+      "id": 14,
+      "title": "Women's Outdoor Shorts",
+      "price": "₹4,200",
+      "image": "https://contents.mediadecathlon.com/p2132241/8be0028800adb67111973a26a8f5409d/p2132241.jpg",
+      "category": "Clothing",
+      "gender": "female",
+      "activity": "Hiking"
+    },
+    {
+      "id": 15,
+      "title": "Portable Camping Stove",
+      "price": "₹3,800",
+      "image": "https://static.wixstatic.com/media/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Camping"
+    },
+    {
+      "id": 16,
+      "title": "Men's Waterproof Hiking Jacket",
+      "price": "₹13,500",
+      "image": "https://outdoorpeople.org.uk/cdn/shop/files/velezadventuresmockmossmens_1024x1024.jpg",
+      "category": "clothing",
+      "gender": "men",
+      "activity": "Hiking"
+    },
+    {
+      "id": 17,
+      "title": "Women's Fleece Hoodie",
+      "price": "₹6,000",
+      "image": "https://contents.mediadecathlon.com/p2119004/99681d99c9a9b14c331ca8d00422e4f6/p2119004.jpg",
+      "category": "Clothing",
+      "gender": "female",
+      "activity": "Camping"
+    },
+    {
+      "id": 18,
+      "title": "Men's Mountain Biking Gloves",
+      "price": "₹2,000",
+      "image": "https://m.media-amazon.com/images/I/61vzKYoJK4L._UF894,1000_QL80_.jpg",
+      "category": "Gear",
+      "gender": "men",
+      "activity": "Mountain Biking"
+    },
+
+    {
+      "id": 19,
+      "title": "Ultralight Camping Chair",
+      "price": "₹3,300",
+      "image": "https://bf1af2.akinoncloudcdn.com/products/2024/12/16/321960/9b896d0f-5f58-4484-bda5-552dccef5c99_size3840_cropCenter.jpg",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Camping"
+    },
+    {
+      "id": 20,
+      "title": "Climbing Chalk Bag",
+      "price": "₹1,200",
+      "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
+      "category": "Gear",
+      "gender": "unisex",
+      "activity": "Climbing"
+    }
+   
   ]
 }
