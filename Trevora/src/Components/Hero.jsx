@@ -15,24 +15,25 @@ const Hero = () => {
       </video>
       <div className="max-w-3xl mx-auto px-6 text-center z-10">
         <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-none ">
-          Warm Up,
+          Adventure Awaits,
           <br />
-          Chill Out
+          Be Ready
         </h1>
 
         <p className="text-lg md:text-xl text-white mb-16 max-w-md mx-auto leading-snug">
-          Daily Outerwear for Mixed Weather and Moving in Comfort.
+         Adventure is calling. answer it with trevora.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
           <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40">
-            Men's
+            Gear
           </button>
           <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40">
-            Women's
+            Clothing
           </button>
           <button className="border border-white text-white px-12 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40">
-            Explore
+            Everything
+
           </button>
         </div>
       </div>

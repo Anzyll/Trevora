@@ -3,30 +3,35 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [user, setUser] = useState(null);
-  const mainCategories = ["Women's", "Men's", "Kids'", "Packs"];
+  const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
+  const [user, setUser] = useState(null); //state to store current logged in user
+  const mainCategories = ["Hiking", " Biking", "Camping", "Fishing","Climbing"];
   const navigate = useNavigate();
 
+  //check if user is logged in via localStorage
   useEffect(() => {
     const userData = localStorage.getItem("currentUser");
     if (userData) {
       setUser(JSON.parse(userData));
     }
   }, []);
+
   const loginForm = () => {
+    setIsMenuOpen(!isMenuOpen);
     navigate("/login");
+    
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("currentUser");
-    setUser(null);
-    navigate("/login");
-  };
-
+const handleLogout = () => {
+  localStorage.removeItem("currentUser");
+  setIsMenuOpen(!isMenuOpen);
+  setUser(null);
+  window.location.href = "/login";
+  window.dispatchEvent(new Event("logout"));
+};
   const goToHome = () => {
     if (user) {
-      window.location.href = "/home";
+      navigate("/home");
     } else {
       navigate("/");
     }
@@ -35,6 +40,7 @@ const Header = () => {
   return (
     <nav className="border-b border-gray-300">
       <div className="max-w-7xl mx-auto">
+        {/* mobile header */}
         <div className="flex items-center justify-between px-4 py-4 lg:hidden h-20">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -95,7 +101,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-
+        {/* desktop header */}
         <div className="hidden lg:flex items-center justify-between px-6 py-4 h-25">
           <button
             onClick={goToHome}
@@ -159,7 +165,6 @@ const Header = () => {
               </svg>
             </button>
 
-            {/* User Account Section - Updated */}
             {user ? (
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
@@ -177,7 +182,7 @@ const Header = () => {
                     />
                   </svg>
                   <span className="text-sm font-medium text-gray-700">
-                    Hi, {user.name || user.email.split("@")[0]}
+                    {user.email.split("@")[0]}
                   </span>
                 </div>
                 <button
@@ -225,7 +230,7 @@ const Header = () => {
             </button>
           </div>
         </div>
-
+        {/* Mobile menu */}
         {isMenuOpen && (
           <div className="lg:hidden bg-white border-t border-gray-200">
             <div className="px-4 py-3 border-b border-gray-100">
@@ -300,7 +305,7 @@ const Header = () => {
                         />
                       </svg>
                       <span className="text-xs font-medium">
-                        {user.name || user.email.split("@")[0]}
+                        {user.email.split("@")[0]}
                       </span>
                     </div>
                     <button

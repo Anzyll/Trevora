@@ -1,17 +1,28 @@
 // src/pages/Login.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 import axios from "axios";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+  // State to hold form input values
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState({});
 
-  const navigate = useNavigate();
+  const [errors, setErrors] = useState({}); // State to hold  errors
+
+  // Reset form when component mounts or when coming from logout
+  useEffect(() => {
+    setForm({
+      email: "",
+      password: "",
+    });
+    setErrors({});
+  }, []);
+
   const signupForm = () => {
     navigate("/signup");
   };
@@ -20,16 +31,17 @@ const LoginForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // Validate login inputs
   const validateLogin = () => {
     const newErrors = {};
     if (!form.email.trim() || !form.email.includes("@")) {
       newErrors.email = "invalid email";
     }
-
     if (form.password.length < 8) newErrors.password = "invalid password";
     return newErrors;
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validateLogin();
@@ -40,13 +52,16 @@ const LoginForm = () => {
 
     setErrors({});
     try {
-      const response = await axios.get("http://localhost:5001/users");
+      // Fetch all users from JSON server
+      const response = await axios.get("http://localhost:5002/users");
       const users = response.data;
+      // Find user by email
       const user = users.find((user) => user.email === form.email);
       if (!user) {
         setErrors({ general: "incorrect email or password" });
         return;
       }
+      // Compare entered password with hashed password
       const matchesPassword = await bcrypt.compare(
         form.password,
         user.password
@@ -56,6 +71,7 @@ const LoginForm = () => {
         return;
       }
       alert("login succesfully");
+      // Save logged-in user to localStorage
       localStorage.setItem("currentUser", JSON.stringify(user));
       window.location.href = "/home";
     } catch (err) {
@@ -80,6 +96,7 @@ const LoginForm = () => {
               placeholder="enter your email"
               value={form.email}
               onChange={handleChange}
+              autoComplete="new-email"
             />
             {errors.email && (
               <p className="text-sm text-red-800">{errors.email}</p>
@@ -97,6 +114,7 @@ const LoginForm = () => {
               placeholder="enter your password"
               value={form.password}
               onChange={handleChange}
+              autoComplete="new-password"
             />
             {errors.password && (
               <p className="text-sm text-red-800">{errors.password}</p>

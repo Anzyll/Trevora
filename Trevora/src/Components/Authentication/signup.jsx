@@ -6,13 +6,14 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Signup = () => {
+  //state to hold form input values
   const [form, setForm] = useState({
     fullName: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
-  const [error, setError] = useState({});
+  const [error, setError] = useState({}); //state to hold validation errors
   const navigate = useNavigate();
   const loginForm = () => {
     navigate("/login");
@@ -21,6 +22,7 @@ const Signup = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  // Validate form input before submitting
   const validateSignup = () => {
     const newErrors = {};
     if (!form.fullName.trim()) newErrors.fullName = "name is required";
@@ -44,29 +46,31 @@ const Signup = () => {
     return newErrors;
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateSignup();
     setError(newErrors);
     if (Object.keys(newErrors).length === 0) {
+      // If no validation errors, proceed
       try {
-        const existingUsers = await axios.get("http://localhost:5001/users");
+        const existingUsers = await axios.get("http://localhost:5002/users");
         if (existingUsers.data.some((user) => user.email === form.email)) {
           setError({ email: "Email already exists" });
           return;
         }
 
-        const hashedPassword = await bcrypt.hash(form.password, 10);
+        const hashedPassword = await bcrypt.hash(form.password, 10); // Hash password before saving
         const newUser = {
           fullName: form.fullName,
           email: form.email,
           password: hashedPassword,
         };
+        // Send POST request to store new user
         const response = await axios.post(
-          "http://localhost:5001/users",
+          "http://localhost:5002/users",
           newUser
         );
-        console.log("user data saved", response.data);
         alert("registered succesfully");
         setError({});
         navigate("/login");
