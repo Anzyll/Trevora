@@ -19,7 +19,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         <button className="w-full bg-gray-900 text-white py-3 rounded-xl font-semibold hover:bg-gray-800 transition-colors">
-          Quick Add
+          View Product
         </button>
       </div>
     </div>

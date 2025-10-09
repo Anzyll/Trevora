@@ -27,10 +27,12 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-          <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40">
+          <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40"
+          onClick={()=>navigate("/products?category=gear")}>
             Gear
           </button>
-          <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40">
+          <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40"
+          onClick={()=>navigate("/products?category=clothing")}>
             Clothing
           </button>
           <button onClick={()=>navigate("/products")} className="border border-white text-white px-12 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40">

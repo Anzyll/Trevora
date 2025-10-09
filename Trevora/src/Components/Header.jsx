@@ -1,11 +1,13 @@
 // src/components/Header/MainNav.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
   const [user, setUser] = useState(null); //state to store current logged in user
   const navigate = useNavigate();
+  const [search, setSearch] = useState("");
+  const inputRef = useRef()
   const activities = [
     { name: "Home", path: "/" },
     { name: "Hiking", activity: "Hiking" },
@@ -26,6 +28,27 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     navigate("/login");
   };
+
+  const handleSearch = (e) => {
+    const newSearch = e.target.value;
+    setSearch(newSearch);
+    if (newSearch.trim()) {
+      navigate(`/products?search=${newSearch.trim()}`);
+    } else {
+      navigate("/products");
+    }
+  };
+
+  useEffect(()=>{
+    if(isMenuOpen&&inputRef.current){
+      inputRef.current.focus()
+    }
+  },[isMenuOpen])
+
+  const handleSearchButton=()=>{
+    setIsMenuOpen(true)
+   
+  }
 
   const filterByActivity = (activity) => {
     if (activity.path) {
@@ -83,7 +106,9 @@ const Header = () => {
           </button>
 
           <div className="flex items-center space-x-2">
-            <button className="p-2 hover:bg-gray-100 rounded-full">
+            <button className="p-2 hover:bg-gray-100 rounded-full"
+            onClick={handleSearchButton}
+            >
               <svg
                 className="w-5 h-5 text-gray-600"
                 fill="none"
@@ -144,6 +169,8 @@ const Header = () => {
                     type="text"
                     placeholder="Search"
                     className="w-60 pl-10 pr-3 py-1 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-gray-400 text-sm"
+                    value={search}
+                    onChange={handleSearch}
                   />
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <svg
@@ -254,6 +281,9 @@ const Header = () => {
                   type="text"
                   placeholder="Search products..."
                   className="w-full px-4 py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                  value={search}
+                  onChange={handleSearch}
+                  ref={inputRef}
                 />
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <svg

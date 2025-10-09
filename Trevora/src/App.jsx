@@ -6,6 +6,7 @@ import LoginForm from "./Components/Authentication/Login";
 import Signup from "./Components/Authentication/signup";
 import Footer from "./Components/Footer";
 import ProductPage from "./Pages/ProductPage";
+import ProductDetails from "./Components/ProductDetails";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/products/:id" element={<ProductDetails/>} />
       </Routes>
       <Footer/>
     </>
