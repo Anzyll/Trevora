@@ -53,7 +53,7 @@ const LoginForm = () => {
     setErrors({});
     try {
       // Fetch all users from JSON server
-      const response = await axios.get("http://localhost:5002/users");
+      const response = await axios.get("http://localhost:3001/users");
       const users = response.data;
       // Find user by email
       const user = users.find((user) => user.email === form.email);
@@ -73,7 +73,8 @@ const LoginForm = () => {
       alert("login succesfully");
       // Save logged-in user to localStorage
       localStorage.setItem("currentUser", JSON.stringify(user));
-      window.location.href = "/home";
+      window.dispatchEvent(new Event("storage"));
+      navigate("/home");
     } catch (err) {
       console.error(err);
       setErrors({ general: "something went wrong. Please try again" });

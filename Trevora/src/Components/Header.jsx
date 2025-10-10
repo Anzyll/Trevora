@@ -1,13 +1,15 @@
 // src/components/Header/MainNav.jsx
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useCart } from "../contexts/CartProvider";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
   const [user, setUser] = useState(null); //state to store current logged in user
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
-  const inputRef = useRef()
+  const inputRef = useRef();
+  const { cartCount, clearCart } = useCart();
   const activities = [
     { name: "Home", path: "/" },
     { name: "Hiking", activity: "Hiking" },
@@ -18,10 +20,26 @@ const Header = () => {
 
   //check if user is logged in via localStorage
   useEffect(() => {
-    const userData = localStorage.getItem("currentUser");
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
+    const checkUser = () => {
+      const userData = localStorage.getItem("currentUser");
+      if (userData) {
+        setUser(JSON.parse(userData));
+      } else {
+        setUser(null);
+      }
+    };
+    checkUser();
+
+    const handleStorageChange = () => {
+      checkUser();
+    };
+    window.addEventListener("storage", handleStorageChange);
+    window.addEventListener("logout", handleStorageChange);
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener("logout", handleStorageChange);
+    };
   }, []);
 
   const loginForm = () => {
@@ -39,16 +57,15 @@ const Header = () => {
     }
   };
 
-  useEffect(()=>{
-    if(isMenuOpen&&inputRef.current){
-      inputRef.current.focus()
+  useEffect(() => {
+    if (isMenuOpen && inputRef.current) {
+      inputRef.current.focus();
     }
-  },[isMenuOpen])
+  }, [isMenuOpen]);
 
-  const handleSearchButton=()=>{
-    setIsMenuOpen(true)
-   
-  }
+  const handleSearchButton = () => {
+    setIsMenuOpen(true);
+  };
 
   const filterByActivity = (activity) => {
     if (activity.path) {
@@ -61,10 +78,12 @@ const Header = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("currentUser");
+    clearCart();
     setIsMenuOpen(!isMenuOpen);
     setUser(null);
-    window.location.href = "/login";
-    window.dispatchEvent(new Event("logout"));
+   window.dispatchEvent(new Event("logout"));
+  window.dispatchEvent(new Event("storage"));
+    navigate("/login");
   };
   const goToHome = () => {
     if (user) {
@@ -106,8 +125,9 @@ const Header = () => {
           </button>
 
           <div className="flex items-center space-x-2">
-            <button className="p-2 hover:bg-gray-100 rounded-full"
-            onClick={handleSearchButton}
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full"
+              onClick={handleSearchButton}
             >
               <svg
                 className="w-5 h-5 text-gray-600"
@@ -123,7 +143,10 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full">
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full relative"
+              onClick={() => navigate("/cart")}
+            >
               <svg
                 className="w-5 h-5 text-gray-600"
                 fill="none"
@@ -137,6 +160,11 @@ const Header = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
             </button>
           </div>
         </div>
@@ -172,6 +200,7 @@ const Header = () => {
                     value={search}
                     onChange={handleSearch}
                   />
+
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <svg
                       className="h-4 w-4 text-gray-400"
@@ -191,7 +220,10 @@ const Header = () => {
               </div>
             </div>
 
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors hidden sm:block">
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors hidden sm:block"
+              onClick={() => navigate("/wishlist")}
+            >
               <svg
                 className="w-5 h-5 text-gray-600"
                 fill="none"
@@ -255,7 +287,10 @@ const Header = () => {
               </button>
             )}
 
-            <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full relative"
+              onClick={() => navigate("/cart")}
+            >
               <svg
                 className="w-5 h-5 text-gray-600"
                 fill="none"
@@ -269,6 +304,11 @@ const Header = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
             </button>
           </div>
         </div>

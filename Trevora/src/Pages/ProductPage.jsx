@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation,  useNavigate } from "react-router-dom";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +12,9 @@ const ProductPage = () => {
   const location = useLocation();
   const [selectedActivity, setSelectedActivity] = useState("");
   const [search, setSearch] = useState("");
+  const navigate = useNavigate()
 
+   
   useEffect(() => {
     const urlParam = new URLSearchParams(location.search);
     const activity = urlParam.get("activity");
@@ -33,6 +35,9 @@ const ProductPage = () => {
     if (searchFromUrl) {
       setSearch(searchFromUrl);
     }
+    else{
+      setSearch("")
+    }
   }, [location.search]);
   // Fetch products on component mount
   useEffect(() => {
@@ -49,7 +54,7 @@ const ProductPage = () => {
     fetchProducts();
   }, []);
 
-  // Filter by category and sort by price
+  // Filter by category , sort by price and by search
   const filteredAndSortedProducts = products
     .filter((product) => {
       const categoryMatch =
@@ -145,9 +150,7 @@ const ProductPage = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredAndSortedProducts.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`}>
-              <ProductCard product={product} />
-            </Link>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
         {filteredAndSortedProducts.length === 0 && (

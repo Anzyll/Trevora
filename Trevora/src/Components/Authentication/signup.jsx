@@ -12,6 +12,7 @@ const Signup = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    
   });
   const [error, setError] = useState({}); //state to hold validation errors
   const navigate = useNavigate();
@@ -54,7 +55,7 @@ const Signup = () => {
     if (Object.keys(newErrors).length === 0) {
       // If no validation errors, proceed
       try {
-        const existingUsers = await axios.get("http://localhost:5002/users");
+        const existingUsers = await axios.get("http://localhost:3001/users");
         if (existingUsers.data.some((user) => user.email === form.email)) {
           setError({ email: "Email already exists" });
           return;
@@ -65,10 +66,11 @@ const Signup = () => {
           fullName: form.fullName,
           email: form.email,
           password: hashedPassword,
+          cart:[],
         };
         // Send POST request to store new user
         const response = await axios.post(
-          "http://localhost:5002/users",
+          "http://localhost:3001/users",
           newUser
         );
         alert("registered succesfully");
