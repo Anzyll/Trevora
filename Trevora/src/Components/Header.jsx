@@ -82,7 +82,6 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     setUser(null);
    window.dispatchEvent(new Event("logout"));
-  window.dispatchEvent(new Event("storage"));
     navigate("/login");
   };
   const goToHome = () => {
@@ -357,7 +356,8 @@ const Header = () => {
 
             <div className="px-4 py-3 border-t border-gray-100">
               <div className="flex justify-around">
-                <button className="flex flex-col items-center space-y-1 text-gray-600">
+                <button className="flex flex-col items-center space-y-1 text-gray-600"
+                onClick={()=>navigate("wishlist")}>
                   <svg
                     className="w-5 h-5"
                     fill="none"

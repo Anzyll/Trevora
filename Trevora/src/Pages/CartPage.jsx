@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 const CartPage = () => {
-  const {cart,removeFromCart,updateQuantity,clearCart}=useCart()
+  const {cart,removeFromCart,updateQuantity,clearCart,cartCount}=useCart()
   const navigate=useNavigate()
   const [user, setUser] = useState(null);
 
@@ -45,7 +45,7 @@ const subtotal=cart.reduce((total,item)=>{
         {/* Header */}
         <div className="border-b border-gray-200 pb-6 mb-8">
           <h1 className="text-2xl font-bold text-gray-900">
-            Your Bag ({cart.reduce((total, item) => total + item.quantity, 0)})
+            Your Bag ({cartCount})
           </h1>
         </div>
 
@@ -61,7 +61,7 @@ const subtotal=cart.reduce((total,item)=>{
           </div>
         ) : (
           <>
-            {/* Share Bag Button */}
+          
             <div className="flex justify-between mb-8">
               <button
                 onClick={clearCart}
@@ -69,9 +69,7 @@ const subtotal=cart.reduce((total,item)=>{
               >
                 Clear Cart
               </button>
-              <button className="text-sm font-medium text-gray-700 hover:text-gray-900 border border-gray-300 px-4 py-2 rounded hover:bg-gray-50 transition-colors">
-                Share Bag
-              </button>
+             
             </div>
 
             {/* Cart Items */}
@@ -95,12 +93,7 @@ const subtotal=cart.reduce((total,item)=>{
                         {item.title}
                       </h3>
 
-                      {/* Product Details */}
-                      <div className="text-sm text-gray-600 mb-4">
-                        <p>
-                          Color: {item.color} / Size: {item.size}
-                        </p>
-                      </div>
+                 
 
                       {/* Price and Quantity */}
                       <div className="flex items-center justify-between">
@@ -115,11 +108,11 @@ const subtotal=cart.reduce((total,item)=>{
                               onClick={() =>
                                 updateQuantity(item.id, item.quantity - 1)
                               }
-                              className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition-colors"
+                              className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition-colors "
                             >
                               -
                             </button>
-                            <span className="px-3 py-1 border-l border-r border-gray-300">
+                            <span className="px-3 py-1 border-l border-r border-gray-30">
                               {item.quantity}
                             </span>
                             <button
@@ -152,9 +145,7 @@ const subtotal=cart.reduce((total,item)=>{
               <div className="max-w-md mx-auto space-y-4 text-center">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">
-                    Subtotal (
-                    {cart.reduce((total, item) => total + item.quantity, 0)}{" "}
-                    items)
+                   Subtotal ({cartCount} items)
                   </span>
                   <span className="font-medium">₹{subtotal.toFixed(2)}</span>
                 </div>

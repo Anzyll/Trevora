@@ -4,6 +4,7 @@ import axios from "axios";
 import bcrypt from "bcryptjs";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import WishlistPage from "../../Pages/WishList";
 
 const Signup = () => {
   //state to hold form input values
@@ -67,6 +68,7 @@ const Signup = () => {
           email: form.email,
           password: hashedPassword,
           cart:[],
+          wishlist:[],
         };
         // Send POST request to store new user
         const response = await axios.post(

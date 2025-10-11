@@ -35,8 +35,8 @@ const Hero = () => {
           onClick={()=>navigate("/products?category=clothing")}>
             Clothing
           </button>
-          <button onClick={()=>navigate("/products")} className="border border-white text-white px-12 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40">
-            Everything
+          <button onClick={()=>navigate("/products")} className="border border-white text-white px-8 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40 text-nowrap">
+            All Products
 
           </button>
         </div>

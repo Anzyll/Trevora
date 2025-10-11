@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 const CartContext = createContext();
+
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {
@@ -12,20 +13,9 @@ export const useCart = () => {
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const [cartCount, setCartCount] = useState(0);
 
-  useEffect(() => {
-    const userData = localStorage.getItem("currentUser");
-    if (userData) {
-      const user = JSON.parse(userData);
-      setCart(user.cart || []);
-    } else {
-      setCart([]); // Clear cart when no user
-    }
-  }, []); // Remove dependency array - runs on every render
-
-  useEffect(() => {
-  const handleStorageChange = () => {
+ useEffect(() => {
+  const handleChange = () => {
     const userData = localStorage.getItem("currentUser");
     if (userData) {
       const user = JSON.parse(userData);
@@ -35,121 +25,82 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  window.addEventListener('storage', handleStorageChange);
-  window.addEventListener('logout', handleStorageChange);
-  
+  window.addEventListener("storage", handleChange);
+  window.addEventListener("logout", handleChange);
+
   return () => {
-    window.removeEventListener('storage', handleStorageChange);
-    window.removeEventListener('logout', handleStorageChange);
+    window.removeEventListener("storage", handleChange);
+    window.removeEventListener("logout", handleChange);
   };
 }, []);
 
-  useEffect(() => {
-    const count = cart.reduce((total, item) => total + item.quantity, 0);
-    setCartCount(count);
-  }, [cart]);
-
-  const addToCart = async (product) => {
+ 
+  const updateCart = async (newCart) => {
     const userData = localStorage.getItem("currentUser");
     if (!userData) {
-      alert("Please login to add items to cart");
+      alert("Please login to modify cart");
       return;
     }
+
     const user = JSON.parse(userData);
-    const updatedCart = [...cart];
-    const existingItemIndex = updatedCart.findIndex(
-      (item) => item.id === product.id
-    );
-    if (existingItemIndex > -1) {
-      updatedCart[existingItemIndex].quantity += 1;
-    } else {
-      updatedCart.push({
-        ...product,
-        quantity: 1,
-      });
-    }
+    
     try {
       await axios.patch(`http://localhost:3001/users/${user.id}`, {
-        cart: updatedCart,
+        cart: newCart,
       });
-      setCart(updatedCart);
-
-      const updatedUser = { ...user, cart: updatedCart };
-      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
-      alert("Product added to cart!");
+      
+      setCart(newCart);
+      localStorage.setItem("currentUser", JSON.stringify({
+        ...user,
+        cart: newCart
+      }));
+      
     } catch (error) {
-      console.error("Error updating cart:", error);
-      alert("Failed to add product to cart");
+      console.error("Cart update failed:", error);
+      alert("Failed to update cart");
     }
   };
 
-  const removeFromCart = async (productId) => {
-    const userData = localStorage.getItem("currentUser");
-    if (!userData) {
-      return;
-    }
-    const user = JSON.parse(userData);
-    const updatedCart = cart.filter((item) => item.id !== productId);
-    try {
-      await axios.patch(`http://localhost:3001/users/${user.id}`, {
-        cart: updatedCart,
-      });
-      setCart(updatedCart);
-
-      const updatedUser = { ...user, cart: updatedCart };
-      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
-    } catch (err) {
-      console.error("error removing cart:", err);
+  const addToCart = (product) => {
+    const existingItem = cart.find(item => item.id === product.id);
+    
+    if (existingItem) {
+      const newCart = cart.map(item =>
+        item.id === product.id 
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
+      );
+      updateCart(newCart);
+    } else {
+      updateCart([...cart, { ...product, quantity: 1 }]);
     }
   };
 
-  const updateQuantity = async (productId, newQuantity) => {
+  const removeFromCart = (productId) => {
+    updateCart(cart.filter(item => item.id !== productId));
+  };
+
+  const updateQuantity = (productId, newQuantity) => {
     if (newQuantity < 1) {
       removeFromCart(productId);
-      return;
-    }
-    const userData = localStorage.getItem("currentUser");
-    if (!userData) return;
-    const user = JSON.parse(userData);
-    const updatedCart = cart.map((item) =>
-      item.id === productId ? { ...item, quantity: newQuantity } : item
-    );
-    try {
-      await axios.patch(`http://localhost:3001/users/${user.id}`, {
-        cart: updatedCart,
-      });
-      setCart(updatedCart);
-
-      const updatedUser = { ...user, cart: updatedCart };
-      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
-    } catch (err) {
-      console.error("error updating quantity", err);
+    } else {
+      const newCart = cart.map(item =>
+        item.id === productId ? { ...item, quantity: newQuantity } : item
+      );
+      updateCart(newCart);
     }
   };
 
-  const clearCart = async () => {
-    const userData = localStorage.getItem("currentUser");
-    if (!userData) return;
-
-    const user = JSON.parse(userData);
-    const updatedCart = [];
-
-    try {
-      await axios.patch(`http://localhost:3001/users/${user.id}`, {
-        cart: updatedCart,
-      });
-      setCart(updatedCart);
-
-      const updatedUser = { ...user, cart: updatedCart };
-      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
-    } catch (err) {
-      console.error("Error clearing cart", err);
-    }
+  const clearCart = () => {
+    updateCart([]);
   };
+
+
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const value = {
     cart,
-    cartCount,
+    cartCount, 
     addToCart,
     removeFromCart,
     updateQuantity,

@@ -10,24 +10,24 @@ import ProductDetails from "./Pages/ProductDetails";
 import ScrollToTop from "./Components/ScrollToTop";
 import CartPage from "./Pages/CartPage";
 import WishlistPage from "./Pages/WishList";
-
 const App = () => {
   return (
-    <>
-      <ScrollToTop/>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/products" element={<ProductPage />} />
-        <Route path="/products/:id" element={<ProductDetails/>} />
-        <Route path="/cart" element={<CartPage/>} />
-        <Route path="/wishlist" element={<WishlistPage/>} />
-      </Routes>
-      <Footer/>
-    </>
+   <>
+    <ScrollToTop />
+    <Header />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/login" element={<LoginForm />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/products" element={<ProductPage />} />
+      <Route path="/products/:id" element={<ProductDetails />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/wishlist" element={<WishlistPage />} />
+    </Routes>
+    <Footer />
+</>
+
   );
 };
 
