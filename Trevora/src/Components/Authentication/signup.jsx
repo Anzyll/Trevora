@@ -4,7 +4,7 @@ import axios from "axios";
 import bcrypt from "bcryptjs";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import WishlistPage from "../../Pages/WishList";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   //state to hold form input values
@@ -69,18 +69,19 @@ const Signup = () => {
           password: hashedPassword,
           cart:[],
           wishlist:[],
+          orders:[]
         };
         // Send POST request to store new user
         const response = await axios.post(
           "http://localhost:3001/users",
           newUser
         );
-        alert("registered succesfully");
+       toast.success('Registered successful!');
         setError({});
         navigate("/login");
       } catch (err) {
         console.error(err);
-        alert("Something went wrong. Please try again.");
+        toast.error('Something went wrong. Please try again.'); 
       }
     }
   };

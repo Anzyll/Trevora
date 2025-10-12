@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import { createContext } from "react";
-import axios from "axios"; // ✅ Add this import
-
+import React from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
+import toast from "react-hot-toast";
 const WishlistContext = createContext();
-
 export const useWishlist = () => {
   const context = useContext(WishlistContext);
   if (!context) {
@@ -11,26 +10,26 @@ export const useWishlist = () => {
   }
   return context;
 };
-
 const WishlistProvider = ({ children }) => {
   const [wishlist, setWishlist] = useState([]);
-
   useEffect(() => {
     const handleChange = () => {
       const userData = localStorage.getItem("currentUser");
       if (userData) {
-        const user = JSON.parse(userData);
-        setWishlist(user.wishlist || []);
+        try {
+          const user = JSON.parse(userData);
+          setWishlist(user.wishlist || []);
+        } catch (error) {
+          console.error("Error parsing wishlist data:", error);
+          setWishlist([]);
+        }
       } else {
         setWishlist([]);
       }
     };
-
     handleChange();
-
     window.addEventListener("storage", handleChange);
     window.addEventListener("logout", handleChange);
-
     return () => {
       window.removeEventListener("storage", handleChange);
       window.removeEventListener("logout", handleChange);
@@ -38,43 +37,49 @@ const WishlistProvider = ({ children }) => {
   }, []);
 
   const updateWishlist = async (newWishlist) => {
-    const user = JSON.parse(localStorage.getItem("currentUser") || "[]");
-    if (!user.id) {
-      alert("Please login first");
-      return;
-    }
+    const userData = localStorage.getItem("currentUser");
+    if (!userData) return;
 
-    setWishlist(newWishlist);
-    const updatedUser = { ...user, wishlist: newWishlist };
-    localStorage.setItem("currentUser", JSON.stringify(updatedUser));
-    axios.patch(`http://localhost:3001/users/${user.id}`, {
-      wishlist: newWishlist,
-    });
+    try {
+      const user = JSON.parse(userData);
+      if (!user.id) return;
+
+      setWishlist(newWishlist);
+      const updatedUser = { ...user, wishlist: newWishlist };
+      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
+
+      axios.patch(`http://localhost:3001/users/${user.id}`, {
+        wishlist: newWishlist,
+      });
+    } catch (error) {
+      console.error("Error updating wishlist:", error);
+    }
   };
 
   const addToWishlist = (product) => {
-    if (!wishlist.find((item) => item.id === product.id)) {
+    if (!wishlist.find((item) => item.id == product.id)) {
       updateWishlist([...wishlist, product]);
+      toast.success("Added to wishlist");
     }
   };
 
   const removeFromWishlist = (productId) => {
-    updateWishlist(wishlist.filter((item) => item.id !== productId));
+    updateWishlist(wishlist.filter((item) => productId !== item.id));
+    toast.success("Removed From wishlist");
   };
 
   const isInWishlist = (productId) => {
-    return wishlist.some((item) => item.id === productId);
+    return wishlist.some((item) => productId === item.id);
   };
 
   const value = {
     wishlist,
-    isInWishlist,
+    updateWishlist,
     addToWishlist,
     removeFromWishlist,
-    wishlistCount: wishlist.length, 
+    isInWishlist,
+    wishlistCount: wishlist.length,
   };
-
-
   return (
     <WishlistContext.Provider value={value}>
       {children}

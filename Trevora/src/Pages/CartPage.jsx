@@ -72,12 +72,11 @@ const subtotal=cart.reduce((total,item)=>{
              
             </div>
 
-            {/* Cart Items */}
+           
             <div className="space-y-8">
               {cart.map((item) => (
                 <div key={item.id} className="border-b border-gray-200 pb-8">
                   <div className="flex gap-6">
-                    {/* Product Image */}
                     <div className="flex-shrink-0">
                       <img
                         src={item.image}
@@ -85,24 +84,16 @@ const subtotal=cart.reduce((total,item)=>{
                         className="w-24 h-24 object-cover rounded-lg"
                       />
                     </div>
-
-                    {/* Product Details */}
                     <div className="flex-grow">
-                      {/* Product Header */}
+
                       <h3 className="text-lg font-medium text-gray-900 mb-2">
                         {item.title}
                       </h3>
-
-                 
-
-                      {/* Price and Quantity */}
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-6">
                           <span className="text-lg font-medium text-gray-900">
                             {item.price}
                           </span>
-
-                          {/* Quantity Selector */}
                           <div className="flex items-center border border-gray-300 rounded">
                             <button
                               onClick={() =>
@@ -125,8 +116,6 @@ const subtotal=cart.reduce((total,item)=>{
                             </button>
                           </div>
                         </div>
-
-                        {/* Remove Button */}
                         <button
                           onClick={() => removeFromCart(item.id)}
                           className="text-sm text-red-600 hover:text-red-800 border border-red-300 px-4 py-2 rounded hover:bg-red-50 transition-colors"
@@ -139,8 +128,6 @@ const subtotal=cart.reduce((total,item)=>{
                 </div>
               ))}
             </div>
-
-            {/* Order Summary */}
             <div className="mt-12 border-t border-gray-200 pt-8">
               <div className="max-w-md mx-auto space-y-4 text-center">
                 <div className="flex justify-between text-sm">
@@ -157,10 +144,8 @@ const subtotal=cart.reduce((total,item)=>{
                   <span>Total</span>
                   <span>₹{total.toFixed(2)}</span>
                 </div>
-
-                {/* Checkout Button */}
                 <button
-                  
+                  onClick={()=>navigate("/checkout")}
                   className="w-full bg-black text-white py-4 px-6 text-base font-medium hover:bg-gray-800 transition-colors mt-6"
                 >
                   Checkout

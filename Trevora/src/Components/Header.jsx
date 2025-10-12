@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
+import toast from "react-hot-toast";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
@@ -18,16 +19,17 @@ const Header = () => {
     { name: "Mountain Biking", activity: "Mountain Biking" },
   ];
 
-  //check if user is logged in via localStorage
   useEffect(() => {
     const checkUser = () => {
       const userData = localStorage.getItem("currentUser");
       if (userData) {
-        setUser(JSON.parse(userData));
+        const user = JSON.parse(userData);
+        setUser(user);
       } else {
         setUser(null);
       }
     };
+
     checkUser();
 
     const handleStorageChange = () => {
@@ -81,8 +83,9 @@ const Header = () => {
     clearCart();
     setIsMenuOpen(!isMenuOpen);
     setUser(null);
-   window.dispatchEvent(new Event("logout"));
+    window.dispatchEvent(new Event("logout"));
     navigate("/login");
+    toast.success("Logout successful!");
   };
   const goToHome = () => {
     if (user) {
@@ -356,8 +359,10 @@ const Header = () => {
 
             <div className="px-4 py-3 border-t border-gray-100">
               <div className="flex justify-around">
-                <button className="flex flex-col items-center space-y-1 text-gray-600"
-                onClick={()=>navigate("wishlist")}>
+                <button
+                  className="flex flex-col items-center space-y-1 text-gray-600"
+                  onClick={() => navigate("wishlist")}
+                >
                   <svg
                     className="w-5 h-5"
                     fill="none"

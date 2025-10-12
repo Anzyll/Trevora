@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 import axios from "axios";
+import toast from 'react-hot-toast';
+
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -59,6 +61,7 @@ const LoginForm = () => {
       const user = users.find((user) => user.email === form.email);
       if (!user) {
         setErrors({ general: "incorrect email or password" });
+         toast.error('Incorrect email or password');
         return;
       }
       // Compare entered password with hashed password
@@ -68,9 +71,11 @@ const LoginForm = () => {
       );
       if (!matchesPassword) {
         setErrors({ general: "incorrect email or password" });
+        toast.error('Incorrect email or password');
         return;
       }
-      alert("login succesfully");
+     toast.success('Login successful!');
+
       // Save logged-in user to localStorage
       localStorage.setItem("currentUser", JSON.stringify(user));
       window.dispatchEvent(new Event("storage"));

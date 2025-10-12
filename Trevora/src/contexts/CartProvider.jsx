@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { createContext, useContext, useEffect, useState } from "react";
-
+import toast from "react-hot-toast";
 const CartContext = createContext();
 
 export const useCart = () => {
@@ -14,77 +14,81 @@ export const useCart = () => {
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
- useEffect(() => {
-  const handleChange = () => {
-    const userData = localStorage.getItem("currentUser");
-    if (userData) {
+  useEffect(() => {
+    const handleChange = () => {
+  const userData = localStorage.getItem("currentUser");
+  if (userData) {
+    try {
       const user = JSON.parse(userData);
       setCart(user.cart || []);
-    } else {
+    } catch (error) {
+      console.error("Error parsing cart data:", error);
       setCart([]);
     }
-  };
+  } else {
+    setCart([]);
+  }
+};
+    handleChange()
+    window.addEventListener("storage", handleChange);
+    window.addEventListener("logout", handleChange);
 
-  window.addEventListener("storage", handleChange);
-  window.addEventListener("logout", handleChange);
+    return () => {
+      window.removeEventListener("storage", handleChange);
+      window.removeEventListener("logout", handleChange);
+    };
+  }, []);
 
-  return () => {
-    window.removeEventListener("storage", handleChange);
-    window.removeEventListener("logout", handleChange);
-  };
-}, []);
-
- 
   const updateCart = async (newCart) => {
     const userData = localStorage.getItem("currentUser");
     if (!userData) {
-      alert("Please login to modify cart");
       return;
     }
 
     const user = JSON.parse(userData);
-    
+
     try {
       await axios.patch(`http://localhost:3001/users/${user.id}`, {
         cart: newCart,
       });
-      
       setCart(newCart);
-      localStorage.setItem("currentUser", JSON.stringify({
-        ...user,
-        cart: newCart
-      }));
-      
+      localStorage.setItem(
+        "currentUser",
+        JSON.stringify({
+          ...user,
+          cart: newCart,
+        })
+      );
     } catch (error) {
       console.error("Cart update failed:", error);
-      alert("Failed to update cart");
+      toast.error('Failed to add product to cart');
     }
   };
 
   const addToCart = (product) => {
-    const existingItem = cart.find(item => item.id === product.id);
-    
+    const existingItem = cart.find((item) => item.id === product.id);
+
     if (existingItem) {
-      const newCart = cart.map(item =>
-        item.id === product.id 
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
+      const newCart = cart.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
       updateCart(newCart);
     } else {
       updateCart([...cart, { ...product, quantity: 1 }]);
+       toast.success('Product added to cart!');
     }
   };
 
   const removeFromCart = (productId) => {
-    updateCart(cart.filter(item => item.id !== productId));
+    updateCart(cart.filter((item) => item.id !== productId));
+    toast.success('Product Removed from cart!');
   };
 
   const updateQuantity = (productId, newQuantity) => {
     if (newQuantity < 1) {
       removeFromCart(productId);
     } else {
-      const newCart = cart.map(item =>
+      const newCart = cart.map((item) =>
         item.id === productId ? { ...item, quantity: newQuantity } : item
       );
       updateCart(newCart);
@@ -95,12 +99,11 @@ export const CartProvider = ({ children }) => {
     updateCart([]);
   };
 
-
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const value = {
     cart,
-    cartCount, 
+    cartCount,
     addToCart,
     removeFromCart,
     updateQuantity,
