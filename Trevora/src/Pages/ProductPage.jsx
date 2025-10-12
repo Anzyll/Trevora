@@ -12,7 +12,7 @@ const ProductPage = () => {
   const location = useLocation();
   const [selectedActivity, setSelectedActivity] = useState("");
   const [search, setSearch] = useState("");
-  const navigate = useNavigate()
+
 
    
   useEffect(() => {

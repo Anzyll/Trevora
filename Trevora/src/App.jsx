@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Home from "./Pages/Home";
-import { Routes, Route, ScrollRestoration } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import LoginForm from "./Components/Authentication/Login";
 import Signup from "./Components/Authentication/signup";
 import Footer from "./Components/Footer";
@@ -12,7 +12,8 @@ import CartPage from "./Pages/CartPage";
 import WishlistPage from "./Pages/WishList";
 import Checkout from "./Pages/Checkout";
 import Payment from "./Pages/Payment";
-
+import OrderSuccess from "./Pages/OrderSuccess";
+import OrderHistory from "./Pages/Orders";
 
 const App = () => {
   return (
@@ -28,9 +29,10 @@ const App = () => {
         <Route path="/products/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
-         <Route path="/checkout" element={<Checkout />} />
-          <Route path="/payment" element={<Payment />} />
-        
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/order-success" element={<OrderSuccess />} />
+         <Route path="/orders" element={<OrderHistory />} />
       </Routes>
       <Footer />
     </>

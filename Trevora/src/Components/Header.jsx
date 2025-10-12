@@ -1,6 +1,6 @@
 // src/components/Header/MainNav.jsx
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 import toast from "react-hot-toast";
 
@@ -288,6 +288,23 @@ const Header = () => {
                 </svg>
               </button>
             )}
+           <button 
+           className="p-2 hover:bg-gray-100 rounded-full relative"
+           onClick={()=>navigate("/orders")}>
+              <svg 
+                className="w-6 h-6" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" 
+                />
+              </svg>
+            </button>
 
             <button
               className="p-2 hover:bg-gray-100 rounded-full relative"
@@ -378,6 +395,27 @@ const Header = () => {
                   </svg>
                   <span className="text-xs">Wishlist</span>
                 </button>
+
+                           <button 
+           className="p-2 hover:bg-gray-100 rounded-full relative "
+           onClick={()=>navigate("/orders")}>
+            
+              <svg 
+                className="w-6 h-6" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" 
+                />
+              </svg>
+              <span className="text-xs text-gray-600">Orders </span>
+             
+            </button>
 
                 {user ? (
                   <div className="flex flex-col items-center space-y-1">

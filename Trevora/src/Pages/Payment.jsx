@@ -7,8 +7,8 @@ import axios from "axios";
 const Payment = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { clearCart } = useCart();
-  const { total, cart, address } = location.state || {};
+  const { clearCart, cart } = useCart();
+  const { total, address } = location.state || {};
 
   const [paymentMethod, setPaymentMethod] = useState("card");
   const [cardDetails, setCardDetails] = useState({
@@ -20,10 +20,11 @@ const Payment = () => {
   const [upiId, setUpiId] = useState("");
 
   const handlePayment = async () => {
-    if (!total) {
+    if (!total || !cart || cart.length === 0) {
       toast.error("Invalid order details");
       return;
     }
+
     if (paymentMethod === "card") {
       if (
         !cardDetails.number ||
@@ -36,21 +37,20 @@ const Payment = () => {
       }
     }
 
-    if (paymentMethod === "upi") {
-      if (!upiId.includes("@")) {
-        toast.error("Please enter valid UPI ID");
-        return;
-      }
+    if (paymentMethod === "upi" && !upiId.includes("@")) {
+      toast.error("Please enter valid UPI ID");
+      return;
     }
-
-    toast.loading("Processing payment...");
 
     try {
       const user = JSON.parse(localStorage.getItem("currentUser"));
+      if (!user || !user.id) {
+        throw new Error("User not found");
+      }
 
       const order = {
         id: Date.now().toString(),
-        items: cart,
+        items: [...cart],
         total: total,
         address: address,
         paymentMethod: paymentMethod,
@@ -58,30 +58,36 @@ const Payment = () => {
         status: "confirmed",
       };
 
+     
       const userResponse = await axios.get(
         `http://localhost:3001/users/${user.id}`
       );
       const currentUser = userResponse.data;
-
       const updatedUser = {
         ...currentUser,
         orders: [...(currentUser.orders || []), order],
       };
+      await axios.patch(`http://localhost:3001/users/${user.id}`, updatedUser);
+      const updatedLocalUser = { 
+      ...user, 
+      orders: updatedUser.orders
+    };
 
-      await axios.patch(`http://localhost:3001/users/${user.id}`, {
-        orders: updatedUser.orders,
-      });
-
-      const updatedLocalUser = { ...user, orders: updatedUser.orders };
       localStorage.setItem("currentUser", JSON.stringify(updatedLocalUser));
+
       clearCart();
-      toast.dismiss();
-      toast.success("Payment successful!");
-      navigate("/order-success", { state: { orderId: order.id, address } });
+
+      toast.success("Order placed successfully!");
+
+      navigate("/order-success", {
+        state: {
+          orderId: order.id,
+          address: address,
+        },
+      });
     } catch (error) {
-      toast.dismiss();
-      console.error("Error saving order:", error);
-      toast.error("Payment failed. Please try again.");
+      console.error("Payment error:", error);
+      toast.error("Failed to place order. Please try again.");
     }
   };
 
@@ -95,7 +101,6 @@ const Payment = () => {
       if (formattedValue.length > 19)
         formattedValue = formattedValue.slice(0, 19);
     }
-
     if (field === "expiry") {
       formattedValue = value.replace(/\D/g, "").replace(/(\d{2})(\d)/, "$1/$2");
       if (formattedValue.length > 5)
@@ -104,7 +109,6 @@ const Payment = () => {
     if (field === "cvv") {
       formattedValue = value.replace(/\D/g, "").slice(0, 3);
     }
-
     setCardDetails((prev) => ({ ...prev, [field]: formattedValue }));
   };
 
@@ -178,7 +182,6 @@ const Payment = () => {
       {paymentMethod === "card" && (
         <div className="mb-6 border rounded p-4 bg-gray-50">
           <h3 className="text-lg font-semibold mb-3">Card Details</h3>
-
           <div className="space-y-4">
             <div>
               <label className="block text-sm font-medium mb-2">
@@ -194,7 +197,6 @@ const Payment = () => {
                 className="w-full border p-3 rounded focus:outline-black"
               />
             </div>
-
             <div>
               <label className="block text-sm font-medium mb-2">
                 Card Number
@@ -207,7 +209,6 @@ const Payment = () => {
                 className="w-full border p-3 rounded focus:outline-black"
               />
             </div>
-
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium mb-2">
@@ -221,7 +222,6 @@ const Payment = () => {
                   className="w-full border p-3 rounded focus:outline-black"
                 />
               </div>
-
               <div>
                 <label className="block text-sm font-medium mb-2">CVV</label>
                 <input
@@ -249,9 +249,6 @@ const Payment = () => {
               onChange={(e) => setUpiId(e.target.value)}
               className="w-full border p-3 rounded focus:outline-black"
             />
-            <p className="text-sm text-gray-600 mt-1">
-              Enter your UPI ID (e.g., name@oksbi, name@ybl)
-            </p>
           </div>
         </div>
       )}
