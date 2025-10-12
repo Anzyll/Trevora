@@ -11,6 +11,8 @@ import ScrollToTop from "./Components/ScrollToTop";
 import CartPage from "./Pages/CartPage";
 import WishlistPage from "./Pages/WishList";
 import Checkout from "./Pages/Checkout";
+import Payment from "./Pages/Payment";
+
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/wishlist" element={<WishlistPage />} />
          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/payment" element={<Payment />} />
+        
       </Routes>
       <Footer />
     </>
