@@ -58,7 +58,6 @@ const Payment = () => {
         status: "confirmed",
       };
 
-     
       const userResponse = await axios.get(
         `http://localhost:3001/users/${user.id}`
       );
@@ -68,10 +67,10 @@ const Payment = () => {
         orders: [...(currentUser.orders || []), order],
       };
       await axios.patch(`http://localhost:3001/users/${user.id}`, updatedUser);
-      const updatedLocalUser = { 
-      ...user, 
-      orders: updatedUser.orders
-    };
+      const updatedLocalUser = {
+        ...user,
+        orders: updatedUser.orders,
+      };
 
       localStorage.setItem("currentUser", JSON.stringify(updatedLocalUser));
 

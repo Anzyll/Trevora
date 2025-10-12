@@ -23,7 +23,19 @@
       "fullName": "naheel",
       "email": "naheel@gmail.com",
       "password": "$2b$10$C53OkCA0C5fawXo6eN.Ed.Y.wBHI6EkDHUqR8XKD.Y.kBbkJNBPk.",
-      "cart": [],
+      "cart": [
+        {
+          "id": "2",
+          "title": "Women's Hiking Jacket",
+          "price": "₹10,500",
+          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+          "category": "clothing",
+          "gender": "female",
+          "activity": "Hiking",
+          "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+          "quantity": 5
+        }
+      ],
       "wishlist": [
         {
           "id": "8",
@@ -119,6 +131,59 @@
           "address": "Ali",
           "paymentMethod": "cod",
           "date": "2025-10-12T14:13:47.171Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760286407729",
+          "items": [
+            {
+              "id": "7",
+              "title": "Sleeping Bag - Lightweight",
+              "price": "₹6,800",
+              "image": "https://www.hacer.in/media/catalog/product/1/_/1_176.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "A lightweight and compact sleeping bag for 3-season camping. Features synthetic insulation, a soft inner lining, and a compression sack for easy packing.",
+              "quantity": 1
+            },
+            {
+              "id": "3",
+              "title": "Aluminum Trekking Poles",
+              "price": "₹5,200",
+              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Hiking",
+              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "quantity": 1
+            }
+          ],
+          "total": 12500,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-12T16:26:47.729Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760287325147",
+          "items": [
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": "₹10,500",
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "quantity": 3
+            }
+          ],
+          "total": 32000,
+          "address": "bridgeon",
+          "paymentMethod": "upi",
+          "date": "2025-10-12T16:42:05.147Z",
           "status": "confirmed"
         }
       ]
@@ -529,6 +594,37 @@
       "cart": [],
       "wishlist": [],
       "orders": []
+    },
+    {
+      "id": "c7ad",
+      "fullName": "anzil",
+      "email": "anz@gmaiil.com",
+      "password": "$2b$10$CSArCn7Tiw.b7ufu6oHtyORjKSehioxBlcMdMnxWPEELWRnz8Rs5C",
+      "cart": [],
+      "wishlist": [],
+      "orders": [
+        {
+          "id": "1760282234349",
+          "items": [
+            {
+              "id": "3",
+              "title": "Aluminum Trekking Poles",
+              "price": "₹5,200",
+              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Hiking",
+              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "quantity": 1
+            }
+          ],
+          "total": 5700,
+          "address": "haai",
+          "paymentMethod": "cod",
+          "date": "2025-10-12T15:17:14.349Z",
+          "status": "confirmed"
+        }
+      ]
     }
   ],
   "products": [
@@ -582,7 +678,7 @@
       "activity": "Camping",
       "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips."
     },
-        {
+    {
       "id": "6",
       "title": "Camping Tent 6-Person",
       "price": "₹21,000",
@@ -596,7 +692,7 @@
       "id": "7",
       "title": "Sleeping Bag - Lightweight",
       "price": "₹6,800",
-      "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRJy5QGZEpj1rnCvG4QMgAxqR-26GnsmLplFy6nfyQ2J76rkUC-1BgkX4-2XCjwO2ejJsV8SeebfQm2tV2mhTTaWIVnn9Nuf2cYqc-tk9eoB3KP2yc6eCoOUV8",
+      "image": "https://kiehberg.in/media/catalog/product/n/h/envelope-sleeping-bag-with-hood-f400-xl-parrot-green-product-sku-nh00f400-d.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "category": "Gear",
       "gender": "unisex",
       "activity": "Camping",
