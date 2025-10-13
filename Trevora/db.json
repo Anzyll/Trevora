@@ -306,7 +306,19 @@
       "fullName": "nabeel",
       "email": "nabeel@gmail.com",
       "password": "$2b$10$bCfxgBzNY6k9Kajl/31AJOJt9wkmWDvpyBuytgKwm76Dg7CnsKAd.",
-      "cart": [],
+      "cart": [
+        {
+          "id": "3",
+          "title": "Aluminum Trekking Poles",
+          "price": "₹5,200",
+          "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+          "category": "Gear",
+          "gender": "unisex",
+          "activity": "Hiking",
+          "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+          "quantity": 4
+        }
+      ],
       "wishlist": [
         {
           "id": "2",
