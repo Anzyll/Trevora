@@ -44,9 +44,7 @@ export const CartProvider = ({ children }) => {
     if (!userData) {
       return;
     }
-
     const user = JSON.parse(userData);
-
     try {
       await axios.patch(`http://localhost:3001/users/${user.id}`, {
         cart: newCart,
@@ -75,7 +73,10 @@ export const CartProvider = ({ children }) => {
       updateCart(newCart);
     } else {
       updateCart([...cart, { ...product, quantity: 1 }]);
-       toast.success('Product added to cart!');
+    
+    }
+      if (localStorage.getItem("currentUser")) {
+      toast.success('Product added to cart!');
     }
   };
 
@@ -99,11 +100,9 @@ export const CartProvider = ({ children }) => {
     updateCart([]);
   };
 
-  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
   const value = {
     cart,
-    cartCount,
     addToCart,
     removeFromCart,
     updateQuantity,

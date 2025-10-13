@@ -3,7 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useWishlist } from "../contexts/WishlistProvider";
 
 const ProductCard = ({ product }) => {
-  const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
+  const { isInWishlist, addToWishlist, removeFromWishlist  } = useWishlist();
 
   const handleWishlist = (e) => {
     e.preventDefault();

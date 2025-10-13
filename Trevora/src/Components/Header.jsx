@@ -1,16 +1,16 @@
 // src/components/Header/MainNav.jsx
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 import toast from "react-hot-toast";
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); //state to toggle mobile menu
-  const [user, setUser] = useState(null); //state to store current logged in user
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const inputRef = useRef();
-  const { cartCount, clearCart } = useCart();
+  const {  clearCart} = useCart();
   const activities = [
     { name: "Home", path: "/" },
     { name: "Hiking", activity: "Hiking" },
@@ -95,6 +95,16 @@ const Header = () => {
     }
   };
 
+  const handleOrders = () => {
+    navigate("/orders");
+    setIsMenuOpen(false);
+  };
+
+  const handleWishlist = () => {
+    navigate("/wishlist");
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="border-b border-gray-300">
       <div className="max-w-7xl mx-auto">
@@ -162,11 +172,6 @@ const Header = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
             </button>
           </div>
         </div>
@@ -223,7 +228,7 @@ const Header = () => {
             </div>
 
             <button
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors hidden sm:block"
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors hidden sm:block relative"
               onClick={() => navigate("/wishlist")}
             >
               <svg
@@ -239,6 +244,7 @@ const Header = () => {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               </svg>
+        
             </button>
 
             {user ? (
@@ -288,20 +294,21 @@ const Header = () => {
                 </svg>
               </button>
             )}
-           <button 
-           className="p-2 hover:bg-gray-100 rounded-full relative"
-           onClick={()=>navigate("/orders")}>
-              <svg 
-                className="w-6 h-6" 
-                fill="none" 
-                stroke="currentColor" 
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full relative"
+              onClick={() => navigate("/orders")}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" 
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                 />
               </svg>
             </button>
@@ -323,11 +330,6 @@ const Header = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  {cartCount}
-                </span>
-              )}
             </button>
           </div>
         </div>
@@ -378,7 +380,7 @@ const Header = () => {
               <div className="flex justify-around">
                 <button
                   className="flex flex-col items-center space-y-1 text-gray-600"
-                  onClick={() => navigate("wishlist")}
+                  onClick={handleWishlist}
                 >
                   <svg
                     className="w-5 h-5"
@@ -396,26 +398,25 @@ const Header = () => {
                   <span className="text-xs">Wishlist</span>
                 </button>
 
-                           <button 
-           className="p-2 hover:bg-gray-100 rounded-full relative "
-           onClick={()=>navigate("/orders")}>
-            
-              <svg 
-                className="w-6 h-6" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" 
-                />
-              </svg>
-              <span className="text-xs text-gray-600">Orders </span>
-             
-            </button>
+                <button
+                  className="p-2 hover:bg-gray-100 rounded-full relative "
+                  onClick={handleOrders}
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+                    />
+                  </svg>
+                  <span className="text-xs text-gray-600">Orders </span>
+                </button>
 
                 {user ? (
                   <div className="flex flex-col items-center space-y-1">

@@ -3,20 +3,17 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import bcrypt from "bcryptjs";
 import axios from "axios";
-import toast from 'react-hot-toast';
-
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  // State to hold form input values
   const [form, setForm] = useState({
     email: "",
     password: "",
   });
 
-  const [errors, setErrors] = useState({}); // State to hold  errors
+  const [errors, setErrors] = useState({});
 
-  // Reset form when component mounts or when coming from logout
   useEffect(() => {
     setForm({
       email: "",
@@ -24,6 +21,13 @@ const LoginForm = () => {
     });
     setErrors({});
   }, []);
+
+  useEffect(() => {
+    const user = localStorage.getItem("currentUser");
+    if (user) {
+      navigate("/home");
+    }
+  }, [navigate]);
 
   const signupForm = () => {
     navigate("/signup");
@@ -51,30 +55,26 @@ const LoginForm = () => {
       setErrors(validationErrors);
       return;
     }
-
     setErrors({});
     try {
-      // Fetch all users from JSON server
       const response = await axios.get("http://localhost:3001/users");
       const users = response.data;
-      // Find user by email
       const user = users.find((user) => user.email === form.email);
       if (!user) {
         setErrors({ general: "incorrect email or password" });
-         toast.error('Incorrect email or password');
+        toast.error("Incorrect email or password");
         return;
       }
-      // Compare entered password with hashed password
       const matchesPassword = await bcrypt.compare(
         form.password,
         user.password
       );
       if (!matchesPassword) {
         setErrors({ general: "incorrect email or password" });
-        toast.error('Incorrect email or password');
+        toast.error("Incorrect email or password");
         return;
       }
-     toast.success('Login successful!');
+      toast.success("Login successful!");
 
       // Save logged-in user to localStorage
       localStorage.setItem("currentUser", JSON.stringify(user));

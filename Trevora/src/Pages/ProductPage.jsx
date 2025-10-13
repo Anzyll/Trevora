@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
-import { useLocation,  useNavigate } from "react-router-dom";
+import { useLocation,  } from "react-router-dom";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +12,7 @@ const ProductPage = () => {
   const location = useLocation();
   const [selectedActivity, setSelectedActivity] = useState("");
   const [search, setSearch] = useState("");
-
+  
 
    
   useEffect(() => {

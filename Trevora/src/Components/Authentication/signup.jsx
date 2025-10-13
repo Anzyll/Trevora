@@ -1,5 +1,5 @@
 // src/pages/Signup.jsx
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import bcrypt from "bcryptjs";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +7,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 const Signup = () => {
-  //state to hold form input values
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -15,8 +14,17 @@ const Signup = () => {
     confirmPassword: "",
     
   });
-  const [error, setError] = useState({}); //state to hold validation errors
+  const [error, setError] = useState({});
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    const user=localStorage.getItem("currentUser")
+    if(user){
+      navigate("/home")
+    }
+  },[navigate])
+
+
   const loginForm = () => {
     navigate("/login");
   };
@@ -54,7 +62,6 @@ const Signup = () => {
     const newErrors = validateSignup();
     setError(newErrors);
     if (Object.keys(newErrors).length === 0) {
-      // If no validation errors, proceed
       try {
         const existingUsers = await axios.get("http://localhost:3001/users");
         if (existingUsers.data.some((user) => user.email === form.email)) {
@@ -71,8 +78,7 @@ const Signup = () => {
           wishlist:[],
           orders:[]
         };
-        // Send POST request to store new user
-        const response = await axios.post(
+         await axios.post(
           "http://localhost:3001/users",
           newUser
         );

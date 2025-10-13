@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const OrderHistory = () => {
   const [orders, setOrders] = useState([]);
@@ -11,17 +12,24 @@ const OrderHistory = () => {
     );
   }, []);
 
-  const cancelOrder = (orderId) => {
-    const user = JSON.parse(localStorage.getItem("currentUser"));
-    const updatedOrders = user.orders.map((order) =>
-      order.id === orderId ? { ...order, status: "cancelled" } : order
-    );
-
-    const updatedUser = { ...user, orders: updatedOrders };
-    localStorage.setItem("currentUser", JSON.stringify(updatedUser));
-    setOrders(
-      updatedOrders.sort((a, b) => new Date(b.date) - new Date(a.date))
-    );
+  const cancelOrder = async (orderId) => {
+    try {
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+      const updatedOrders = user.orders.map((order) =>
+        order.id === orderId ? { ...order, status: "cancelled" } : order
+      );
+      const updatedUser = { ...user, orders: updatedOrders };
+      await axios.patch(`http://localhost:3001/users/${user.id}`, {
+        orders: updatedOrders,
+      });
+      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
+      setOrders(
+        updatedOrders.sort((a, b) => new Date(b.date) - new Date(a.date))
+      );
+    } catch (error) {
+      console.error("Error cancelling order:", error);
+      alert("Failed to cancel order. Please try again.");
+    }
   };
 
   const canCancelOrder = (orderDate) => {

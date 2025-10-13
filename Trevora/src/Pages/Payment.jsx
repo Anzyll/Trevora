@@ -188,7 +188,7 @@ const Payment = () => {
               </label>
               <input
                 type="text"
-                placeholder="John Doe"
+                placeholder="Full Name"
                 value={cardDetails.name}
                 onChange={(e) =>
                   setCardDetails((prev) => ({ ...prev, name: e.target.value }))
