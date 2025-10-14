@@ -28,7 +28,6 @@ const ProductDetails = () => {
     },[id])
     
 
-
   const handleAddToCart=async()=>{
     if(product.stock>0){
      await addToCart(product)
@@ -98,9 +97,21 @@ const ProductDetails = () => {
                 {product.title}
               </h1>
               <div className="flex items-center space-x-4 mb-4"></div>
-              <p className="text-2xl font-normal text-gray-900">
-                {product.price}
-              </p>
+              <div className="text-2xl font-normal text-gray-900 flex justify-between items-center">
+                {product.price} 
+                                {product.stock == 0 ? (
+              <span className="text-sm  text-red-600">Out of Stock</span>
+            ) : product.stock <= 10 ? (
+              <span className="text-sm  text-red-600">
+                {" "}
+                {product.stock} stocks left{" "}
+              </span>
+            ) : (
+              <span className="text-sm  text-green-700">In Stock </span>
+            )}
+              </div>
+              
+        
           
             </div>
             <div className="border-t border-gray-200 pt-8">

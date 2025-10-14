@@ -47,6 +47,18 @@ const Payment = () => {
       if (!user || !user.id) {
         throw new Error("User not found");
       }
+      for(const item of cart){
+        try{
+          const response = await axios.get(`http://localhost:3001/products/${item.id}`)
+          const latestProduct=response.data
+          const newStock = latestProduct.stock-item.quantity
+          await axios.patch(`http://localhost:3001/products/${item.id}`,
+            {stock:newStock}
+          )
+        }catch(error){
+          console.error(`Failed to update stock for product ${item.id}:`, error);
+        }
+      }
 
       const order = {
         id: Date.now().toString(),
@@ -75,8 +87,9 @@ const Payment = () => {
       localStorage.setItem("currentUser", JSON.stringify(updatedLocalUser));
 
       clearCart();
-
+      
       toast.success("Order placed successfully!");
+
 
       navigate("/order-success", {
         state: {

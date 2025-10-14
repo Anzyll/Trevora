@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 import toast from "react-hot-toast";
+import { useWishlist } from "../contexts/WishlistProvider";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +12,7 @@ const Header = () => {
   const [search, setSearch] = useState("");
   const inputRef = useRef();
   const { cartCount, clearCart } = useCart();
+  const {wishlistCount}=useWishlist()
   const activities = [
     { name: "Home", path: "/" },
     { name: "Hiking", activity: "Hiking" },
@@ -184,6 +186,7 @@ const Header = () => {
       px-1
       border border-white
       shadow-md
+      animate-pulse
      
     "
                 >
@@ -262,6 +265,26 @@ const Header = () => {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               </svg>
+                 {wishlistCount > 0 && (
+                <span
+                  className="
+      absolute -top-1 -right-1
+      min-w-[18px] h-5
+      bg-red-500
+      text-white text-[10px] font-bold
+      rounded-full
+      flex items-center justify-center
+      px-1
+      border border-white
+      shadow-md
+      animate-pulse
+     
+    "
+                >
+                  {wishlistCount > 99 ? "99+" : wishlistCount}
+                </span>)}
+              
+              
             </button>
 
             {user ? (
@@ -357,6 +380,7 @@ const Header = () => {
       px-1
       border border-white
       shadow-md
+      animate-pulse
      
     "
                 >
@@ -428,6 +452,7 @@ const Header = () => {
                       d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                     />
                   </svg>
+                          
                   <span className="text-xs">Wishlist</span>
                 </button>
 

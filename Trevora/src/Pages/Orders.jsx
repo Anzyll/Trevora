@@ -15,6 +15,20 @@ const OrderHistory = () => {
   const cancelOrder = async (orderId) => {
     try {
       const user = JSON.parse(localStorage.getItem("currentUser"));
+      const cancelledOrder = user.orders.find((order) => orderId === order.id);
+      for (const item of cancelledOrder.items) {
+        try {
+          const response = await axios.get(
+            `http://localhost:3001/products/${item.id}`
+          );
+          const latestProduct = response.data;
+          await axios.patch(`http://localhost:3001/products/${item.id}`, {
+            stock: latestProduct.stock + item.quantity,
+          });
+        } catch (error) {
+          console.error("Failed to restore stock:", error);
+        }
+      }
       const updatedOrders = user.orders.map((order) =>
         order.id === orderId ? { ...order, status: "cancelled" } : order
       );

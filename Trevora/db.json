@@ -24,7 +24,30 @@
       "email": "naheel@gmail.com",
       "password": "$2b$10$C53OkCA0C5fawXo6eN.Ed.Y.wBHI6EkDHUqR8XKD.Y.kBbkJNBPk.",
       "cart": [],
-      "wishlist": [],
+      "wishlist": [
+        {
+          "id": "3",
+          "title": "Aluminum Trekking Poles",
+          "price": "₹5,200",
+          "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+          "category": "Gear",
+          "gender": "unisex",
+          "activity": "Hiking",
+          "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+          "stock": 20
+        },
+        {
+          "id": "1",
+          "title": "Men's Retro Pile Jacket",
+          "price": "₹12,000",
+          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+          "category": "clothing",
+          "gender": "men",
+          "activity": "Hiking",
+          "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
+          "stock": 13
+        }
+      ],
       "orders": [
         {
           "id": "1760268384835",
@@ -215,6 +238,150 @@
           "paymentMethod": "cod",
           "date": "2025-10-13T05:32:34.537Z",
           "status": "confirmed"
+        },
+        {
+          "id": "1760433931730",
+          "items": [
+            {
+              "id": "3",
+              "title": "Aluminum Trekking Poles",
+              "price": "₹5,200",
+              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Hiking",
+              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "stock": 21,
+              "quantity": 1
+            },
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": "₹10,500",
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 22,
+              "quantity": 1
+            }
+          ],
+          "total": 16200,
+          "address": "BRIDGEON",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T09:25:31.730Z",
+          "status": "cancelled"
+        },
+        {
+          "id": "1760447735212",
+          "items": [
+            {
+              "id": "20",
+              "title": "Climbing Chalk Bag",
+              "price": "₹1,200",
+              "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Climbing",
+              "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
+              "stock": 45,
+              "quantity": 1
+            }
+          ],
+          "total": 1700,
+          "address": "BRIDGEON",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T13:15:35.212Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760449966540",
+          "items": [
+            {
+              "id": "5",
+              "title": "Camping Tent 2-Person",
+              "price": "₹12,500",
+              "image": "https://www.mountainexperience.it/37286-medium_default/sea-to-summit-alto-tr2.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips.",
+              "stock": 29,
+              "quantity": 1
+            }
+          ],
+          "total": 13000,
+          "address": "BRIDGEON",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T13:52:46.540Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760449996724",
+          "items": [
+            {
+              "id": "6",
+              "title": "Camping Tent 6-Person",
+              "price": "₹21,000",
+              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
+              "stock": 4,
+              "quantity": 1
+            }
+          ],
+          "total": 21500,
+          "address": "BRIDGEON",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T13:53:16.724Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760451089411",
+          "items": [
+            {
+              "id": "6",
+              "title": "Camping Tent 6-Person",
+              "price": "₹21,000",
+              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
+              "stock": 3,
+              "quantity": 1
+            }
+          ],
+          "total": 21500,
+          "address": "BRIDGEON",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T14:11:29.411Z",
+          "status": "cancelled"
+        },
+        {
+          "id": "1760452145262",
+          "items": [
+            {
+              "id": "6",
+              "title": "Camping Tent 6-Person",
+              "price": "₹21,000",
+              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
+              "stock": 2,
+              "quantity": 1
+            }
+          ],
+          "total": 21500,
+          "address": "BRIDGEON",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T14:29:05.262Z",
+          "status": "cancelled"
         }
       ]
     },
@@ -1125,7 +1292,7 @@
       "gender": "men",
       "activity": "Hiking",
       "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-      "stock": null
+      "stock": 13
     },
     {
       "id": "2",
@@ -1147,7 +1314,7 @@
       "gender": "unisex",
       "activity": "Hiking",
       "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-      "stock": 21
+      "stock": 20
     },
     {
       "id": "4",
@@ -1169,7 +1336,7 @@
       "gender": "unisex",
       "activity": "Camping",
       "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips.",
-      "stock": 29
+      "stock": 28
     },
     {
       "id": "6",
@@ -1180,7 +1347,7 @@
       "gender": "unisex",
       "activity": "Camping",
       "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
-      "stock": 4
+      "stock": 2
     },
     {
       "id": "7",
@@ -1334,7 +1501,7 @@
       "gender": "unisex",
       "activity": "Climbing",
       "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
-      "stock": 45
+      "stock": 44
     }
   ]
 }
