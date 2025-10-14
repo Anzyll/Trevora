@@ -16,20 +16,20 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     const handleChange = () => {
-  const userData = localStorage.getItem("currentUser");
-  if (userData) {
-    try {
-      const user = JSON.parse(userData);
-      setCart(user.cart || []);
-    } catch (error) {
-      console.error("Error parsing cart data:", error);
-      setCart([]);
-    }
-  } else {
-    setCart([]);
-  }
-};
-    handleChange()
+      const userData = localStorage.getItem("currentUser");
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          setCart(user.cart || []);
+        } catch (error) {
+          console.error("Error parsing cart data:", error);
+          setCart([]);
+        }
+      } else {
+        setCart([]);
+      }
+    };
+    handleChange();
     window.addEventListener("storage", handleChange);
     window.addEventListener("logout", handleChange);
 
@@ -59,30 +59,61 @@ export const CartProvider = ({ children }) => {
       );
     } catch (error) {
       console.error("Cart update failed:", error);
-      toast.error('Failed to add product to cart');
+      toast.error("Failed to add product to cart");
     }
   };
 
-  const addToCart = (product) => {
+  const addToCart = async (product) => {
     const existingItem = cart.find((item) => item.id === product.id);
 
-    if (existingItem) {
-      const newCart = cart.map((item) =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-      updateCart(newCart);
-    } else {
-      updateCart([...cart, { ...product, quantity: 1 }]);
-    
+    try {
+      const response = await axios.get(`http://localhost:3001/products/${product.id}`)
+      const latestProduct=response.data
+      if (latestProduct.stock < 1) {
+      toast.error('Product is out of stock');
+      return;
     }
+    await axios.patch(`http://localhost:3001/products/${product.id}`, {
+      stock: latestProduct.stock - 1,
+    });
+
+      if (existingItem) {
+        const newCart = cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+        updateCart(newCart);
+      } else {
+        updateCart([...cart, { ...product, quantity: 1 }]);
+      }
+
       if (localStorage.getItem("currentUser")) {
-      toast.success('Product added to cart!');
+        toast.success("Product added to cart!");
+      }
+    } catch (error) {
+      console.error("Failed to add to cart:", error);
+      toast.error("Failed to add product to cart");
     }
   };
 
-  const removeFromCart = (productId) => {
-    updateCart(cart.filter((item) => item.id !== productId));
-    toast.success('Product Removed from cart!');
+  const removeFromCart = async (productId) => {
+    const item = cart.find((item) => item.id === productId);
+    if (item) {
+      try {
+        const response=await axios.get(`http://localhost:3001/products/${productId}`)
+        const latestProduct=response.data
+        if(latestProduct){
+        await axios.patch(`http://localhost:3001/products/${productId}`, {
+          stock: latestProduct.stock + item.quantity,
+        });}
+      } catch (error) {
+        console.error("Failed to update stock:", error);
+      }
+
+      updateCart(cart.filter((item) => item.id !== productId));
+      toast.success("Product Removed from cart!");
+    }
   };
 
   const updateQuantity = (productId, newQuantity) => {
@@ -96,12 +127,26 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const clearCart = () => {
-    updateCart([]);
-  };
+  const clearCart = async() => {
+      try{
+        for(const item of cart){
+      const response =await axios.get(`http://localhost:3001/products/${item.id}`);
+      const latestProduct=response.data
+      if(latestProduct){
+      await axios.patch(`http://localhost:3001/products/${item.id}`, {
+          stock: latestProduct.stock + item.quantity
+        })}
+      }
+      updateCart([]);
+    toast.success("Cart cleared!");}
+    catch(error){ 
+       console.error("failed to clear cart", error)
+      };
+    
+  }
 
-  const cartCount = cart.reduce((total,item)=>total+item.quantity,0)
-
+  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  
   const value = {
     cart,
     addToCart,

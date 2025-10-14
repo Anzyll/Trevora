@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link,  } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 
 const ProductDetails = () => {
@@ -10,7 +10,7 @@ const ProductDetails = () => {
   const { id } = useParams();
   const {addToCart}=useCart()
 
-  useEffect(() => {
+  
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
@@ -23,11 +23,17 @@ const ProductDetails = () => {
         setLoading(false);
       }
     };
-    fetchProduct();
-  }, [id]);
+    useEffect(()=>{
+     fetchProduct();
+    },[id])
+    
 
-  const handleAddToCart=()=>{
-    addToCart(product)
+
+  const handleAddToCart=async()=>{
+    if(product.stock>0){
+     await addToCart(product)
+    }
+    
   }
 
   if (error) {
@@ -95,6 +101,7 @@ const ProductDetails = () => {
               <p className="text-2xl font-normal text-gray-900">
                 {product.price}
               </p>
+          
             </div>
             <div className="border-t border-gray-200 pt-8">
               <button className="w-full bg-black text-white py-4 px-6 text-base font-medium hover:bg-gray-800 transition-colors mb-4"

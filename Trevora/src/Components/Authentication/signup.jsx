@@ -91,7 +91,7 @@ const Signup = () => {
       }
     }
   };
-
+ 
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-md mx-auto px-6 py-20">

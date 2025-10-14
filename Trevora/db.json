@@ -308,29 +308,19 @@
       "password": "$2b$10$bCfxgBzNY6k9Kajl/31AJOJt9wkmWDvpyBuytgKwm76Dg7CnsKAd.",
       "cart": [
         {
-          "id": "3",
-          "title": "Aluminum Trekking Poles",
-          "price": "₹5,200",
-          "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+          "id": "4",
+          "title": "Women's Climbing Shoes",
+          "price": "₹7,800",
+          "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
           "category": "Gear",
-          "gender": "unisex",
-          "activity": "Hiking",
-          "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-          "quantity": 4
-        }
-      ],
-      "wishlist": [
-        {
-          "id": "2",
-          "title": "Women's Hiking Jacket",
-          "price": "₹10,500",
-          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-          "category": "clothing",
           "gender": "female",
-          "activity": "Hiking",
-          "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks."
+          "activity": "Climbing",
+          "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
+          "stock": 4,
+          "quantity": 1
         }
       ],
+      "wishlist": [],
       "orders": [
         {
           "id": "1760271633348",
@@ -531,6 +521,82 @@
           "address": "bridgeon",
           "paymentMethod": "upi",
           "date": "2025-10-13T10:48:56.827Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760360663221",
+          "items": [
+            {
+              "id": "6",
+              "title": "Camping Tent 6-Person",
+              "price": "₹21,000",
+              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
+              "quantity": 1
+            },
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": "₹10,500",
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "quantity": 1
+            }
+          ],
+          "total": 32000,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-13T13:04:23.221Z",
+          "status": "cancelled"
+        },
+        {
+          "id": "1760419709419",
+          "items": [
+            {
+              "id": "3",
+              "title": "Aluminum Trekking Poles",
+              "price": "₹5,200",
+              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Hiking",
+              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "stock": 20,
+              "quantity": 12
+            }
+          ],
+          "total": 62900,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T05:28:29.419Z",
+          "status": "confirmed"
+        },
+        {
+          "id": "1760419742966",
+          "items": [
+            {
+              "id": "3",
+              "title": "Aluminum Trekking Poles",
+              "price": "₹5,200",
+              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Hiking",
+              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "stock": 19,
+              "quantity": 1
+            }
+          ],
+          "total": 5700,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-14T05:29:02.966Z",
           "status": "confirmed"
         }
       ]
@@ -1058,7 +1124,8 @@
       "category": "clothing",
       "gender": "men",
       "activity": "Hiking",
-      "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort."
+      "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
+      "stock": null
     },
     {
       "id": "2",
@@ -1068,7 +1135,8 @@
       "category": "clothing",
       "gender": "female",
       "activity": "Hiking",
-      "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks."
+      "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+      "stock": 22
     },
     {
       "id": "3",
@@ -1078,7 +1146,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Hiking",
-      "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents."
+      "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+      "stock": 21
     },
     {
       "id": "4",
@@ -1088,7 +1157,8 @@
       "category": "Gear",
       "gender": "female",
       "activity": "Climbing",
-      "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused."
+      "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
+      "stock": 0
     },
     {
       "id": "5",
@@ -1098,7 +1168,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Camping",
-      "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips."
+      "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips.",
+      "stock": 29
     },
     {
       "id": "6",
@@ -1108,7 +1179,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Camping",
-      "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow."
+      "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
+      "stock": 4
     },
     {
       "id": "7",
@@ -1118,7 +1190,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Camping",
-      "description": "A lightweight and compact sleeping bag for 3-season camping. Features synthetic insulation, a soft inner lining, and a compression sack for easy packing."
+      "description": "A lightweight and compact sleeping bag for 3-season camping. Features synthetic insulation, a soft inner lining, and a compression sack for easy packing.",
+      "stock": 18
     },
     {
       "id": "8",
@@ -1128,7 +1201,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Mountain Biking",
-      "description": "Lightweight MTB helmet with MIPS protection system. Ensures superior impact absorption, adjustable fit, and excellent ventilation for trail riding safety."
+      "description": "Lightweight MTB helmet with MIPS protection system. Ensures superior impact absorption, adjustable fit, and excellent ventilation for trail riding safety.",
+      "stock": 14
     },
     {
       "id": "9",
@@ -1138,7 +1212,8 @@
       "category": "clothing",
       "gender": "men",
       "activity": "Hiking",
-      "description": "Durable, water-resistant hiking boots with rugged soles for superior traction. Provide ankle support and comfort for long treks on rocky or muddy trails."
+      "description": "Durable, water-resistant hiking boots with rugged soles for superior traction. Provide ankle support and comfort for long treks on rocky or muddy trails.",
+      "stock": 12
     },
     {
       "id": "10",
@@ -1148,7 +1223,8 @@
       "category": "clothing",
       "gender": "female",
       "activity": "Hiking",
-      "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures."
+      "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures.",
+      "stock": 15
     },
     {
       "id": "11",
@@ -1158,7 +1234,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Fishing",
-      "description": "High-performance graphite fishing rod offering lightweight feel and superior casting distance. Perfect for both freshwater and saltwater fishing."
+      "description": "High-performance graphite fishing rod offering lightweight feel and superior casting distance. Perfect for both freshwater and saltwater fishing.",
+      "stock": 20
     },
     {
       "id": "12",
@@ -1168,7 +1245,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Hiking",
-      "description": "Spacious 40L hiking backpack with multiple compartments. Features breathable back padding, adjustable straps, and a rain cover for all-weather treks."
+      "description": "Spacious 40L hiking backpack with multiple compartments. Features breathable back padding, adjustable straps, and a rain cover for all-weather treks.",
+      "stock": 16
     },
     {
       "id": "13",
@@ -1178,7 +1256,8 @@
       "category": "Clothing",
       "gender": "men",
       "activity": "Hiking",
-      "description": "Water-resistant and stretchable softshell pants that provide comfort and flexibility. Ideal for hiking, trekking, or travel in changing weather."
+      "description": "Water-resistant and stretchable softshell pants that provide comfort and flexibility. Ideal for hiking, trekking, or travel in changing weather.",
+      "stock": 13
     },
     {
       "id": "14",
@@ -1188,7 +1267,8 @@
       "category": "Clothing",
       "gender": "female",
       "activity": "Hiking",
-      "description": "Lightweight and quick-drying outdoor shorts with stretch fabric for easy movement. Perfect for summer hikes, climbing, or everyday outdoor use."
+      "description": "Lightweight and quick-drying outdoor shorts with stretch fabric for easy movement. Perfect for summer hikes, climbing, or everyday outdoor use.",
+      "stock": 14
     },
     {
       "id": "15",
@@ -1198,17 +1278,19 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Camping",
-      "description": "Compact and efficient portable stove ideal for outdoor cooking. Easy to assemble, lightweight, and compatible with standard gas canisters."
+      "description": "Compact and efficient portable stove ideal for outdoor cooking. Easy to assemble, lightweight, and compatible with standard gas canisters.",
+      "stock": 13
     },
     {
       "id": "16",
-      "title": "Men's Waterproof Hiking Jacket",
+      "title": "Men's Waterproof Jacket",
       "price": "₹13,500",
       "image": "https://outdoorpeople.org.uk/cdn/shop/files/velezadventuresmockmossmens_1024x1024.jpg",
       "category": "clothing",
       "gender": "men",
       "activity": "Hiking",
-      "description": "Fully waterproof hiking jacket made from breathable fabric. Designed to keep you dry during heavy rain while maintaining airflow for comfort."
+      "description": "Fully waterproof hiking jacket made from breathable fabric. Designed to keep you dry during heavy rain while maintaining airflow for comfort.",
+      "stock": 12
     },
     {
       "id": "17",
@@ -1218,7 +1300,8 @@
       "category": "Clothing",
       "gender": "female",
       "activity": "Camping",
-      "description": "Soft and cozy fleece hoodie made for cool evenings by the campfire. Provides warmth without bulk and is perfect for layering during outdoor trips."
+      "description": "Soft and cozy fleece hoodie made for cool evenings by the campfire. Provides warmth without bulk and is perfect for layering during outdoor trips.",
+      "stock": 12
     },
     {
       "id": "18",
@@ -1228,7 +1311,8 @@
       "category": "Gear",
       "gender": "men",
       "activity": "Mountain Biking",
-      "description": "Durable MTB gloves offering excellent grip, knuckle protection, and breathability. Designed for rough terrain and long trail rides."
+      "description": "Durable MTB gloves offering excellent grip, knuckle protection, and breathability. Designed for rough terrain and long trail rides.",
+      "stock": 19
     },
     {
       "id": "19",
@@ -1238,7 +1322,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Camping",
-      "description": "Lightweight yet sturdy camping chair that folds easily into a carry bag. Perfect for campfires, picnics, and outdoor adventures."
+      "description": "Lightweight yet sturdy camping chair that folds easily into a carry bag. Perfect for campfires, picnics, and outdoor adventures.",
+      "stock": 18
     },
     {
       "id": "20",
@@ -1248,7 +1333,8 @@
       "category": "Gear",
       "gender": "unisex",
       "activity": "Climbing",
-      "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions."
+      "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
+      "stock": 45
     }
   ]
 }

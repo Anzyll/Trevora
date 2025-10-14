@@ -13,6 +13,21 @@ const ProductPage = () => {
   const [selectedActivity, setSelectedActivity] = useState("");
   const [search, setSearch] = useState("");
   
+    // Fetch products on component mount
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get("http://localhost:3001/products");
+        setProducts(response.data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message, "failed to fetch");
+        setLoading(false);
+      }
+    };
+    fetchProducts();
+  }, []);
 
    
   useEffect(() => {
@@ -39,20 +54,7 @@ const ProductPage = () => {
       setSearch("")
     }
   }, [location.search]);
-  // Fetch products on component mount
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("http://localhost:3001/products");
-        setProducts(response.data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message, "failed to fetch");
-        setLoading(false);
-      }
-    };
-    fetchProducts();
-  }, []);
+
 
   // Filter by category , sort by price and by search
   const filteredAndSortedProducts = products
