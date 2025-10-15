@@ -14,6 +14,8 @@ import Checkout from "./Pages/Checkout";
 import Payment from "./Pages/Payment";
 import OrderSuccess from "./Pages/OrderSuccess";
 import OrderHistory from "./Pages/Orders";
+import AdminDashboard from "./admin/pages/AdminDashboard";
+
 
 const App = () => {
   return (
@@ -33,6 +35,7 @@ const App = () => {
         <Route path="/payment" element={<Payment />} />
         <Route path="/order-success" element={<OrderSuccess />} />
          <Route path="/orders" element={<OrderHistory />} />
+         <Route path="/admin/dashboard" element={<AdminDashboard />} />
       </Routes>
       <Footer />
     </>

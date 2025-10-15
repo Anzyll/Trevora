@@ -24,8 +24,12 @@ const LoginForm = () => {
 
   useEffect(() => {
     const user = localStorage.getItem("currentUser");
+    const admin = localStorage.getItem("adminUser")
     if (user) {
       navigate("/home");
+    }
+    if(admin){
+      navigate("/home")
     }
   }, [navigate]);
 
@@ -74,12 +78,20 @@ const LoginForm = () => {
         toast.error("Incorrect email or password");
         return;
       }
+      if(!user.isAdmin){
       toast.success("Login successful!");
-
-      // Save logged-in user to localStorage
+      }
+      if(user.isAdmin){
+        localStorage.setItem("adminUser",JSON.stringify(user))
+        toast.success("Admin login sucessfull")
+       window.dispatchEvent(new Event('storage'));
+        navigate("/home")
+      }
+      else{
       localStorage.setItem("currentUser", JSON.stringify(user));
       window.dispatchEvent(new Event("storage"));
       navigate("/home");
+      }
     } catch (err) {
       console.error(err);
       setErrors({ general: "something went wrong. Please try again" });
