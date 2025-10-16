@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     const handleChange = () => {
-  const userData = localStorage.getItem("currentUser");
+  const userData = (localStorage.getItem("currentUser") ||localStorage.getItem("adminUser"));
   if (userData) {
     try {
       const user = JSON.parse(userData);
@@ -40,7 +40,7 @@ export const CartProvider = ({ children }) => {
   }, []);
 
   const updateCart = async (newCart) => {
-    const userData = localStorage.getItem("currentUser");
+    const userData = (localStorage.getItem("currentUser")||localStorage.getItem("adminUser"));
     if (!userData) {
       return;
     }
@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
       });
       setCart(newCart);
       localStorage.setItem(
-        "currentUser",
+        "currentUser"||"adminUser",
         JSON.stringify({
           ...user,
           cart: newCart,
@@ -75,7 +75,7 @@ export const CartProvider = ({ children }) => {
       updateCart([...cart, { ...product, quantity: 1 }]);
 
     }
-      if (localStorage.getItem("currentUser")) {
+      if (localStorage.getItem("currentUser")||localStorage.getItem("adminUser")) {
       toast.success('Product added to cart!');
     }
   };

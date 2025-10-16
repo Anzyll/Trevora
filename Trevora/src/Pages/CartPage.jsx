@@ -9,7 +9,7 @@ const CartPage = () => {
   const [user, setUser] = useState(null);
 
   useEffect(()=>{
-const userData = localStorage.getItem("currentUser")
+const userData = (localStorage.getItem("currentUser") ||localStorage.getItem("adminUser"))
 if(userData){
   setUser(JSON.parse(userData))
 }

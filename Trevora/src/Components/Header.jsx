@@ -144,7 +144,7 @@ const Header = () => {
           </button>
 
           <div className="flex items-center space-x-2">
-             {user && user.isAdmin && (
+            {user && user.isAdmin && (
               <button
                 onClick={() => navigate("/admin/dashboard")}
                 className="bg-gray-800 text-white px-2 py-1 rounded text-sm hover:bg-black transition-colors "
@@ -315,14 +315,19 @@ const Header = () => {
                       d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                     />
                   </svg>
-                   {user && user.isAdmin && (
-              <button
-                onClick={() => navigate("/admin/dashboard")}
-                className="bg-gray-800 text-white px-2 py-1 m-3 rounded text-sm hover:bg-black transition-colors "
-              >
-                Admin
-              </button>
-            )}
+
+                  {user && user.isAdmin ? (
+                    <button
+                      onClick={() => navigate("/admin/dashboard")}
+                      className="bg-gray-800 text-white px-2 py-1 m-3 rounded text-sm hover:bg-black transition-colors "
+                    >
+                      Admin
+                    </button>
+                  ) : (
+                    <span className="text-xs font-medium">
+                      {user.email.split("@")[0]}
+                    </span>
+                  )}
                 </div>
                 <button
                   onClick={handleLogout}
@@ -405,10 +410,7 @@ const Header = () => {
                 </span>
               )}
             </button>
-           
-           
           </div>
-           
         </div>
         {/* Mobile menu */}
         {isMenuOpen && (
@@ -542,7 +544,6 @@ const Header = () => {
                     </svg>
                     <span className="text-xs">Account</span>
                   </button>
-                  
                 )}
               </div>
             </div>

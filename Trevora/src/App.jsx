@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Home from "./Pages/Home";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import LoginForm from "./Components/Authentication/Login";
 import Signup from "./Components/Authentication/signup";
 import Footer from "./Components/Footer";
@@ -15,13 +15,16 @@ import Payment from "./Pages/Payment";
 import OrderSuccess from "./Pages/OrderSuccess";
 import OrderHistory from "./Pages/Orders";
 import AdminDashboard from "./admin/pages/AdminDashboard";
+import ProductManagement from "./admin/pages/ProductManagement";
 
 
 const App = () => {
+  const location =useLocation()
+  const isAdmin=location.pathname.startsWith('/admin')
   return (
     <>
       <ScrollToTop />
-      <Header />
+     {!isAdmin &&< Header />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -36,8 +39,9 @@ const App = () => {
         <Route path="/order-success" element={<OrderSuccess />} />
          <Route path="/orders" element={<OrderHistory />} />
          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+         <Route path="/admin/productmanagement" element={<ProductManagement />} />
       </Routes>
-      <Footer />
+      {!isAdmin &&<Footer />}
     </>
   );
 };

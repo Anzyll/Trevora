@@ -1,15 +1,22 @@
 import React from "react";
+import {  useNavigate } from "react-router-dom";
 
 const AdminHeader = ({ activeTab, setActiveTab }) => {
   const user = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const navigate = useNavigate();
+  
 
   const tabs = [
-    { key: "overview", label: "Overview" },
-    { key: "products", label: "Products" },
+    { key: "overview", label: "Overview", path: "/admin/dashboard" },
+    { key: "products", label: "Products", path: "/admin/productmanagement" },
     { key: "orders", label: "Orders" },
     { key: "users", label: "Users" },
   ];
-
+  const handleTab=(tab)=>{
+     setActiveTab(tab.key)
+     if(tab.path){
+     navigate(tab.path)}
+  }
   return (
     <header className="bg-white shadow-sm border-b border-gray-200">
       <div className="flex justify-between items-center px-6 py-4">
@@ -19,8 +26,19 @@ const AdminHeader = ({ activeTab, setActiveTab }) => {
             Welcome back, {user.fullName || "Admin"}
           </p>
         </div>
-
+       
         <div className="flex items-center space-x-4">
+          <button onClick={()=>navigate("/home")}><svg xmlns="http://www.w3.org/2000/svg" 
+     fill="none" 
+     viewBox="0 0 24 24" 
+     stroke-width="2" 
+     stroke="currentColor" 
+     class="w-6 h-6">
+  <path stroke-linecap="round" 
+        stroke-linejoin="round" 
+        d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M18 12l3-3m0 0l-3-3m3 3H9" />
+</svg>
+</button>
           <div className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white font-semibold">
             {user.fullName ? user.fullName.charAt(0).toUpperCase() : "A"}
           </div>
@@ -33,7 +51,7 @@ const AdminHeader = ({ activeTab, setActiveTab }) => {
             {tabs.map((tab) => (
               <button
                 key={tab.key}
-                onClick={() => setActiveTab(tab.key)}
+                onClick={()=>handleTab(tab)}
                 className={`
                   py-4 px-1 border-b-2 font-medium text-sm transition-colors
                   ${
