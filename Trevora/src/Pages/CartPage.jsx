@@ -14,13 +14,14 @@ if(userData){
   setUser(JSON.parse(userData))
 }
 },[])
+console.log("Cart items:", cart);
+const subtotal = cart.reduce((total, item) => {
+  const price = Number(item.price) || 0;    
+  const quantity = Number(item.quantity) || 0; 
+  return total + price * quantity;
+}, 0);
 
-const subtotal=cart.reduce((total,item)=>{
-  const price = parseFloat(item.price.replace(/[^0-9.-]+/g, ""));
- return total+(price*item.quantity)
-
-},0)
- const total=subtotal;
+const total = subtotal;
 
   if (!user) {
     return (

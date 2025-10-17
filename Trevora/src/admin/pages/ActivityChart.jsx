@@ -18,7 +18,7 @@ const ActivityProgressChart = ({ orders }) => {
             };
           }
           activityData[activity].sales += item.quantity;
-          activityData[activity].revenue += (parseFloat(item.price.replace(/[^0-9.-]+/g, "")) * item.quantity);
+          activityData[activity].revenue +=(item.price * item.quantity);
           activityData[activity].orders += 1;
         });
       });

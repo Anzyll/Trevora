@@ -53,7 +53,7 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <AdminHeader activeTab={activeTab} setActiveTab={setActiveTab} />
+
 
       <main className="p-4 lg:p-6">
         <div className="space-y-6">

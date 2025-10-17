@@ -6,22 +6,13 @@
       "email": "admin@example.com",
       "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
       "isAdmin": true,
-      "cart": [
-        {
-          "id": 1760604722664,
-          "title": "Trekking Shoes for men",
-          "category": "Clothing",
-          "price": 8900,
-          "stock": 20,
-          "image": "https://m.media-amazon.com/images/I/71jucJHKGrL._SL1500_.jpg",
-          "quantity": 1
-        }
-      ],
+      "joinDate": "2025-10-16T18:50:23.103Z",
+      "cart": [],
       "wishlist": [
         {
           "id": "20",
           "title": "Climbing Chalk Bag",
-          "price": "₹1,200",
+          "price": 1200,
           "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
           "category": "Gear",
           "gender": "unisex",
@@ -37,7 +28,7 @@
             {
               "id": "1",
               "title": "Men's Retro Pile Jacket",
-              "price": "₹12,000",
+              "price": 12000,
               "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
               "category": "clothing",
               "gender": "men",
@@ -52,1420 +43,268 @@
           "paymentMethod": "cod",
           "date": "2025-10-15T14:51:48.694Z",
           "status": "cancelled"
-        }
-      ]
-    },
-    {
-      "id": "9ea0",
-      "fullName": "irfan",
-      "email": "irfan@gmail.com",
-      "password": "$2b$10$3akLWWaW8MhFY11SkhcZKel9o2RrcDGQmHp.FWukeTkYXomAdbAN2",
-      "cart": [],
-      "wishlist": [],
-      "orders": []
-    },
-    {
-      "id": "6163",
-      "fullName": "nimshi",
-      "email": "nimshi@gmail.com",
-      "password": "$2b$10$thuLSrGS.u121uVHudEGOeUxidpq0T76wU6/qAJBA8ePV7qzuDbvK",
-      "cart": [],
-      "wishlist": [],
-      "orders": []
-    },
-    {
-      "id": "7091",
-      "fullName": "naheel",
-      "email": "naheel@gmail.com",
-      "password": "$2b$10$C53OkCA0C5fawXo6eN.Ed.Y.wBHI6EkDHUqR8XKD.Y.kBbkJNBPk.",
-      "cart": [
-        {
-          "id": "4",
-          "title": "Women's Climbing Shoes",
-          "price": "₹7,800",
-          "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-          "category": "Gear",
-          "gender": "female",
-          "activity": "Climbing",
-          "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-          "quantity": 1
         },
         {
-          "id": "2",
-          "title": "Women's Hiking Jacket",
-          "price": "₹10,500",
-          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-          "category": "clothing",
-          "gender": "female",
-          "activity": "Hiking",
-          "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-          "stock": 22,
-          "quantity": 1
-        }
-      ],
-      "wishlist": [
-        {
-          "id": "3",
-          "title": "Aluminum Trekking Poles",
-          "price": "₹5,200",
-          "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-          "category": "Gear",
-          "gender": "unisex",
-          "activity": "Hiking",
-          "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-          "stock": 20
-        },
-        {
-          "id": "1",
-          "title": "Men's Retro Pile Jacket",
-          "price": "₹12,000",
-          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-          "category": "clothing",
-          "gender": "men",
-          "activity": "Hiking",
-          "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-          "stock": 13
-        }
-      ],
-      "orders": [
-        {
-          "id": "1760268384835",
+          "id": "1760677722296",
           "items": [
             {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 3
-            }
-          ],
-          "total": 32000,
-          "address": "bridgeon\n",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T11:26:24.835Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760271458750",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 3
-            }
-          ],
-          "total": 32000,
-          "address": "bridgeon\n",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T12:17:38.750Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760271595131",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "bridgeon\n",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T12:19:55.131Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760278427171",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 2
-            }
-          ],
-          "total": 10900,
-          "address": "Ali",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T14:13:47.171Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760286407729",
-          "items": [
-            {
-              "id": "7",
-              "title": "Sleeping Bag - Lightweight",
-              "price": "₹6,800",
-              "image": "https://www.hacer.in/media/catalog/product/1/_/1_176.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "A lightweight and compact sleeping bag for 3-season camping. Features synthetic insulation, a soft inner lining, and a compression sack for easy packing.",
+              "id": 1760604722664,
+              "title": "Trekking Shoes for men",
+              "category": "Clothing",
+              "price": 8900,
+              "stock": 20,
+              "image": "https://m.media-amazon.com/images/I/71jucJHKGrL._SL1500_.jpg",
               "quantity": 1
             },
             {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
+              "id": "1",
+              "title": "Men's Retro Pile Jacket",
+              "price": 12000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "men",
               "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
+              "stock": 60,
               "quantity": 1
             }
           ],
-          "total": 12500,
-          "address": "bridgeon",
+          "total": 9400,
+          "address": "admin",
           "paymentMethod": "cod",
-          "date": "2025-10-12T16:26:47.729Z",
-          "status": "confirmed"
+          "date": "2025-10-17T05:08:42.296Z",
+          "status": "delivered"
         },
         {
-          "id": "1760287325147",
+          "id": "1760679942019",
+          "items": [
+            {
+              "id": "1",
+              "title": "Men's Retro Pile Jacket",
+              "price": 12000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "men",
+              "activity": "Hiking",
+              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
+              "stock": 59,
+              "quantity": 1
+            },
+            {
+              "id": "19",
+              "title": "Ultralight Camping Chair",
+              "price": 6500,
+              "image": "https://bf1af2.akinoncloudcdn.com/products/2024/12/16/321960/9b896d0f-5f58-4484-bda5-552dccef5c99_size3840_cropCenter.jpg",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Camping",
+              "description": "Lightweight yet sturdy camping chair that folds easily into a carry bag. Perfect for campfires, picnics, and outdoor adventures.",
+              "stock": 25,
+              "quantity": 1
+            }
+          ],
+          "total": 19000,
+          "address": "admin",
+          "paymentMethod": "cod",
+          "date": "2025-10-17T05:45:42.019Z",
+          "status": "delivered"
+        },
+        {
+          "id": "1760696012267",
           "items": [
             {
               "id": "2",
               "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
+              "price": 10000,
               "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
               "category": "clothing",
               "gender": "female",
               "activity": "Hiking",
               "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 3
-            }
-          ],
-          "total": 32000,
-          "address": "bridgeon",
-          "paymentMethod": "upi",
-          "date": "2025-10-12T16:42:05.147Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760289967160",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 5
-            }
-          ],
-          "total": 53000,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T17:26:07.160Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760333554537",
-          "items": [
+              "stock": 24,
+              "quantity": 1
+            },
             {
               "id": "4",
               "title": "Women's Climbing Shoes",
-              "price": "₹7,800",
+              "price": 8000,
               "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
               "category": "Gear",
               "gender": "female",
               "activity": "Climbing",
               "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
+              "stock": 20,
+              "quantity": 1
+            }
+          ],
+          "total": 18500,
+          "address": "bridgeon\n",
+          "paymentMethod": "cod",
+          "date": "2025-10-17T10:13:32.267Z",
+          "status": "confirmed"
+        }
+      ],
+      "isBlock": false
+    },
+    {
+      "id": "05c2",
+      "joinDate": "2025-10-16T18:50:23.103Z",
+      "fullName": "anzil",
+      "email": "anzil@gmail.com",
+      "password": "$2b$10$2zmc44Cwk.uBHvpG2pypcO3JMTQa871WmvUpyz3r0Dtid7vaFRhQy",
+      "isBlock": false,
+      "cart": [],
+      "wishlist": [],
+      "orders": [
+        {
+          "id": "1760680723616",
+          "items": [
+            {
+              "id": "1",
+              "title": "Men's Retro Pile Jacket",
+              "price": 12000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "men",
+              "activity": "Hiking",
+              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
+              "stock": 57,
               "quantity": 1
             },
             {
-              "id": "8",
-              "title": "Mountain Biking Helmet",
-              "price": "₹6,000",
-              "image": "https://alpkit.com/cdn/shop/files/smith-convoy-mips-mtb-helmet-black-side.jpg?v=1744010852&width=768",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Mountain Biking",
-              "description": "Lightweight MTB helmet with MIPS protection system. Ensures superior impact absorption, adjustable fit, and excellent ventilation for trail riding safety.",
-              "quantity": 3
-            }
-          ],
-          "total": 26300,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T05:32:34.537Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760433931730",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
               "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 25,
+              "quantity": 1
+            },
+            {
+              "id": "4",
+              "title": "Women's Climbing Shoes",
+              "price": 8000,
+              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
+              "category": "Gear",
+              "gender": "female",
+              "activity": "Climbing",
+              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
               "stock": 21,
               "quantity": 1
-            },
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "stock": 22,
-              "quantity": 1
             }
           ],
-          "total": 16200,
-          "address": "BRIDGEON",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T09:25:31.730Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760447735212",
-          "items": [
-            {
-              "id": "20",
-              "title": "Climbing Chalk Bag",
-              "price": "₹1,200",
-              "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Climbing",
-              "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
-              "stock": 45,
-              "quantity": 1
-            }
-          ],
-          "total": 1700,
-          "address": "BRIDGEON",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T13:15:35.212Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760449966540",
-          "items": [
-            {
-              "id": "5",
-              "title": "Camping Tent 2-Person",
-              "price": "₹12,500",
-              "image": "https://www.mountainexperience.it/37286-medium_default/sea-to-summit-alto-tr2.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips.",
-              "stock": 29,
-              "quantity": 1
-            }
-          ],
-          "total": 13000,
-          "address": "BRIDGEON",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T13:52:46.540Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760449996724",
-          "items": [
-            {
-              "id": "6",
-              "title": "Camping Tent 6-Person",
-              "price": "₹21,000",
-              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
-              "stock": 4,
-              "quantity": 1
-            }
-          ],
-          "total": 21500,
-          "address": "BRIDGEON",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T13:53:16.724Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760451089411",
-          "items": [
-            {
-              "id": "6",
-              "title": "Camping Tent 6-Person",
-              "price": "₹21,000",
-              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
-              "stock": 3,
-              "quantity": 1
-            }
-          ],
-          "total": 21500,
-          "address": "BRIDGEON",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T14:11:29.411Z",
-          "status": "cancelled"
-        },
-        {
-          "id": "1760452145262",
-          "items": [
-            {
-              "id": "6",
-              "title": "Camping Tent 6-Person",
-              "price": "₹21,000",
-              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
-              "stock": 2,
-              "quantity": 1
-            }
-          ],
-          "total": 21500,
-          "address": "BRIDGEON",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T14:29:05.262Z",
-          "status": "cancelled"
-        },
-        {
-          "id": "1760503193395",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "stock": 22,
-              "quantity": 1
-            },
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "stock": 20,
-              "quantity": 4
-            }
-          ],
-          "total": 31800,
+          "total": 30500,
           "address": "bridgeon",
           "paymentMethod": "cod",
-          "date": "2025-10-15T04:39:53.395Z",
-          "status": "cancelled"
-        },
+          "date": "2025-10-17T05:58:43.616Z",
+          "status": "delivered"
+        }
+      ]
+    },
+    {
+      "id": "e87f",
+      "joinDate": "2025-10-17T05:54:15.831Z",
+      "fullName": "irfan",
+      "email": "irfan@gmail.com",
+      "password": "$2b$10$pr/sOJYZejF2gbUzxoIhVOPGhiwjH7WL7nWDVurcAsQTJ4uYXnr.2",
+      "isBlock": false,
+      "cart": [],
+      "wishlist": [],
+      "orders": [
         {
-          "id": "1760521657507",
+          "id": "1760680530223",
           "items": [
             {
-              "id": "17",
-              "title": "Women's Fleece Hoodie",
-              "price": "₹6,000",
-              "image": "https://contents.mediadecathlon.com/p2119004/99681d99c9a9b14c331ca8d00422e4f6/p2119004.jpg",
-              "category": "Clothing",
-              "gender": "female",
-              "activity": "Camping",
-              "description": "Soft and cozy fleece hoodie made for cool evenings by the campfire. Provides warmth without bulk and is perfect for layering during outdoor trips.",
+              "id": "16",
+              "title": "Men's Waterproof Jacket",
+              "price": 13500,
+              "image": "https://outdoorpeople.org.uk/cdn/shop/files/velezadventuresmockmossmens_1024x1024.jpg",
+              "category": "clothing",
+              "gender": "men",
+              "activity": "Hiking",
+              "description": "Fully waterproof hiking jacket made from breathable fabric. Designed to keep you dry during heavy rain while maintaining airflow for comfort.",
               "stock": 12,
-              "quantity": 4
-            }
-          ],
-          "total": 24500,
-          "address": "Bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-15T09:47:37.507Z",
-          "status": "cancelled"
-        }
-      ]
-    },
-    {
-      "id": "0bd0",
-      "fullName": "anzill",
-      "email": "anzilq@gmail.com",
-      "password": "$2b$10$hRAgsNQCz9K3ho.lK3bh.OhbtysHVzonzAhrsevfHTcRceyh2fx1O",
-      "cart": [],
-      "wishlist": [],
-      "orders": []
-    },
-    {
-      "id": "5209",
-      "fullName": "mishal",
-      "email": "mishal@gmail.com",
-      "password": "$2b$10$SycH/WpufTFrdqgqnRd7ouRn5DBkexJKPNn.2MjTdHifvqai/nXB.",
-      "cart": [],
-      "wishlist": [],
-      "orders": [
-        {
-          "id": "1760277608946",
-          "items": [
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": "₹12,000",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
               "quantity": 1
             },
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            },
-            {
-              "id": "8",
-              "title": "Mountain Biking Helmet",
-              "price": "₹6,000",
-              "image": "https://alpkit.com/cdn/shop/files/smith-convoy-mips-mtb-helmet-black-side.jpg?v=1744010852&width=768",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Mountain Biking",
-              "description": "Lightweight MTB helmet with MIPS protection system. Ensures superior impact absorption, adjustable fit, and excellent ventilation for trail riding safety.",
-              "quantity": 1
-            }
-          ],
-          "total": 29000,
-          "address": "home",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T14:00:08.946Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760278117533",
-          "items": [
             {
               "id": "3",
               "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "home",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T14:08:37.533Z",
-          "status": "delivered"
-        }
-      ]
-    },
-    {
-      "id": "548a",
-      "fullName": "nabeel",
-      "email": "nabeel@gmail.com",
-      "password": "$2b$10$bCfxgBzNY6k9Kajl/31AJOJt9wkmWDvpyBuytgKwm76Dg7CnsKAd.",
-      "cart": [],
-      "wishlist": [],
-      "orders": [
-        {
-          "id": "1760271633348",
-          "items": [
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": "₹12,000",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "quantity": 1
-            },
-            {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": "₹7,800",
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
-              "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "quantity": 2
-            },
-            {
-              "id": "12",
-              "title": "Outdoor Backpack 40L",
-              "price": "₹8,000",
-              "image": "https://m.media-amazon.com/images/I/71zi7+fdf9L._UY1100_.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Spacious 40L hiking backpack with multiple compartments. Features breathable back padding, adjustable straps, and a rain cover for all-weather treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 36100,
-          "address": "calicut",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T12:20:33.348Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760271966510",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "calicut",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T12:26:06.510Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760276011752",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 11000,
-          "address": "hh",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:33:31.752Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760327345798",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 6
-            },
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 2
-            }
-          ],
-          "total": 52700,
-          "address": "bridgeon ",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T03:49:05.798Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760327468632",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 11000,
-          "address": "bridgeon ",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T03:51:08.632Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760352420127",
-          "items": [
-            {
-              "id": "5",
-              "title": "Camping Tent 2-Person",
-              "price": "₹12,500",
-              "image": "https://www.mountainexperience.it/37286-medium_default/sea-to-summit-alto-tr2.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips.",
-              "quantity": 1
-            }
-          ],
-          "total": 13000,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T10:47:00.127Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760352456527",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "bridgeon",
-          "paymentMethod": "upi",
-          "date": "2025-10-13T10:47:36.527Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760352536827",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 11000,
-          "address": "bridgeon",
-          "paymentMethod": "upi",
-          "date": "2025-10-13T10:48:56.827Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760360663221",
-          "items": [
-            {
-              "id": "6",
-              "title": "Camping Tent 6-Person",
-              "price": "₹21,000",
-              "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
-              "quantity": 1
-            },
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 32000,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T13:04:23.221Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760419709419",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
+              "price": 5200,
               "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
               "category": "Gear",
               "gender": "unisex",
               "activity": "Hiking",
               "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
               "stock": 20,
-              "quantity": 12
-            }
-          ],
-          "total": 62900,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T05:28:29.419Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760419742966",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "stock": 19,
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-14T05:29:02.966Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760511301725",
-          "items": [
-            {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": "₹7,800",
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
-              "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "stock": 4,
               "quantity": 1
             },
             {
               "id": "1",
               "title": "Men's Retro Pile Jacket",
-              "price": "₹12,000",
+              "price": 12000,
               "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
               "category": "clothing",
               "gender": "men",
               "activity": "Hiking",
               "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 13,
-              "quantity": 10
+              "stock": 58,
+              "quantity": 1
             }
           ],
-          "total": 128300,
-          "address": "home",
-          "paymentMethod": "cod",
-          "date": "2025-10-15T06:55:01.725Z",
+          "total": 31200,
+          "address": "kinfra",
+          "paymentMethod": "upi",
+          "date": "2025-10-17T05:55:30.223Z",
           "status": "confirmed"
         }
       ]
     },
     {
-      "id": "5f70",
-      "fullName": "haifa",
-      "email": "haifa@gmail.com",
-      "password": "$2b$10$faCxOrmSd.3GfsTADHPwVeE9o1Vaz163u6KByEYdK27OvCwC99m8i",
-      "cart": [],
-      "wishlist": [],
-      "orders": []
-    },
-    {
-      "id": "5879",
-      "fullName": "nizar",
-      "email": "nizar@gmail.com",
-      "password": "$2b$10$QrggS/Q94NN2RtSi9gSn3uZKfJyjFEtGOZ4aXkcXftUjDArrQT0D6",
+      "id": "6a4b",
+      "joinDate": "2025-10-17T05:55:57.921Z",
+      "fullName": "nimshi",
+      "email": "nimshi@gmail.com",
+      "password": "$2b$10$r3YH0b//g7c7vZ1nd9F3j.SnIyoy6oUUwNuNICfE7enZCp3UIFiw6",
+      "isBlock": true,
       "cart": [],
       "wishlist": [],
       "orders": [
         {
-          "id": "1760273623317",
+          "id": "1760680621432",
           "items": [
             {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T12:53:43.317Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760273661400",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T12:54:21.400Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760274027709",
-          "items": [
-            {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": "₹7,800",
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
-              "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "quantity": 1
-            }
-          ],
-          "total": 8300,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:00:27.709Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760274572125",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "id": "10",
+              "title": "Women's Hiking Boots",
+              "price": 10500,
+              "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
               "category": "clothing",
               "gender": "female",
               "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures.",
+              "stock": 15,
               "quantity": 1
-            }
-          ],
-          "total": 11000,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:09:32.125Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760274818327",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:13:38.327Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760274900339",
-          "items": [
+            },
             {
               "id": "15",
               "title": "Portable Camping Stove",
-              "price": "₹3,800",
+              "price": 4500,
               "image": "https://static.wixstatic.com/media/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg",
               "category": "Gear",
               "gender": "unisex",
               "activity": "Camping",
               "description": "Compact and efficient portable stove ideal for outdoor cooking. Easy to assemble, lightweight, and compatible with standard gas canisters.",
+              "stock": 13,
               "quantity": 1
             }
           ],
-          "total": 4300,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:15:00.339Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760275003423",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 11000,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:16:43.423Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760275123456",
-          "items": [
-            {
-              "id": "20",
-              "title": "Climbing Chalk Bag",
-              "price": "₹1,200",
-              "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Climbing",
-              "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
-              "quantity": 1
-            }
-          ],
-          "total": 1700,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:18:43.456Z",
-          "status": "confirmed"
-        },
-        {
-          "id": "1760275379553",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 2
-            }
-          ],
-          "total": 10900,
-          "address": "calicut university",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T13:22:59.553Z",
-          "status": "confirmed"
-        }
-      ]
-    },
-    {
-      "id": "1cab",
-      "fullName": "diya",
-      "email": "diya@gmail.com",
-      "password": "$2b$10$wh5E9zdQIPe8SOWvrXG1JeprOvVlLMGl9fUOV1LkhinghfIyg/hMW",
-      "cart": [],
-      "wishlist": [],
-      "orders": []
-    },
-    {
-      "id": "c7ad",
-      "fullName": "anzil",
-      "email": "anz@gmaiil.com",
-      "password": "$2b$10$CSArCn7Tiw.b7ufu6oHtyORjKSehioxBlcMdMnxWPEELWRnz8Rs5C",
-      "cart": [],
-      "wishlist": [],
-      "orders": [
-        {
-          "id": "1760282234349",
-          "items": [
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 5700,
-          "address": "haai",
-          "paymentMethod": "cod",
-          "date": "2025-10-12T15:17:14.349Z",
-          "status": "confirmed"
-        }
-      ]
-    },
-    {
-      "id": "af39",
-      "fullName": "irfan",
-      "email": "irfan123@gmail.com",
-      "password": "$2b$10$xE9oWtQAS9MrwLx83JPXy.h1KjHzHnMdNiFx5GjU1XPtb8VZzHTUa",
-      "cart": [],
-      "wishlist": [],
-      "orders": [
-        {
-          "id": "1760327844752",
-          "items": [
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": "₹12,000",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "quantity": 1
-            },
-            {
-              "id": "9",
-              "title": "Men's Hiking Boots",
-              "price": "₹11,000",
-              "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/2024/AUGUST/3/pGAWAwqo_a6805a57052640a697e59380b5a68248.jpg",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "Durable, water-resistant hiking boots with rugged soles for superior traction. Provide ankle support and comfort for long treks on rocky or muddy trails.",
-              "quantity": 1
-            }
-          ],
-          "total": 23500,
-          "address": "kinfra kakencherry\n",
-          "paymentMethod": "upi",
-          "date": "2025-10-13T03:57:24.752Z",
+          "total": 15500,
+          "address": "bridgeon",
+          "paymentMethod": "card",
+          "date": "2025-10-17T05:57:01.432Z",
           "status": "cancelled"
-        },
-        {
-          "id": "1760331841411",
-          "items": [
-            {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": "₹7,800",
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
-              "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "quantity": 1
-            },
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 3
-            }
-          ],
-          "total": 23900,
-          "address": "kinfra kakencherry\n",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T05:04:01.411Z",
-          "status": "confirmed"
-        }
-      ]
-    },
-    {
-      "id": "5f76",
-      "fullName": "mishal",
-      "email": "mishal2@gmail.com",
-      "password": "$2b$10$vkGRxAYLYozuo7BIV.wF/.uM4XTCO18s1wRBt5FSM36HNDxETsM8y",
-      "cart": [],
-      "wishlist": [
-        {
-          "id": "2",
-          "title": "Women's Hiking Jacket",
-          "price": "₹10,500",
-          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-          "category": "clothing",
-          "gender": "female",
-          "activity": "Hiking",
-          "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks."
-        }
-      ],
-      "orders": [
-        {
-          "id": "1760332195092",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 2
-            },
-            {
-              "id": "20",
-              "title": "Climbing Chalk Bag",
-              "price": "₹1,200",
-              "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Climbing",
-              "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
-              "quantity": 1
-            }
-          ],
-          "total": 22700,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T05:09:55.092Z",
-          "status": "cancelled"
-        }
-      ]
-    },
-    {
-      "id": "6480",
-      "fullName": "neethu",
-      "email": "neethu@gmail.com",
-      "password": "$2b$10$ha2RMDHSyJ/1hYefTIhYtOxnoYCr0DBYVJuiaKsY4cojinV/BRwTu",
-      "cart": [
-        {
-          "id": "3",
-          "title": "Aluminum Trekking Poles",
-          "price": "₹5,200",
-          "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-          "category": "Gear",
-          "gender": "unisex",
-          "activity": "Hiking",
-          "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-          "quantity": 6
-        }
-      ],
-      "wishlist": [
-        {
-          "id": "1",
-          "title": "Men's Retro Pile Jacket",
-          "price": "₹12,000",
-          "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-          "category": "clothing",
-          "gender": "men",
-          "activity": "Hiking",
-          "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort."
-        }
-      ],
-      "orders": [
-        {
-          "id": "1760333798169",
-          "items": [
-            {
-              "id": "10",
-              "title": "Women's Hiking Boots",
-              "price": "₹10,500",
-              "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures.",
-              "quantity": 2
-            },
-            {
-              "id": "17",
-              "title": "Women's Fleece Hoodie",
-              "price": "₹6,000",
-              "image": "https://contents.mediadecathlon.com/p2119004/99681d99c9a9b14c331ca8d00422e4f6/p2119004.jpg",
-              "category": "Clothing",
-              "gender": "female",
-              "activity": "Camping",
-              "description": "Soft and cozy fleece hoodie made for cool evenings by the campfire. Provides warmth without bulk and is perfect for layering during outdoor trips.",
-              "quantity": 1
-            },
-            {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": "₹5,200",
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "quantity": 1
-            }
-          ],
-          "total": 32700,
-          "address": "bridgeon kakenchery",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T05:36:38.169Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760340597305",
-          "items": [
-            {
-              "id": "10",
-              "title": "Women's Hiking Boots",
-              "price": "₹10,500",
-              "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures.",
-              "quantity": 1
-            },
-            {
-              "id": "12",
-              "title": "Outdoor Backpack 40L",
-              "price": "₹8,000",
-              "image": "https://m.media-amazon.com/images/I/71zi7+fdf9L._UY1100_.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Spacious 40L hiking backpack with multiple compartments. Features breathable back padding, adjustable straps, and a rain cover for all-weather treks.",
-              "quantity": 2
-            }
-          ],
-          "total": 27000,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T07:29:57.305Z",
-          "status": "cancelled"
-        },
-        {
-          "id": "1760344178725",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": "₹10,500",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "quantity": 1
-            }
-          ],
-          "total": 11000,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-13T08:29:38.725Z",
-          "status": "confirmed"
-        }
-      ]
-    },
-    {
-      "id": "3198",
-      "fullName": "1234",
-      "email": "neethu4@gmail.com",
-      "password": "$2b$10$Df3GA9GX7.nxg0PrFbtr7OXGZRpe40eoni/eTyJLtlss8xP1VRr5S",
-      "cart": [],
-      "wishlist": [],
-      "orders": []
-    },
-    {
-      "id": "a7bd",
-      "fullName": "ashfaq",
-      "email": "ashfaq@example.com",
-      "password": "$2b$10$0yvbj44ZkzPOoYjzUpUmMuhBNufBjvQsgFihjLmi4AUs5KHhDiwLK",
-      "cart": [],
-      "wishlist": [],
-      "orders": [
-        {
-          "id": "1760521335175",
-          "items": [
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": "₹12,000",
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 3,
-              "quantity": 5
-            }
-          ],
-          "total": 60500,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-15T09:42:15.175Z",
-          "status": "delivered"
         }
       ]
     }
@@ -1474,13 +313,13 @@
     {
       "id": "1",
       "title": "Men's Retro Pile Jacket",
-      "price": "₹12,000",
+      "price": 12000,
       "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
       "category": "clothing",
       "gender": "men",
       "activity": "Hiking",
       "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-      "stock": 60
+      "stock": 56
     },
     {
       "id": "2",
@@ -1491,34 +330,34 @@
       "gender": "female",
       "activity": "Hiking",
       "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-      "stock": 25
+      "stock": 23
     },
     {
       "id": "3",
       "title": "Aluminum Trekking Poles",
-      "price": "₹5,200",
+      "price": 5200,
       "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
       "category": "Gear",
       "gender": "unisex",
       "activity": "Hiking",
       "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-      "stock": 20
+      "stock": 19
     },
     {
       "id": "4",
       "title": "Women's Climbing Shoes",
-      "price": "₹7,800",
+      "price": 8000,
       "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
       "category": "Gear",
       "gender": "female",
       "activity": "Climbing",
       "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-      "stock": 21
+      "stock": 19
     },
     {
       "id": "5",
       "title": "Camping Tent 2-Person",
-      "price": "₹12,500",
+      "price": 12500,
       "image": "https://www.mountainexperience.it/37286-medium_default/sea-to-summit-alto-tr2.jpg",
       "category": "Gear",
       "gender": "unisex",
@@ -1529,7 +368,7 @@
     {
       "id": "6",
       "title": "Camping Tent 6-Person",
-      "price": "₹21,000",
+      "price": 21000,
       "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
       "category": "Gear",
       "gender": "unisex",
@@ -1540,7 +379,7 @@
     {
       "id": "7",
       "title": "Sleeping Bag - Lightweight",
-      "price": "₹6,800",
+      "price": 6800,
       "image": "https://kiehberg.in/media/catalog/product/n/h/envelope-sleeping-bag-with-hood-f400-xl-parrot-green-product-sku-nh00f400-d.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "category": "Gear",
       "gender": "unisex",
@@ -1551,7 +390,7 @@
     {
       "id": "8",
       "title": "Mountain Biking Helmet",
-      "price": "₹6,000",
+      "price": 6000,
       "image": "https://alpkit.com/cdn/shop/files/smith-convoy-mips-mtb-helmet-black-side.jpg?v=1744010852&width=768",
       "category": "Gear",
       "gender": "unisex",
@@ -1562,7 +401,7 @@
     {
       "id": "9",
       "title": "Men's Hiking Boots",
-      "price": "₹11,000",
+      "price": 11000,
       "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/2024/AUGUST/3/pGAWAwqo_a6805a57052640a697e59380b5a68248.jpg",
       "category": "clothing",
       "gender": "men",
@@ -1573,7 +412,7 @@
     {
       "id": "10",
       "title": "Women's Hiking Boots",
-      "price": "₹10,500",
+      "price": 10500,
       "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
       "category": "clothing",
       "gender": "female",
@@ -1584,7 +423,7 @@
     {
       "id": "11",
       "title": "Fishing Rod",
-      "price": "₹9,000",
+      "price": 9000,
       "image": "https://pyxis.nymag.com/v1/imgs/1d9/b3b/524f93f27c86c53fc37747b38a77e4e9fa-fishing-6.rsquare.w600.jpg",
       "category": "Gear",
       "gender": "unisex",
@@ -1595,7 +434,7 @@
     {
       "id": "12",
       "title": "Outdoor Backpack 40L",
-      "price": "₹8,000",
+      "price": 8000,
       "image": "https://m.media-amazon.com/images/I/71zi7+fdf9L._UY1100_.jpg",
       "category": "Gear",
       "gender": "unisex",
@@ -1606,7 +445,7 @@
     {
       "id": "13",
       "title": "Men's Softshell Pants",
-      "price": "₹7,000",
+      "price": 7000,
       "image": "https://gokyo.in/cdn/shop/files/WhatsApp_Image_2024-12-11_at_15.40.21_1_bad8cc70-8bf6-4049-9ae9-cfc070ef9994.jpg?v=1757771898",
       "category": "Clothing",
       "gender": "men",
@@ -1617,7 +456,7 @@
     {
       "id": "14",
       "title": "Women's Outdoor Shorts",
-      "price": "₹4,200",
+      "price": 5500,
       "image": "https://contents.mediadecathlon.com/p2132241/8be0028800adb67111973a26a8f5409d/p2132241.jpg",
       "category": "Clothing",
       "gender": "female",
@@ -1628,7 +467,7 @@
     {
       "id": "15",
       "title": "Portable Camping Stove",
-      "price": "₹3,800",
+      "price": 4500,
       "image": "https://static.wixstatic.com/media/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg",
       "category": "Gear",
       "gender": "unisex",
@@ -1639,18 +478,18 @@
     {
       "id": "16",
       "title": "Men's Waterproof Jacket",
-      "price": "₹13,500",
+      "price": 13500,
       "image": "https://outdoorpeople.org.uk/cdn/shop/files/velezadventuresmockmossmens_1024x1024.jpg",
       "category": "clothing",
       "gender": "men",
       "activity": "Hiking",
       "description": "Fully waterproof hiking jacket made from breathable fabric. Designed to keep you dry during heavy rain while maintaining airflow for comfort.",
-      "stock": 12
+      "stock": 11
     },
     {
       "id": "17",
       "title": "Women's Fleece Hoodie",
-      "price": "₹6,000",
+      "price": 6000,
       "image": "https://contents.mediadecathlon.com/p2119004/99681d99c9a9b14c331ca8d00422e4f6/p2119004.jpg",
       "category": "Clothing",
       "gender": "female",
@@ -1661,7 +500,7 @@
     {
       "id": "18",
       "title": "Men's Mountain Biking Gloves",
-      "price": "₹2,000",
+      "price": 2000,
       "image": "https://m.media-amazon.com/images/I/61vzKYoJK4L._UF894,1000_QL80_.jpg",
       "category": "Gear",
       "gender": "men",
@@ -1678,7 +517,7 @@
       "gender": "unisex",
       "activity": "Camping",
       "description": "Lightweight yet sturdy camping chair that folds easily into a carry bag. Perfect for campfires, picnics, and outdoor adventures.",
-      "stock": 25
+      "stock": 0
     },
     {
       "id": "1760607952514",

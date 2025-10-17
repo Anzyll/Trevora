@@ -16,11 +16,12 @@ const Checkout = () => {
       setAddress("");
     }
   }, []);
-  const total =
-    cart.reduce((sum, item) => {
-      const price = parseFloat(item.price.replace(/[^0-9.-]+/g, ""));
-      return sum + price * item.quantity;
-    }, 0) + 500;
+const total = cart.reduce((sum, item) => {
+  const price = Number(item.price) || 0;
+  const quantity = Number(item.quantity) || 0; // safe fallback
+  return sum + price * quantity;
+}, 0) + 500; // adding fixed 500
+
 
   const handleCheckout = () => {
     if (!address.trim()) {

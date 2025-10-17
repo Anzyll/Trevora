@@ -12,18 +12,16 @@ const Signup = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    
   });
   const [error, setError] = useState({});
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    const user=localStorage.getItem("currentUser")
-    if(user){
-      navigate("/home")
+  useEffect(() => {
+    const user = localStorage.getItem("currentUser");
+    if (user) {
+      navigate("/home");
     }
-  },[navigate])
-
+  }, [navigate]);
 
   const loginForm = () => {
     navigate("/login");
@@ -61,6 +59,7 @@ const Signup = () => {
     e.preventDefault();
     const newErrors = validateSignup();
     setError(newErrors);
+      setForm({ fullName: "", email: "", password: "", confirmPassword: "" });
     if (Object.keys(newErrors).length === 0) {
       try {
         const existingUsers = await axios.get("http://localhost:3001/users");
@@ -71,27 +70,26 @@ const Signup = () => {
 
         const hashedPassword = await bcrypt.hash(form.password, 10); // Hash password before saving
         const newUser = {
+          joinDate: new Date().toISOString(),
           fullName: form.fullName,
           email: form.email,
           password: hashedPassword,
-          cart:[],
-          wishlist:[],
-          orders:[]
+          isBlock: false,
+          cart: [],
+          wishlist: [],
+          orders: [],
         };
-         await axios.post(
-          "http://localhost:3001/users",
-          newUser
-        );
-       toast.success('Registered successful!');
+        await axios.post("http://localhost:3001/users", newUser);
+        toast.success("Registered successful!");
         setError({});
         navigate("/login");
       } catch (err) {
         console.error(err);
-        toast.error('Something went wrong. Please try again.'); 
+        toast.error("Something went wrong. Please try again.");
       }
     }
   };
- 
+
   return (
     <div className="min-h-screen bg-white">
       <main className="max-w-md mx-auto px-6 py-20">
@@ -99,7 +97,7 @@ const Signup = () => {
           Create an Account.
         </h1>
 
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <form className="space-y-6" onSubmit={handleSubmit} autoComplete="off">
           <div>
             <label className="block text-sm font-normal text-gray-700 mb-2">
               Full Name *
@@ -171,7 +169,6 @@ const Signup = () => {
           <button
             type="submit"
             className="w-full bg-black text-white py-3 rounded hover:bg-gray-800 transition-colors font-normal text-base"
-            onClick={handleSubmit}
           >
             Create Account
           </button>

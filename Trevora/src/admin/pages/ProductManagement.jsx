@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import AdminHeader from "./AdminHeader";
 
 const ProductManagement = () => {
   const [products, setProducts] = useState([]);
@@ -15,7 +16,7 @@ const ProductManagement = () => {
     price: "",
     stock: "",
     image: "",
-    activity:""
+    activity: "",
   });
 
   useEffect(() => {
@@ -52,10 +53,10 @@ const ProductManagement = () => {
         price: "",
         stock: "",
         image: "",
-        activity:""
+        activity: "",
       });
       fetchProducts();
-      toast("product added succesfully")
+      toast("product added succesfully");
     } catch (error) {
       console.error("Error adding product:", error);
     }
@@ -71,29 +72,29 @@ const ProductManagement = () => {
       });
       setEditingProduct(null);
       fetchProducts();
-      toast("product edited succesfully")
+      toast("product edited succesfully");
     } catch (error) {
       console.error("Error updating product:", error);
     }
   };
 
-const handleDeleteProduct = async (productId) => {
-  toast.confirm("Are you sure you want to delete this product?", {
-    onConfirm: async () => {
-      try {
-        await axios.delete(`http://localhost:3001/products/${productId}`);
-        fetchProducts();
-        toast.success("Product deleted successfully");
-      } catch (error) {
-        console.error("Error deleting product:", error);
-        toast.error("Failed to delete product");
-      }
-    },
-    onCancel: () => {
-      console.log("Delete cancelled");
-    }
-  });
-};
+  const handleDeleteProduct = async (productId) => {
+    toast.confirm("Are you sure you want to delete this product?", {
+      onConfirm: async () => {
+        try {
+          await axios.delete(`http://localhost:3001/products/${productId}`);
+          fetchProducts();
+          toast.success("Product deleted successfully");
+        } catch (error) {
+          console.error("Error deleting product:", error);
+          toast.error("Failed to delete product");
+        }
+      },
+      onCancel: () => {
+        console.log("Delete cancelled");
+      },
+    });
+  };
 
   // Calculate stats
   const totalProducts = products.length;
@@ -122,7 +123,6 @@ const handleDeleteProduct = async (productId) => {
   return (
     <div className="min-h-screen bg-gray-50 p-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-6">
           <h1 className="text-2xl font-bold text-gray-900">
             Product Management
@@ -292,7 +292,10 @@ const handleDeleteProduct = async (productId) => {
                       required
                       value={newProduct.title}
                       onChange={(e) =>
-                        setNewProduct({ ...newProduct, title: e.target.value })
+                        setNewProduct({
+                          ...newProduct,
+                          title: e.target.value,
+                        })
                       }
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     />
@@ -323,7 +326,10 @@ const handleDeleteProduct = async (productId) => {
                       required
                       value={newProduct.price}
                       onChange={(e) =>
-                        setNewProduct({ ...newProduct, price: e.target.value })
+                        setNewProduct({
+                          ...newProduct,
+                          price: e.target.value,
+                        })
                       }
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     />
@@ -337,12 +343,15 @@ const handleDeleteProduct = async (productId) => {
                       required
                       value={newProduct.stock}
                       onChange={(e) =>
-                        setNewProduct({ ...newProduct, stock: e.target.value })
+                        setNewProduct({
+                          ...newProduct,
+                          stock: e.target.value,
+                        })
                       }
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     />
                   </div>
-                   <div>
+                  <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Activity
                     </label>
@@ -350,7 +359,10 @@ const handleDeleteProduct = async (productId) => {
                       type="string"
                       value={newProduct.activity}
                       onChange={(e) =>
-                        setNewProduct({ ...newProduct, activity: e.target.value })
+                        setNewProduct({
+                          ...newProduct,
+                          activity: e.target.value,
+                        })
                       }
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     />
@@ -363,7 +375,10 @@ const handleDeleteProduct = async (productId) => {
                       type="string"
                       value={newProduct.image}
                       onChange={(e) =>
-                        setNewProduct({ ...newProduct, image: e.target.value })
+                        setNewProduct({
+                          ...newProduct,
+                          image: e.target.value,
+                        })
                       }
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     />

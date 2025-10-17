@@ -16,6 +16,9 @@ import OrderSuccess from "./Pages/OrderSuccess";
 import OrderHistory from "./Pages/Orders";
 import AdminDashboard from "./admin/pages/AdminDashboard";
 import ProductManagement from "./admin/pages/ProductManagement";
+import UserManagement from "./admin/pages/UserManagement";
+import AdminRoute from "./admin/pages/AdminRoute";
+import AdminHeader from "./admin/pages/AdminHeader";
 
 
 const App = () => {
@@ -24,7 +27,7 @@ const App = () => {
   return (
     <>
       <ScrollToTop />
-     {!isAdmin &&< Header />}
+     {!isAdmin ?< Header />:<AdminHeader/>}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -37,9 +40,10 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/order-success" element={<OrderSuccess />} />
-         <Route path="/orders" element={<OrderHistory />} />
-         <Route path="/admin/dashboard" element={<AdminDashboard />} />
-         <Route path="/admin/productmanagement" element={<ProductManagement />} />
+        <Route path="/orders" element={<OrderHistory />} />
+        <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
+        <Route path="/admin/productmanagement" element={<AdminRoute><ProductManagement /></AdminRoute>} />
+        <Route path="/admin/usermanagement" element={<AdminRoute><UserManagement /></AdminRoute>} />
       </Routes>
       {!isAdmin &&<Footer />}
     </>
