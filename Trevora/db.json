@@ -141,7 +141,29 @@
           "address": "bridgeon\n",
           "paymentMethod": "cod",
           "date": "2025-10-17T10:13:32.267Z",
-          "status": "confirmed"
+          "status": "cancelled"
+        },
+        {
+          "id": "1760710926047",
+          "items": [
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 23,
+              "quantity": 2
+            }
+          ],
+          "total": 20500,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-17T14:22:06.047Z",
+          "status": "processing"
         }
       ],
       "isBlock": false
@@ -201,6 +223,28 @@
           "paymentMethod": "cod",
           "date": "2025-10-17T05:58:43.616Z",
           "status": "delivered"
+        },
+        {
+          "id": "1760705888477",
+          "items": [
+            {
+              "id": "4",
+              "title": "Women's Climbing Shoes",
+              "price": 8000,
+              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
+              "category": "Gear",
+              "gender": "female",
+              "activity": "Climbing",
+              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
+              "stock": 19,
+              "quantity": 1
+            }
+          ],
+          "total": 8500,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-17T12:58:08.477Z",
+          "status": "shipped"
         }
       ]
     },
@@ -258,7 +302,7 @@
           "address": "kinfra",
           "paymentMethod": "upi",
           "date": "2025-10-17T05:55:30.223Z",
-          "status": "confirmed"
+          "status": "shipped"
         }
       ]
     },
@@ -330,7 +374,7 @@
       "gender": "female",
       "activity": "Hiking",
       "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-      "stock": 23
+      "stock": 21
     },
     {
       "id": "3",
@@ -352,7 +396,7 @@
       "gender": "female",
       "activity": "Climbing",
       "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-      "stock": 19
+      "stock": 18
     },
     {
       "id": "5",

@@ -10,7 +10,7 @@ const AdminHeader = () => {
   const tabs = [
     { key: "overview", label: "Overview", path: "/admin/dashboard" },
     { key: "products", label: "Products", path: "/admin/productmanagement" },
-    { key: "orders", label: "Orders"  },
+    { key: "orders", label: "Orders",path:"/admin/ordermanagement"  },
     { key: "users", label: "Users",path:"/admin/usermanagement" },
   ];
   const handleTab=(tab)=>{

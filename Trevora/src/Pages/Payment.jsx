@@ -67,7 +67,7 @@ const Payment = () => {
         address: address,
         paymentMethod: paymentMethod,
         date: new Date().toISOString(),
-        status: "confirmed",
+        status: "processing",
       };
 
       const userResponse = await axios.get(

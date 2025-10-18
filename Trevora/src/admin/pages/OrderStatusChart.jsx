@@ -3,12 +3,13 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recha
 
 const OrderStatusChart = ({ orders }) => {
   const orderStatusData = [
-    { name: 'Confirmed', value: orders.filter(order => order.status === 'confirmed').length },
+    { name: 'Processing', value: orders.filter(order => order.status === 'processing').length },
     { name: 'Cancelled', value: orders.filter(order => order.status === 'cancelled').length },
+    { name: 'shipped', value: orders.filter(order => order.status === 'shipped').length },
      { name: 'Delivered', value: orders.filter(order => order.status === 'delivered').length },
   ];
 
-  const COLORS = ['#899499','#D3D3D3', '#000000',];
+const COLORS = ['#E0E0E0', '#AAAAAA', '#555555', '#000000'];
 
   return (
     <div className="bg-white rounded-lg shadow p-6">

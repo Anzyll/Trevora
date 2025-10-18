@@ -19,6 +19,7 @@ import ProductManagement from "./admin/pages/ProductManagement";
 import UserManagement from "./admin/pages/UserManagement";
 import AdminRoute from "./admin/pages/AdminRoute";
 import AdminHeader from "./admin/pages/AdminHeader";
+import OrderManagement from "./admin/pages/OrderManagement";
 
 
 const App = () => {
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         <Route path="/admin/productmanagement" element={<AdminRoute><ProductManagement /></AdminRoute>} />
         <Route path="/admin/usermanagement" element={<AdminRoute><UserManagement /></AdminRoute>} />
+        <Route path="/admin/ordermanagement" element={<AdminRoute><OrderManagement /></AdminRoute>} />
       </Routes>
       {!isAdmin &&<Footer />}
     </>
