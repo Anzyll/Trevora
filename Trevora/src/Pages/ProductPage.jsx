@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
 import { useLocation,  } from "react-router-dom";
+import ScrollToTop from "../Components/ScrollToTop";
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -12,22 +13,34 @@ const ProductPage = () => {
   const location = useLocation();
   const [selectedActivity, setSelectedActivity] = useState("");
   const [search, setSearch] = useState("");
+  const [page,setPage]=useState(1)
+  const PAGE_SIZE = 12;
   
     // Fetch products on component mount
+  useEffect(()=>{
+    fetchProducts()
+  },[])
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get("http://localhost:3001/products");
-        setProducts(response.data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message, "failed to fetch");
-        setLoading(false);
-      }
-    };
-    fetchProducts();
-  }, []);
+    useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [page]);
+
+
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get(`http://localhost:3001/products`);
+      setProducts(response.data);
+      setLoading(false);
+    } catch (err) {
+      setError(err.message);
+      setLoading(false);
+    }
+  };
+
 
    
   useEffect(() => {
@@ -104,6 +117,19 @@ const ProductPage = () => {
       </div>
     );
   }
+  const nextPage=()=>{
+    setPage(page+1)
+  }
+  const prevPage=()=>{
+    setPage(page-1)
+  }
+
+  const totalProducts=filteredAndSortedProducts.length;
+  const totalPages=Math.ceil(totalProducts/PAGE_SIZE);
+
+   const startIndex = (page - 1) * PAGE_SIZE;
+  const endIndex = startIndex + PAGE_SIZE;
+  const paginatedProducts = filteredAndSortedProducts.slice(startIndex, endIndex);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -151,7 +177,7 @@ const ProductPage = () => {
           </select>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {filteredAndSortedProducts.map((product) => (
+          {paginatedProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
@@ -160,6 +186,39 @@ const ProductPage = () => {
             <p className="text-gray-500 text-lg">No products found</p>
           </div>
         )}
+            {/* Pagination Controls */}
+        <div className="flex justify-center items-center gap-4 mt-12">
+          {/* Previous Button */}
+          <button
+            onClick={prevPage}
+            disabled={page === 1}
+            className={`px-6 py-2 border rounded-lg font-medium transition-colors ${
+              page === 1
+                ? "text-gray-400 border-gray-300 cursor-not-allowed"
+                : "text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"
+            }`}
+          >
+            Previous
+          </button>
+          
+          {/* Current Page Display */}
+          <span className="px-4 py-2 bg-gray-100 rounded-lg font-medium">
+            Page {page} of {totalPages}
+          </span>
+          
+          {/* Next Button */}
+          <button
+            onClick={nextPage}
+            disabled={page >= totalPages}
+            className={`px-6 py-2 border rounded-lg font-medium transition-colors ${
+              page >= totalPages
+                ? "text-gray-400 border-gray-300 cursor-not-allowed"
+                : "text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"
+            }`}
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );

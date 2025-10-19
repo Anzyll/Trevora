@@ -7,8 +7,7 @@
       "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
       "isAdmin": true,
       "joinDate": "2025-10-16T18:50:23.103Z",
-      "cart": [],
-      "wishlist": [
+      "cart": [
         {
           "id": "20",
           "title": "Climbing Chalk Bag",
@@ -18,9 +17,21 @@
           "gender": "unisex",
           "activity": "Climbing",
           "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
-          "stock": 44
+          "stock": 44,
+          "quantity": 2
+        },
+        {
+          "id": "1760780903255",
+          "title": "Women's Long Coat",
+          "category": "Clothing",
+          "price": 8800,
+          "stock": 30,
+          "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw2e731a29/images/hi-res/26655_DNAT.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+          "activity": "Camping",
+          "quantity": 1
         }
       ],
+      "wishlist": [],
       "orders": [],
       "isBlock": false
     },
@@ -260,7 +271,7 @@
       "cart": [],
       "wishlist": [],
       "orders": [],
-      "isAdmin": true
+      "isAdmin": false
     },
     {
       "id": "41f2",
@@ -330,7 +341,7 @@
           "address": "bridgeon",
           "paymentMethod": "cod",
           "date": "2025-10-18T11:24:25.137Z",
-          "status": "processing"
+          "status": "delivered"
         }
       ]
     }
@@ -355,15 +366,6 @@
       "stock": 20,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
       "activity": "Hiking"
-    },
-    {
-      "id": "1760779202597",
-      "title": "Daily Gloves",
-      "category": "Clothing",
-      "price": 3900,
-      "stock": 9,
-      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwac30a25b/images/hi-res/34561_BLK.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
-      "activity": "Biking"
     },
     {
       "id": "1760779424247",
@@ -625,6 +627,15 @@
       "stock": 2,
       "image": "https://trekkit.in/cdn/shop/files/CMC132_J77_WoodlandGreen_02.png?v=1756449023&width=1800",
       "activity": "Hiking"
+    },
+    {
+      "id": "1760869325413",
+      "title": "Daily Gloves",
+      "category": "Gear",
+      "price": 6800,
+      "stock": 20,
+      "image": "https://trekkit.in/cdn/shop/files/QAH-39-BL-1.png?v=1758786946&width=1800",
+      "activity": "Biking"
     }
   ]
 }

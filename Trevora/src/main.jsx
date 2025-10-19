@@ -8,8 +8,7 @@ import { CartProvider } from "./contexts/CartProvider.jsx";
 import WishlistProvider from "./contexts/WishlistProvider.jsx";
 import { Toaster, toast } from "react-hot-toast";
 
-// Add custom confirm toast method
-toast.confirm = (message, { onConfirm, onCancel, ...options } = {}) => {
+toast.confirm = (message, { onConfirm, onCancel, confirmText = "OK", cancelText = "Cancel", ...options } = {}) => {
   return toast.custom(
     (t) => (
       <div
@@ -29,7 +28,7 @@ toast.confirm = (message, { onConfirm, onCancel, ...options } = {}) => {
           fontFamily: 'inherit',
         }}
       >
-        <p className="text-white text-sm mb-3" style={{ fontSize: '13px', fontWeight: '400', margin: 0 }}>
+        <p className="text-white text-sm mb-3" style={{ fontSize: '13px', fontWeight: '400', margin: 0, lineHeight: '1.4' }}>
           {message}
         </p>
         <div className="flex gap-2 justify-end">
@@ -38,7 +37,7 @@ toast.confirm = (message, { onConfirm, onCancel, ...options } = {}) => {
               onCancel?.();
               toast.dismiss(t.id);
             }}
-            className="px-3 py-1 text-xs border border-[#333333] text-gray-300 hover:bg-[#111111] transition-colors"
+            className="px-3 py-1 text-xs border border-[#333333] text-gray-300 hover:bg-[#111111] transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
             style={{
               background: 'transparent',
               color: '#ffffff',
@@ -47,16 +46,17 @@ toast.confirm = (message, { onConfirm, onCancel, ...options } = {}) => {
               fontSize: '11px',
               fontWeight: '400',
               padding: '6px 12px',
+              minWidth: '60px',
             }}
           >
-            Cancel
+            {cancelText}
           </button>
           <button
             onClick={() => {
               onConfirm?.();
               toast.dismiss(t.id);
             }}
-            className="px-3 py-1 text-xs bg-white text-black hover:bg-gray-200 transition-colors"
+            className="px-3 py-1 text-xs bg-white text-black hover:bg-gray-200 transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
             style={{
               background: '#ffffff',
               color: '#000000',
@@ -65,18 +65,24 @@ toast.confirm = (message, { onConfirm, onCancel, ...options } = {}) => {
               fontSize: '11px',
               fontWeight: '400',
               padding: '6px 12px',
+              minWidth: '60px',
             }}
           >
-            OK
+            {confirmText}
           </button>
         </div>
       </div>
     ),
     {
-      duration: Infinity, // Stay until user interacts
+      duration: Infinity, 
       ...options,
     }
   );
+};
+
+
+toast.dismissAll = () => {
+  toast.dismiss();
 };
 
 createRoot(document.getElementById("root")).render(
@@ -119,6 +125,18 @@ createRoot(document.getElementById("root")).render(
                 },
               },
               error: {
+                duration: 3000,
+                iconTheme: {
+                  primary: '#ffffff',
+                  secondary: '#000000',
+                },
+                style: {
+                  background: '#000000',
+                  color: '#ffffff',
+                  border: '1px solid #333333',
+                },
+              },
+              loading: {
                 iconTheme: {
                   primary: '#ffffff',
                   secondary: '#000000',

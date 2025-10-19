@@ -36,7 +36,10 @@ const WishlistPage = () => {
                   </p>
                   <div className="flex gap-3">
                     <button
-                      onClick={() => addToCart(item)}
+                      onClick={() => {
+                        addToCart(item);
+                        removeFromWishlist(item.id);
+                      }}
                       className="bg-black text-white px-4 py-2 rounded-lg text-sm"
                     >
                       Add to Cart

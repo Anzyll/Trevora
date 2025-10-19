@@ -79,8 +79,9 @@ const ProductManagement = () => {
     }
   };
 
-  const handleDeleteProduct = async (productId) => {
-    if (window.confirm("Are you sure you want to delete this product?")) {
+const handleDeleteProduct = (productId) => {
+  toast.confirm("Are you sure you want to delete this product?", {
+    onConfirm: async () => {
       try {
         await axios.delete(`http://localhost:3001/products/${productId}`);
         fetchProducts();
@@ -89,8 +90,12 @@ const ProductManagement = () => {
         console.error("Error deleting product:", error);
         toast.error("Failed to delete product");
       }
+    },
+    onCancel: () => {
+      console.log("Deletion cancelled");
     }
-  };
+  });
+};
 
   const totalProducts = products.length;
   const lowStock = products.filter((product) => product.stock < 10).length;
