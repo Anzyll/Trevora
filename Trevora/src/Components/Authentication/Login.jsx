@@ -69,6 +69,11 @@ const LoginForm = () => {
         toast.error("Incorrect email or password");
         return;
       }
+      if(user.isBlock){
+        setErrors({general:"user doesn't exist"})
+        toast.error("user doesn't exist")
+        return;
+      }
       const matchesPassword = await bcrypt.compare(
         form.password,
         user.password
@@ -78,6 +83,7 @@ const LoginForm = () => {
         toast.error("Incorrect email or password");
         return;
       }
+
       if(!user.isAdmin){
       toast.success("Login successful!");
       }

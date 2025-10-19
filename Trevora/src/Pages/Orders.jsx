@@ -114,7 +114,7 @@ const OrderHistory = () => {
                 : "Paid Online"}
             </div>
 
-            {order.status === "confirmed" && canCancelOrder(order.date) && (
+            {order.status === "processing" && canCancelOrder(order.date) && (
               <button
                 onClick={() => cancelOrder(order.id)}
                 className="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600"

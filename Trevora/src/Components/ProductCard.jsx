@@ -5,7 +5,7 @@ import { useCart } from "../contexts/CartProvider";
 
 const ProductCard = ({ product }) => {
   const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist();
-  const {addToCart} = useCart()
+  const { addToCart } = useCart();
   const handleWishlist = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -16,16 +16,14 @@ const ProductCard = ({ product }) => {
     }
   };
 
-
-
-  const handleAddToBag=(e)=>{
+  const handleAddToBag = (e) => {
     e.preventDefault();
     e.stopPropagation();
-   if(product.stock>0){
-    addToCart(product)
-   }
-  }
-  const { title, price, image ,stock } = product;
+    if (product.stock > 0) {
+      addToCart(product);
+    }
+  };
+  const { title, price, image, stock } = product;
 
   return (
     <Link to={`/products/${product.id}`}>
@@ -45,7 +43,7 @@ const ProductCard = ({ product }) => {
           <img
             src={image}
             alt={title}
-            className="w-full sm:h-fit md:h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full sm-h-fit md:h-full object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
         <div className="p-6">
@@ -65,14 +63,13 @@ const ProductCard = ({ product }) => {
             )}
           </div>
           <div className="flex justify-between gap-5">
-          <button className="w-40 bg-gray-900 text-white py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors">
-            View Product
-          </button>
-             <button className="w-40 bg-gray-900 text-white py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors"
-             onClick={handleAddToBag}
-             disabled={stock === 0}>
-            Add to Bag
-          </button>
+            <button
+              className="w-80 bg-gray-900 text-white py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors"
+              onClick={handleAddToBag}
+              disabled={stock === 0}
+            >
+              Add to Bag
+            </button>
           </div>
         </div>
       </div>

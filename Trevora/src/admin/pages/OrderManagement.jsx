@@ -112,7 +112,7 @@ const OrderManagement = () => {
           ].map((status) => (
             <div
               key={status.key}
-              className="bg-white rounded-lg border p-3 sm:p-4 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-white rounded-lg border border-gray-200 p-3 sm:p-4 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -129,7 +129,7 @@ const OrderManagement = () => {
           ))}
         </div>
 
-        <div className="bg-white rounded-lg border p-3 sm:p-4 mb-3 sm:mb-4 shadow-sm">
+        <div className="bg-white rounded-lg border border-gray-200 p-3 sm:p-4 mb-3 sm:mb-4 shadow-sm">
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">
               <input
@@ -167,11 +167,11 @@ const OrderManagement = () => {
           </div>
         </div>
 
-        <div className="bg-white rounded-lg border overflow-hidden shadow-sm">
+        <div className="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm">
           <div className="hidden lg:block">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead className="bg-gray-50 border-b">
+                <thead className="bg-gray-50 border-b border-b-gray-200">
                   <tr>
                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Order ID

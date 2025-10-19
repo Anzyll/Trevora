@@ -21,151 +21,7 @@
           "stock": 44
         }
       ],
-      "orders": [
-        {
-          "id": "1760539908694",
-          "items": [
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": 12000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 60,
-              "quantity": 1
-            }
-          ],
-          "total": 12500,
-          "address": "admin",
-          "paymentMethod": "cod",
-          "date": "2025-10-15T14:51:48.694Z",
-          "status": "cancelled"
-        },
-        {
-          "id": "1760677722296",
-          "items": [
-            {
-              "id": 1760604722664,
-              "title": "Trekking Shoes for men",
-              "category": "Clothing",
-              "price": 8900,
-              "stock": 20,
-              "image": "https://m.media-amazon.com/images/I/71jucJHKGrL._SL1500_.jpg",
-              "quantity": 1
-            },
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": 12000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 60,
-              "quantity": 1
-            }
-          ],
-          "total": 9400,
-          "address": "admin",
-          "paymentMethod": "cod",
-          "date": "2025-10-17T05:08:42.296Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760679942019",
-          "items": [
-            {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": 12000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 59,
-              "quantity": 1
-            },
-            {
-              "id": "19",
-              "title": "Ultralight Camping Chair",
-              "price": 6500,
-              "image": "https://bf1af2.akinoncloudcdn.com/products/2024/12/16/321960/9b896d0f-5f58-4484-bda5-552dccef5c99_size3840_cropCenter.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Lightweight yet sturdy camping chair that folds easily into a carry bag. Perfect for campfires, picnics, and outdoor adventures.",
-              "stock": 25,
-              "quantity": 1
-            }
-          ],
-          "total": 19000,
-          "address": "admin",
-          "paymentMethod": "cod",
-          "date": "2025-10-17T05:45:42.019Z",
-          "status": "delivered"
-        },
-        {
-          "id": "1760696012267",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": 10000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "stock": 24,
-              "quantity": 1
-            },
-            {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": 8000,
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
-              "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "stock": 20,
-              "quantity": 1
-            }
-          ],
-          "total": 18500,
-          "address": "bridgeon\n",
-          "paymentMethod": "cod",
-          "date": "2025-10-17T10:13:32.267Z",
-          "status": "cancelled"
-        },
-        {
-          "id": "1760710926047",
-          "items": [
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": 10000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "stock": 23,
-              "quantity": 2
-            }
-          ],
-          "total": 20500,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-17T14:22:06.047Z",
-          "status": "processing"
-        }
-      ],
+      "orders": [],
       "isBlock": false
     },
     {
@@ -179,74 +35,97 @@
       "wishlist": [],
       "orders": [
         {
-          "id": "1760680723616",
+          "id": "1760785968604",
           "items": [
             {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": 12000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 57,
-              "quantity": 1
-            },
-            {
-              "id": "2",
-              "title": "Women's Hiking Jacket",
-              "price": 10000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-              "stock": 25,
-              "quantity": 1
-            },
-            {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": 8000,
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
+              "id": "1760779424247",
+              "title": "Balaclava",
+              "category": "Clothing",
+              "price": 3800,
+              "stock": 10,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw869e5c8f/images/hi-res/22501_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
               "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "stock": 21,
+              "quantity": 1
+            },
+            {
+              "id": "1760779945124",
+              "title": "Men's Lightweight Shirt",
+              "category": "Clothing",
+              "price": 6000,
+              "stock": 15,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dweea4919e/images/hi-res/45760_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Biking",
+              "quantity": 1
+            },
+            {
+              "id": "1760781827596",
+              "title": "3 Person Tent",
+              "category": "Gear",
+              "price": 12000,
+              "stock": 7,
+              "image": "https://trekkit.in/cdn/shop/files/Litetrek_III_Tent-1.png?v=1757341031&width=1800",
+              "activity": "Camping",
+              "quantity": 1
+            },
+            {
+              "id": "1760782535665",
+              "title": "Hiking Sunglass",
+              "category": "Gear",
+              "price": 6000,
+              "stock": 40,
+              "image": "https://trekkit.in/cdn/shop/files/Sunglasses_Alpine.png?v=1756448505&width=1800",
+              "activity": "Hiking",
+              "quantity": 1
+            },
+            {
+              "id": "1760782217556",
+              "title": "Hiking Pole",
+              "category": "Gear",
+              "price": 6000,
+              "stock": 30,
+              "image": "https://trekkit.in/cdn/shop/files/11.png?v=1756448533&width=1800",
+              "activity": "Hiking",
+              "quantity": 1
+            },
+            {
+              "id": "1760779202597",
+              "title": "Daily Gloves",
+              "category": "Clothing",
+              "price": 3900,
+              "stock": 10,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwac30a25b/images/hi-res/34561_BLK.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+              "activity": "Biking",
               "quantity": 1
             }
           ],
-          "total": 30500,
-          "address": "bridgeon",
+          "total": 38200,
+          "address": "Kinfra\n",
           "paymentMethod": "cod",
-          "date": "2025-10-17T05:58:43.616Z",
+          "date": "2025-10-18T11:12:48.604Z",
           "status": "delivered"
         },
         {
-          "id": "1760705888477",
+          "id": "1760786027746",
           "items": [
             {
-              "id": "4",
-              "title": "Women's Climbing Shoes",
-              "price": 8000,
-              "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-              "category": "Gear",
-              "gender": "female",
-              "activity": "Climbing",
-              "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-              "stock": 19,
+              "id": "1760779945124",
+              "title": "Men's Lightweight Shirt",
+              "category": "Clothing",
+              "price": 6000,
+              "stock": 14,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dweea4919e/images/hi-res/45760_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Biking",
               "quantity": 1
             }
           ],
-          "total": 8500,
-          "address": "bridgeon",
-          "paymentMethod": "cod",
-          "date": "2025-10-17T12:58:08.477Z",
+          "total": 6500,
+          "address": "Kinfra\n",
+          "paymentMethod": "upi",
+          "date": "2025-10-18T11:13:47.746Z",
           "status": "shipped"
         }
-      ]
+      ],
+      "isAdmin": true
     },
     {
       "id": "e87f",
@@ -259,52 +138,117 @@
       "wishlist": [],
       "orders": [
         {
-          "id": "1760680530223",
+          "id": "1760786102610",
           "items": [
             {
-              "id": "16",
-              "title": "Men's Waterproof Jacket",
-              "price": 13500,
-              "image": "https://outdoorpeople.org.uk/cdn/shop/files/velezadventuresmockmossmens_1024x1024.jpg",
-              "category": "clothing",
-              "gender": "men",
-              "activity": "Hiking",
-              "description": "Fully waterproof hiking jacket made from breathable fabric. Designed to keep you dry during heavy rain while maintaining airflow for comfort.",
-              "stock": 12,
-              "quantity": 1
+              "id": "1760779945124",
+              "title": "Men's Lightweight Shirt",
+              "category": "Clothing",
+              "price": 6000,
+              "stock": 13,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dweea4919e/images/hi-res/45760_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Biking",
+              "quantity": 3
             },
             {
-              "id": "3",
-              "title": "Aluminum Trekking Poles",
-              "price": 5200,
-              "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+              "id": "1760781552907",
+              "title": "Climbing Shoe",
               "category": "Gear",
-              "gender": "unisex",
-              "activity": "Hiking",
-              "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-              "stock": 20,
+              "price": 9500,
+              "stock": 21,
+              "image": "https://trekkit.in/cdn/shop/files/V6.png?v=1756449267&width=1800",
+              "activity": "Climbing",
               "quantity": 1
             },
             {
-              "id": "1",
-              "title": "Men's Retro Pile Jacket",
-              "price": 12000,
-              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-              "category": "clothing",
-              "gender": "men",
+              "id": "1760781782497",
+              "title": "Sleeping Bag",
+              "category": "Gear",
+              "price": 7000,
+              "stock": 17,
+              "image": "https://trekkit.in/cdn/shop/files/Expedition100DownSleepingBag.png?v=1756448601&width=1800",
+              "activity": "Camping",
+              "quantity": 1
+            },
+            {
+              "id": "1760782489269",
+              "title": "Hiking Poles",
+              "category": "Gear",
+              "price": 7000,
+              "stock": 5,
+              "image": "https://trekkit.in/cdn/shop/files/JD_CUX0077_Z9P_AnodisedRedAnodisedGrey_1.png_1.png?v=1756449122&width=1800",
               "activity": "Hiking",
-              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-              "stock": 58,
+              "quantity": 1
+            },
+            {
+              "id": "1760782535665",
+              "title": "Hiking Sunglass",
+              "category": "Gear",
+              "price": 6000,
+              "stock": 39,
+              "image": "https://trekkit.in/cdn/shop/files/Sunglasses_Alpine.png?v=1756448505&width=1800",
+              "activity": "Hiking",
+              "quantity": 1
+            },
+            {
+              "id": "1760782630641",
+              "title": "Men's Waterproof Jacket",
+              "category": "Clothing",
+              "price": 9800,
+              "stock": 30,
+              "image": "https://trekkit.in/cdn/shop/files/Expedition_8000_Down_Jacket-1.png?v=1756448842&width=1800",
+              "activity": "Hiking",
               "quantity": 1
             }
           ],
-          "total": 31200,
-          "address": "kinfra",
-          "paymentMethod": "upi",
-          "date": "2025-10-17T05:55:30.223Z",
-          "status": "shipped"
+          "total": 57800,
+          "address": "bridgeon\n",
+          "paymentMethod": "cod",
+          "date": "2025-10-18T11:15:02.610Z",
+          "status": "delivered"
+        },
+        {
+          "id": "1760786122699",
+          "items": [
+            {
+              "id": "1760780345000",
+              "title": "Stealth Converting Vest",
+              "category": "Clothing",
+              "price": 7500,
+              "stock": 20,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw9d33f547/images/hi-res/81918_RVGN.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+              "activity": "Trekking",
+              "quantity": 1
+            },
+            {
+              "id": "1760780126702",
+              "title": "Roller Bag 120 L",
+              "category": "Gear",
+              "price": 8900,
+              "stock": 10,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw17555db4/images/hi-res/49211_CNY.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Camping",
+              "quantity": 1
+            },
+            {
+              "id": "1760781120078",
+              "title": "Wide Mouth Water Bottle",
+              "category": "Gear",
+              "price": 5500,
+              "stock": 30,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwbe1e8b83/images/hi-res/O3019_000.jpg?sw=1024&sh=1024&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Camping",
+              "quantity": 1
+            }
+          ],
+          "total": 22400,
+          "address": "bridgeon\n",
+          "paymentMethod": "cod",
+          "date": "2025-10-18T11:15:22.699Z",
+          "status": "cancelled"
         }
-      ]
+      ],
+      "isAdmin": false
     },
     {
       "id": "6a4b",
@@ -315,56 +259,83 @@
       "isBlock": true,
       "cart": [],
       "wishlist": [],
+      "orders": [],
+      "isAdmin": true
+    },
+    {
+      "id": "41f2",
+      "joinDate": "2025-10-18T11:16:48.657Z",
+      "fullName": "Ashfaq",
+      "email": "ashfaq@gmail.com",
+      "password": "$2b$10$rxf2LIvyHLC4I/g6ladl1eXn.8vblgWrTShE4ChrTiU8pylXygZlu",
+      "isBlock": false,
+      "cart": [],
+      "wishlist": [],
       "orders": [
         {
-          "id": "1760680621432",
+          "id": "1760786281865",
           "items": [
             {
-              "id": "10",
-              "title": "Women's Hiking Boots",
-              "price": 10500,
-              "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
-              "category": "clothing",
-              "gender": "female",
-              "activity": "Hiking",
-              "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures.",
-              "stock": 15,
+              "id": "1760779945124",
+              "title": "Men's Lightweight Shirt",
+              "category": "Clothing",
+              "price": 6000,
+              "stock": 10,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dweea4919e/images/hi-res/45760_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Biking",
               "quantity": 1
             },
             {
-              "id": "15",
-              "title": "Portable Camping Stove",
-              "price": 4500,
-              "image": "https://static.wixstatic.com/media/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg",
-              "category": "Gear",
-              "gender": "unisex",
-              "activity": "Camping",
-              "description": "Compact and efficient portable stove ideal for outdoor cooking. Easy to assemble, lightweight, and compatible with standard gas canisters.",
-              "stock": 13,
+              "id": "1760782630641",
+              "title": "Men's Waterproof Jacket",
+              "category": "Clothing",
+              "price": 9800,
+              "stock": 29,
+              "image": "https://trekkit.in/cdn/shop/files/Expedition_8000_Down_Jacket-1.png?v=1756448842&width=1800",
+              "activity": "Hiking",
               "quantity": 1
             }
           ],
-          "total": 15500,
+          "total": 16300,
           "address": "bridgeon",
           "paymentMethod": "card",
-          "date": "2025-10-17T05:57:01.432Z",
+          "date": "2025-10-18T11:18:01.865Z",
           "status": "cancelled"
+        },
+        {
+          "id": "1760786665137",
+          "items": [
+            {
+              "id": "1760779945124",
+              "title": "Men's Lightweight Shirt",
+              "category": "Clothing",
+              "price": 6000,
+              "stock": 9,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dweea4919e/images/hi-res/45760_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Biking",
+              "quantity": 1
+            },
+            {
+              "id": "1760782630641",
+              "title": "Men's Waterproof Jacket",
+              "category": "Clothing",
+              "price": 9800,
+              "stock": 28,
+              "image": "https://trekkit.in/cdn/shop/files/Expedition_8000_Down_Jacket-1.png?v=1756448842&width=1800",
+              "activity": "Hiking",
+              "quantity": 1
+            }
+          ],
+          "total": 16300,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-18T11:24:25.137Z",
+          "status": "processing"
         }
       ]
     }
   ],
   "products": [
-    {
-      "id": "1",
-      "title": "Men's Retro Pile Jacket",
-      "price": 12000,
-      "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
-      "category": "clothing",
-      "gender": "men",
-      "activity": "Hiking",
-      "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
-      "stock": 56
-    },
     {
       "id": "2",
       "title": "Women's Hiking Jacket",
@@ -377,200 +348,283 @@
       "stock": 21
     },
     {
-      "id": "3",
-      "title": "Aluminum Trekking Poles",
-      "price": 5200,
-      "image": "https://explorescientific.com/cdn/shop/products/NG_80-60500_TrekkingPoles_1_2021.jpg?v=1636496674&width=2500",
+      "id": "1760778929208",
+      "title": "Sling Bag 8L",
       "category": "Gear",
-      "gender": "unisex",
-      "activity": "Hiking",
-      "description": "Durable yet lightweight aluminum trekking poles with adjustable height. Provide stability and support on rough terrain and reduce strain on knees during ascents and descents.",
-      "stock": 19
+      "price": 5900,
+      "stock": 20,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Hiking"
     },
     {
-      "id": "4",
-      "title": "Women's Climbing Shoes",
-      "price": 8000,
-      "image": "https://i1.adis.ws/i/jpl/ti_FWRBT4TI0212_a?w=1000&h=1000",
-      "category": "Gear",
-      "gender": "female",
-      "activity": "Climbing",
-      "description": "Precision-fit climbing shoes designed for women. Provide excellent grip and toe support for bouldering, sport climbing, or indoor walls. Comfortable yet performance-focused.",
-      "stock": 18
-    },
-    {
-      "id": "5",
-      "title": "Camping Tent 2-Person",
-      "price": 12500,
-      "image": "https://www.mountainexperience.it/37286-medium_default/sea-to-summit-alto-tr2.jpg",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Camping",
-      "description": "Compact and lightweight 2-person tent built for easy setup. Features waterproof fabric, double doors, and excellent ventilation — perfect for weekend camping trips.",
-      "stock": 28
-    },
-    {
-      "id": "6",
-      "title": "Camping Tent 6-Person",
-      "price": 21000,
-      "image": "https://i.ebayimg.com/images/g/xHAAAOSwHGxnnCCl/s-l1200.jpg",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Camping",
-      "description": "Spacious 6-person family tent with strong poles and weatherproof fabric. Includes a large vestibule for gear storage and multiple ventilation windows for airflow.",
-      "stock": 2
-    },
-    {
-      "id": "7",
-      "title": "Sleeping Bag - Lightweight",
-      "price": 6800,
-      "image": "https://kiehberg.in/media/catalog/product/n/h/envelope-sleeping-bag-with-hood-f400-xl-parrot-green-product-sku-nh00f400-d.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Camping",
-      "description": "A lightweight and compact sleeping bag for 3-season camping. Features synthetic insulation, a soft inner lining, and a compression sack for easy packing.",
-      "stock": 18
-    },
-    {
-      "id": "8",
-      "title": "Mountain Biking Helmet",
-      "price": 6000,
-      "image": "https://alpkit.com/cdn/shop/files/smith-convoy-mips-mtb-helmet-black-side.jpg?v=1744010852&width=768",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Biking",
-      "description": "Lightweight MTB helmet with MIPS protection system. Ensures superior impact absorption, adjustable fit, and excellent ventilation for trail riding safety.",
-      "stock": 14
-    },
-    {
-      "id": "9",
-      "title": "Men's Hiking Boots",
-      "price": 11000,
-      "image": "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/2024/AUGUST/3/pGAWAwqo_a6805a57052640a697e59380b5a68248.jpg",
-      "category": "clothing",
-      "gender": "men",
-      "activity": "Hiking",
-      "description": "Durable, water-resistant hiking boots with rugged soles for superior traction. Provide ankle support and comfort for long treks on rocky or muddy trails.",
-      "stock": 12
-    },
-    {
-      "id": "10",
-      "title": "Women's Hiking Boots",
-      "price": 10500,
-      "image": "https://contents.mediadecathlon.com/p2945005/k$1958a677f69a8aefd6b4e6afa7c87c93/women-s-warm-waterproof-hiking-boots-nh500-mid-qlt-beige-quechua-8928674.jpg",
-      "category": "clothing",
-      "gender": "female",
-      "activity": "Hiking",
-      "description": "Waterproof and breathable boots designed for women hikers. Offer reliable grip, cushioning, and support for trails, rain, and cold-weather adventures.",
-      "stock": 15
-    },
-    {
-      "id": "11",
-      "title": "Fishing Rod",
-      "price": 9000,
-      "image": "https://pyxis.nymag.com/v1/imgs/1d9/b3b/524f93f27c86c53fc37747b38a77e4e9fa-fishing-6.rsquare.w600.jpg",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Fishing",
-      "description": "High-performance graphite fishing rod offering lightweight feel and superior casting distance. Perfect for both freshwater and saltwater fishing.",
-      "stock": 20
-    },
-    {
-      "id": "12",
-      "title": "Outdoor Backpack 40L",
-      "price": 8000,
-      "image": "https://m.media-amazon.com/images/I/71zi7+fdf9L._UY1100_.jpg",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Hiking",
-      "description": "Spacious 40L hiking backpack with multiple compartments. Features breathable back padding, adjustable straps, and a rain cover for all-weather treks.",
-      "stock": 16
-    },
-    {
-      "id": "13",
-      "title": "Men's Softshell Pants",
-      "price": 7000,
-      "image": "https://gokyo.in/cdn/shop/files/WhatsApp_Image_2024-12-11_at_15.40.21_1_bad8cc70-8bf6-4049-9ae9-cfc070ef9994.jpg?v=1757771898",
+      "id": "1760779202597",
+      "title": "Daily Gloves",
       "category": "Clothing",
-      "gender": "men",
-      "activity": "Hiking",
-      "description": "Water-resistant and stretchable softshell pants that provide comfort and flexibility. Ideal for hiking, trekking, or travel in changing weather.",
-      "stock": 13
+      "price": 3900,
+      "stock": 9,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwac30a25b/images/hi-res/34561_BLK.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+      "activity": "Biking"
     },
     {
-      "id": "14",
-      "title": "Women's Outdoor Shorts",
+      "id": "1760779424247",
+      "title": "Balaclava",
+      "category": "Clothing",
+      "price": 3800,
+      "stock": 9,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw869e5c8f/images/hi-res/22501_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760779475680",
+      "title": "Alpline Suit",
+      "category": "Clothing",
+      "price": 11500,
+      "stock": 24,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw39c1e395/images/hi-res/85745_NUVG.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760779611670",
+      "title": "Mountain sky suspenders",
+      "category": "Gear",
+      "price": 5600,
+      "stock": 12,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwba790f79/images/hi-res/59166_FZBK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760779728230",
+      "title": "Mens Bibs",
+      "category": "Clothing",
+      "price": 3900,
+      "stock": 10,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw3f64e7f1/images/hi-res/85660_CLMB.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760779847440",
+      "title": "Grade VII Parka",
+      "category": "Clothing",
+      "price": 10200,
+      "stock": 6,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwd5bac28e/images/hi-res/84847_SZRD.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760779945124",
+      "title": "Men's Lightweight Shirt",
+      "category": "Clothing",
+      "price": 6000,
+      "stock": 8,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dweea4919e/images/hi-res/45760_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Biking"
+    },
+    {
+      "id": "1760779989323",
+      "title": "Daily Beanie",
+      "category": "Clothing",
+      "price": 4900,
+      "stock": 30,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw8d4af05c/images/hi-res/33435_SMDB.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Biking"
+    },
+    {
+      "id": "1760780126702",
+      "title": "Roller Bag 120 L",
+      "category": "Gear",
+      "price": 8900,
+      "stock": 10,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw17555db4/images/hi-res/49211_CNY.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760780345000",
+      "title": "Stealth Converting Vest",
+      "category": "Clothing",
+      "price": 7500,
+      "stock": 20,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw9d33f547/images/hi-res/81918_RVGN.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+      "activity": "Trekking"
+    },
+    {
+      "id": "1760780408392",
+      "title": "Wading Socks",
+      "category": "Clothing",
+      "price": 3500,
+      "stock": 23,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw834d214b/images/hi-res/88380_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Trekking"
+    },
+    {
+      "id": "1760780903255",
+      "title": "Women's Long Coat",
+      "category": "Clothing",
+      "price": 8800,
+      "stock": 30,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw2e731a29/images/hi-res/26655_DNAT.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760781120078",
+      "title": "Wide Mouth Water Bottle",
+      "category": "Gear",
       "price": 5500,
-      "image": "https://contents.mediadecathlon.com/p2132241/8be0028800adb67111973a26a8f5409d/p2132241.jpg",
-      "category": "Clothing",
-      "gender": "female",
-      "activity": "Hiking",
-      "description": "Lightweight and quick-drying outdoor shorts with stretch fabric for easy movement. Perfect for summer hikes, climbing, or everyday outdoor use.",
-      "stock": 14
+      "stock": 30,
+      "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwbe1e8b83/images/hi-res/O3019_000.jpg?sw=1024&sh=1024&sfrm=png&q=90&bgcolor=f3f4ef",
+      "activity": "Camping"
     },
     {
-      "id": "15",
-      "title": "Portable Camping Stove",
-      "price": 4500,
-      "image": "https://static.wixstatic.com/media/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce7920_e59d3b756adc4b06a2a721b27eeab19d~mv2.jpg",
+      "id": "1760781552907",
+      "title": "Climbing Shoe",
       "category": "Gear",
-      "gender": "unisex",
-      "activity": "Camping",
-      "description": "Compact and efficient portable stove ideal for outdoor cooking. Easy to assemble, lightweight, and compatible with standard gas canisters.",
-      "stock": 13
-    },
-    {
-      "id": "16",
-      "title": "Men's Waterproof Jacket",
-      "price": 13500,
-      "image": "https://outdoorpeople.org.uk/cdn/shop/files/velezadventuresmockmossmens_1024x1024.jpg",
-      "category": "clothing",
-      "gender": "men",
-      "activity": "Hiking",
-      "description": "Fully waterproof hiking jacket made from breathable fabric. Designed to keep you dry during heavy rain while maintaining airflow for comfort.",
-      "stock": 11
-    },
-    {
-      "id": "17",
-      "title": "Women's Fleece Hoodie",
-      "price": 6000,
-      "image": "https://contents.mediadecathlon.com/p2119004/99681d99c9a9b14c331ca8d00422e4f6/p2119004.jpg",
-      "category": "Clothing",
-      "gender": "female",
-      "activity": "Camping",
-      "description": "Soft and cozy fleece hoodie made for cool evenings by the campfire. Provides warmth without bulk and is perfect for layering during outdoor trips.",
-      "stock": 12
-    },
-    {
-      "id": "18",
-      "title": "Men's Mountain Biking Gloves",
-      "price": 2000,
-      "image": "https://m.media-amazon.com/images/I/61vzKYoJK4L._UF894,1000_QL80_.jpg",
-      "category": "Gear",
-      "gender": "men",
-      "activity": "Biking",
-      "description": "Durable MTB gloves offering excellent grip, knuckle protection, and breathability. Designed for rough terrain and long trail rides.",
-      "stock": 19
-    },
-    {
-      "id": "19",
-      "title": "Ultralight Camping Chair",
-      "price": 6500,
-      "image": "https://bf1af2.akinoncloudcdn.com/products/2024/12/16/321960/9b896d0f-5f58-4484-bda5-552dccef5c99_size3840_cropCenter.jpg",
-      "category": "Gear",
-      "gender": "unisex",
-      "activity": "Camping",
-      "description": "Lightweight yet sturdy camping chair that folds easily into a carry bag. Perfect for campfires, picnics, and outdoor adventures.",
-      "stock": 0
-    },
-    {
-      "id": "1760607952514",
-      "title": "Woodland Men's trekking Shoe",
-      "category": "clothing",
       "price": 9500,
+      "stock": 20,
+      "image": "https://trekkit.in/cdn/shop/files/V6.png?v=1756449267&width=1800",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760781632869",
+      "title": "Waterproof Hiking Boots",
+      "category": "Gear",
+      "price": 9500,
+      "stock": 10,
+      "image": "https://trekkit.in/cdn/shop/files/Copyof8769.png?v=1757341122&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760781782497",
+      "title": "Sleeping Bag",
+      "category": "Gear",
+      "price": 7000,
+      "stock": 16,
+      "image": "https://trekkit.in/cdn/shop/files/Expedition100DownSleepingBag.png?v=1756448601&width=1800",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760781827596",
+      "title": "3 Person Tent",
+      "category": "Gear",
+      "price": 12000,
+      "stock": 6,
+      "image": "https://trekkit.in/cdn/shop/files/Litetrek_III_Tent-1.png?v=1757341031&width=1800",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760781915208",
+      "title": "Sleeping Mat",
+      "category": "Gear",
+      "price": 7000,
       "stock": 5,
-      "image": "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/f/0/f067d81OGC4000121OLIVEGREEN_1.jpg",
-      "activity": "trekking"
+      "image": "https://trekkit.in/cdn/shop/files/Ionosphere_5_Zest-1_4f2ae13a-10f7-42ca-aa18-0fa3043f2f38.png?v=1756449087&width=1080",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760782011042",
+      "title": "35 L BagPack",
+      "category": "Gear",
+      "price": 7000,
+      "stock": 20,
+      "image": "https://trekkit.in/cdn/shop/files/Protium_35_DarkPewter_Anthracite-1.png?v=1756448553&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760782158722",
+      "title": "Climbing Helmet",
+      "category": "Gear",
+      "price": 5800,
+      "stock": 19,
+      "image": "https://trekkit.in/cdn/shop/files/Grivel_Helmet_STEALTH_White-1.png?v=1756448689&width=1800",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760782217556",
+      "title": "Hiking Pole",
+      "category": "Gear",
+      "price": 6000,
+      "stock": 29,
+      "image": "https://trekkit.in/cdn/shop/files/11.png?v=1756448533&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760782257851",
+      "title": "Ice Axe",
+      "category": "Gear",
+      "price": 3500,
+      "stock": 10,
+      "image": "https://trekkit.in/cdn/shop/files/THE_NORTH_MACHINE_Carbon_ice_vario.png?v=1756448538&width=1800",
+      "activity": "Climbing"
+    },
+    {
+      "id": "1760782309870",
+      "title": "Climbing Harness",
+      "category": "Gear",
+      "price": 5000,
+      "stock": 33,
+      "image": "https://trekkit.in/cdn/shop/files/1_e6ff2b84-b572-43e6-8a2b-2862e37de52c.png?v=1756448499&width=1080",
+      "activity": "climbing"
+    },
+    {
+      "id": "1760782365404",
+      "title": "Camping Stove Set",
+      "category": "Gear",
+      "price": 4000,
+      "stock": 30,
+      "image": "https://trekkit.in/cdn/shop/files/P351032_1.png?v=1756449275&width=1800",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760782429661",
+      "title": "Camping Stove",
+      "category": "Gear",
+      "price": 5400,
+      "stock": 20,
+      "image": "https://trekkit.in/cdn/shop/files/P321988_1.png?v=1756448889&width=1800",
+      "activity": "Camping"
+    },
+    {
+      "id": "1760782489269",
+      "title": "Hiking Poles",
+      "category": "Gear",
+      "price": 7000,
+      "stock": 4,
+      "image": "https://trekkit.in/cdn/shop/files/JD_CUX0077_Z9P_AnodisedRedAnodisedGrey_1.png_1.png?v=1756449122&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760782535665",
+      "title": "Hiking Sunglass",
+      "category": "Gear",
+      "price": 6000,
+      "stock": 38,
+      "image": "https://trekkit.in/cdn/shop/files/Sunglasses_Alpine.png?v=1756448505&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760782630641",
+      "title": "Men's Waterproof Jacket",
+      "category": "Clothing",
+      "price": 9800,
+      "stock": 27,
+      "image": "https://trekkit.in/cdn/shop/files/Expedition_8000_Down_Jacket-1.png?v=1756448842&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760782879764",
+      "title": "Unisex Hat",
+      "category": "Clothing",
+      "price": 4000,
+      "stock": 20,
+      "image": "https://trekkit.in/cdn/shop/files/CMC130_695_Pebble_01.png?v=1756449250&width=1080",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760782938326",
+      "title": "Hiking Hat",
+      "category": "Clothing",
+      "price": 4000,
+      "stock": 2,
+      "image": "https://trekkit.in/cdn/shop/files/CMC132_J77_WoodlandGreen_02.png?v=1756449023&width=1800",
+      "activity": "Hiking"
     }
   ]
 }
