@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
 import { useLocation } from "react-router-dom";
-import ScrollToTop from "../Components/ScrollToTop";
+
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);

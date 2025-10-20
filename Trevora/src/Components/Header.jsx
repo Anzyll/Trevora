@@ -1,5 +1,6 @@
 // src/components/Header/MainNav.jsx
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import  { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 import toast from "react-hot-toast";

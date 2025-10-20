@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import  { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 import toast from "react-hot-toast";

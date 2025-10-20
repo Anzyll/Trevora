@@ -8,17 +8,7 @@
       "isAdmin": true,
       "joinDate": "2025-10-16T18:50:23.103Z",
       "cart": [],
-      "wishlist": [
-        {
-          "id": "1760779847440",
-          "title": "Grade VII Parka",
-          "category": "Clothing",
-          "price": 10200,
-          "stock": 6,
-          "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwd5bac28e/images/hi-res/84847_SZRD.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
-          "activity": "Hiking"
-        }
-      ],
+      "wishlist": [],
       "orders": [
         {
           "id": "1760887246030",
@@ -167,6 +157,90 @@
           "paymentMethod": "cod",
           "date": "2025-10-20T05:13:08.215Z",
           "status": "delivered"
+        },
+        {
+          "id": "pay_RVdDLfP79zHQRx",
+          "items": [
+            {
+              "id": "1760780345000",
+              "title": "Stealth Converting Vest",
+              "category": "Clothing",
+              "price": 7500,
+              "stock": 20,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw9d33f547/images/hi-res/81918_RVGN.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+              "activity": "Trekking",
+              "quantity": 1
+            }
+          ],
+          "total": 8000,
+          "address": "bridgeon",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T06:39:52.187Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVdDLfP79zHQRx"
+        },
+        {
+          "id": "pay_RVe4BmAeGuKpzd",
+          "items": [
+            {
+              "id": "1760779475680",
+              "title": "Alpline Suit",
+              "category": "Clothing",
+              "price": 11500,
+              "stock": 23,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw39c1e395/images/hi-res/85745_NUVG.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+              "activity": "Climbing",
+              "quantity": 1
+            }
+          ],
+          "total": 12000,
+          "address": "hlu",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T07:29:53.490Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVe4BmAeGuKpzd"
+        },
+        {
+          "id": "pay_RVegUr5pExmk6k",
+          "items": [
+            {
+              "id": "1760778929208",
+              "title": "Sling Bag 8L",
+              "category": "Gear",
+              "price": 5900,
+              "stock": 14,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Hiking",
+              "quantity": 1
+            }
+          ],
+          "total": 6400,
+          "address": "hlu",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T08:06:09.365Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVegUr5pExmk6k"
+        },
+        {
+          "id": "pay_RVfj0fnd7YuJ24",
+          "items": [
+            {
+              "id": "1760782489269",
+              "title": "Hiking Poles",
+              "category": "Gear",
+              "price": 7000,
+              "stock": 4,
+              "image": "https://trekkit.in/cdn/shop/files/JD_CUX0077_Z9P_AnodisedRedAnodisedGrey_1.png_1.png?v=1756449122&width=1800",
+              "activity": "Hiking",
+              "quantity": 1
+            }
+          ],
+          "total": 7500,
+          "address": "bridgeon",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T09:07:14.714Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVfj0fnd7YuJ24"
         }
       ],
       "isBlock": false
@@ -499,7 +573,7 @@
       "title": "Sling Bag 8L",
       "category": "Gear",
       "price": 5900,
-      "stock": 14,
+      "stock": 13,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
       "activity": "Hiking"
     },
@@ -517,7 +591,7 @@
       "title": "Alpline Suit",
       "category": "Clothing",
       "price": 11500,
-      "stock": 23,
+      "stock": 22,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw39c1e395/images/hi-res/85745_NUVG.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
       "activity": "Climbing"
     },
@@ -580,7 +654,7 @@
       "title": "Stealth Converting Vest",
       "category": "Clothing",
       "price": 7500,
-      "stock": 20,
+      "stock": 19,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw9d33f547/images/hi-res/81918_RVGN.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
       "activity": "Trekking"
     },
@@ -724,7 +798,7 @@
       "title": "Hiking Poles",
       "category": "Gear",
       "price": 7000,
-      "stock": 4,
+      "stock": 3,
       "image": "https://trekkit.in/cdn/shop/files/JD_CUX0077_Z9P_AnodisedRedAnodisedGrey_1.png_1.png?v=1756449122&width=1800",
       "activity": "Hiking"
     },

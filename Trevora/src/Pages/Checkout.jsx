@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import  { useEffect, useState } from "react";
 import { useCart } from "../contexts/CartProvider";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";

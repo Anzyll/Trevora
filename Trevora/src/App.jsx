@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./components/Header";
 import Home from "./Pages/Home";
+import Header from "./Components/Header.jsx"
 import { Routes, Route, useLocation } from "react-router-dom";
 import LoginForm from "./Components/Authentication/Login";
 import Signup from "./Components/Authentication/signup";

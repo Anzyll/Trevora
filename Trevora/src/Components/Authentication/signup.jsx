@@ -1,5 +1,6 @@
 // src/pages/Signup.jsx
-import React, { useEffect } from "react";
+import React from "react";
+import  { useEffect } from "react";
 import axios from "axios";
 import bcrypt from "bcryptjs";
 import { useNavigate } from "react-router-dom";

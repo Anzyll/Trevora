@@ -1,5 +1,5 @@
-import React from 'react';
 
+import React from "react";
 const OrderStatusChart = ({ orders }) => {
   const statusData = {
     processing: orders.filter(order => order.status === 'processing').length,

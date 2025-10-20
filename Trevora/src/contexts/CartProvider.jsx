@@ -1,5 +1,6 @@
+import React from "react";
 import axios from "axios";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import  { createContext, useContext, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 const CartContext = createContext();
 
