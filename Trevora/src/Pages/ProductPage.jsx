@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../Components/ProductCard";
-import { useLocation,  } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import ScrollToTop from "../Components/ScrollToTop";
 
 const ProductPage = () => {
@@ -15,20 +15,19 @@ const ProductPage = () => {
   const [search, setSearch] = useState("");
   const [page,setPage]=useState(1)
   const PAGE_SIZE = 12;
-  
-    // Fetch products on component mount
-  useEffect(()=>{
-    fetchProducts()
-  },[])
 
-    useEffect(() => {
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+ 
+   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth",
     });
   }, [page]);
-
 
   const fetchProducts = async () => {
     try {
@@ -41,8 +40,6 @@ const ProductPage = () => {
     }
   };
 
-
-   
   useEffect(() => {
     const urlParam = new URLSearchParams(location.search);
     const activity = urlParam.get("activity");
@@ -62,14 +59,11 @@ const ProductPage = () => {
     const searchFromUrl = urlParam.get("search");
     if (searchFromUrl) {
       setSearch(searchFromUrl);
-    }
-    else{
-      setSearch("")
+    } else {
+      setSearch("");
     }
   }, [location.search]);
 
-
-  // Filter by category , sort by price and by search
   const filteredAndSortedProducts = products
     .filter((product) => {
       const categoryMatch =
@@ -117,24 +111,24 @@ const ProductPage = () => {
       </div>
     );
   }
+
+
+  const totalProducts=filteredAndSortedProducts.length;
+  const totalPages=Math.ceil(totalProducts/PAGE_SIZE)
+
+  const startIndex = (page-1) * PAGE_SIZE
+  const endIndex = startIndex + PAGE_SIZE
+  const paginatedProducts=filteredAndSortedProducts.slice(startIndex,endIndex)
   const nextPage=()=>{
     setPage(page+1)
   }
-  const prevPage=()=>{
+   const prevPage=()=>{
     setPage(page-1)
   }
-
-  const totalProducts=filteredAndSortedProducts.length;
-  const totalPages=Math.ceil(totalProducts/PAGE_SIZE);
-
-   const startIndex = (page - 1) * PAGE_SIZE;
-  const endIndex = startIndex + PAGE_SIZE;
-  const paginatedProducts = filteredAndSortedProducts.slice(startIndex, endIndex);
-
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-8">
-        {/* Page Header */}
+
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Adventure & Outdoor Essentials
@@ -186,9 +180,9 @@ const ProductPage = () => {
             <p className="text-gray-500 text-lg">No products found</p>
           </div>
         )}
-            {/* Pagination Controls */}
+
         <div className="flex justify-center items-center gap-4 mt-12">
-          {/* Previous Button */}
+       
           <button
             onClick={prevPage}
             disabled={page === 1}
@@ -198,15 +192,25 @@ const ProductPage = () => {
                 : "text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"
             }`}
           >
-            Previous
+           <svg 
+              className="w-5 h-5" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M15 19l-7-7 7-7" 
+              />
+            </svg>
           </button>
-          
-          {/* Current Page Display */}
           <span className="px-4 py-2 bg-gray-100 rounded-lg font-medium">
             Page {page} of {totalPages}
           </span>
-          
-          {/* Next Button */}
+
+   
           <button
             onClick={nextPage}
             disabled={page >= totalPages}
@@ -216,7 +220,20 @@ const ProductPage = () => {
                 : "text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"
             }`}
           >
-            Next
+                        <svg 
+              className="w-5 h-5" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M9 5l7 7-7 7" 
+              />
+            </svg>
+
           </button>
         </div>
       </div>

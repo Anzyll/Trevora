@@ -7,32 +7,168 @@
       "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
       "isAdmin": true,
       "joinDate": "2025-10-16T18:50:23.103Z",
-      "cart": [
+      "cart": [],
+      "wishlist": [
         {
-          "id": "20",
-          "title": "Climbing Chalk Bag",
-          "price": 1200,
-          "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
-          "category": "Gear",
-          "gender": "unisex",
-          "activity": "Climbing",
-          "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
-          "stock": 44,
-          "quantity": 2
-        },
-        {
-          "id": "1760780903255",
-          "title": "Women's Long Coat",
+          "id": "1760779847440",
+          "title": "Grade VII Parka",
           "category": "Clothing",
-          "price": 8800,
-          "stock": 30,
-          "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw2e731a29/images/hi-res/26655_DNAT.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
-          "activity": "Camping",
-          "quantity": 1
+          "price": 10200,
+          "stock": 6,
+          "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwd5bac28e/images/hi-res/84847_SZRD.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+          "activity": "Hiking"
         }
       ],
-      "wishlist": [],
-      "orders": [],
+      "orders": [
+        {
+          "id": "1760887246030",
+          "items": [
+            {
+              "id": "20",
+              "title": "Climbing Chalk Bag",
+              "price": 1200,
+              "image": "https://organicclimbing.com/cdn/shop/products/MiniChalkBag.jpg?v=1641846278",
+              "category": "Gear",
+              "gender": "unisex",
+              "activity": "Climbing",
+              "description": "Compact chalk bag with adjustable drawstring closure. Keeps your hands dry and provides easy chalk access during climbs or bouldering sessions.",
+              "stock": 44,
+              "quantity": 2
+            },
+            {
+              "id": "1760780903255",
+              "title": "Women's Long Coat",
+              "category": "Clothing",
+              "price": 8800,
+              "stock": 30,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw2e731a29/images/hi-res/26655_DNAT.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Camping",
+              "quantity": 1
+            },
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 21,
+              "quantity": 1
+            },
+            {
+              "id": "1760781552907",
+              "title": "Climbing Shoe",
+              "category": "Gear",
+              "price": 9500,
+              "stock": 20,
+              "image": "https://trekkit.in/cdn/shop/files/V6.png?v=1756449267&width=1800",
+              "activity": "Climbing",
+              "quantity": 1
+            }
+          ],
+          "total": 31200,
+          "address": "xxsxfff",
+          "paymentMethod": "cod",
+          "date": "2025-10-19T15:20:46.030Z",
+          "status": "cancelled"
+        },
+        {
+          "id": "pay_RVPhRN6wHWu1Y6",
+          "items": [
+            {
+              "id": "1760778929208",
+              "title": "Sling Bag 8L",
+              "category": "Gear",
+              "price": 5900,
+              "stock": 20,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Hiking",
+              "quantity": 1
+            },
+            {
+              "id": "1760779728230",
+              "title": "Mens Bibs",
+              "category": "Clothing",
+              "price": 3900,
+              "stock": 10,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw3f64e7f1/images/hi-res/85660_CLMB.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+              "activity": "Climbing",
+              "quantity": 1
+            }
+          ],
+          "total": 10300,
+          "address": "xxsxfff",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-19T17:26:47.539Z",
+          "status": "delivered",
+          "razorpay_payment_id": "pay_RVPhRN6wHWu1Y6"
+        },
+        {
+          "id": "1760898505099",
+          "items": [
+            {
+              "id": "1760779475680",
+              "title": "Alpline Suit",
+              "category": "Clothing",
+              "price": 11500,
+              "stock": 24,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw39c1e395/images/hi-res/85745_NUVG.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
+              "activity": "Climbing",
+              "quantity": 1
+            }
+          ],
+          "total": 12000,
+          "address": "xxsxfff",
+          "paymentMethod": "cod",
+          "date": "2025-10-19T18:28:25.100Z",
+          "status": "delivered"
+        },
+        {
+          "id": "pay_RVbhaYu3o2SvWv",
+          "items": [
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 20,
+              "quantity": 1
+            }
+          ],
+          "total": 10500,
+          "address": "bridgeon",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T05:11:09.250Z",
+          "status": "delivered",
+          "razorpay_payment_id": "pay_RVbhaYu3o2SvWv"
+        },
+        {
+          "id": "cod_1760937188215",
+          "items": [
+            {
+              "id": "1760778929208",
+              "title": "Sling Bag 8L",
+              "category": "Gear",
+              "price": 5900,
+              "stock": 19,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Hiking",
+              "quantity": 5
+            }
+          ],
+          "total": 30000,
+          "address": "bridgeon",
+          "paymentMethod": "cod",
+          "date": "2025-10-20T05:13:08.215Z",
+          "status": "delivered"
+        }
+      ],
       "isBlock": false
     },
     {
@@ -356,14 +492,14 @@
       "gender": "female",
       "activity": "Hiking",
       "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-      "stock": 21
+      "stock": 19
     },
     {
       "id": "1760778929208",
       "title": "Sling Bag 8L",
       "category": "Gear",
       "price": 5900,
-      "stock": 20,
+      "stock": 14,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
       "activity": "Hiking"
     },
@@ -381,7 +517,7 @@
       "title": "Alpline Suit",
       "category": "Clothing",
       "price": 11500,
-      "stock": 24,
+      "stock": 23,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw39c1e395/images/hi-res/85745_NUVG.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
       "activity": "Climbing"
     },
@@ -399,7 +535,7 @@
       "title": "Mens Bibs",
       "category": "Clothing",
       "price": 3900,
-      "stock": 10,
+      "stock": 9,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw3f64e7f1/images/hi-res/85660_CLMB.jpg?sw=768&sh=768&sfrm=png&q=95&bgcolor=f3f4ef",
       "activity": "Climbing"
     },
@@ -462,7 +598,7 @@
       "title": "Women's Long Coat",
       "category": "Clothing",
       "price": 8800,
-      "stock": 30,
+      "stock": 29,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw2e731a29/images/hi-res/26655_DNAT.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
       "activity": "Camping"
     },
@@ -480,7 +616,7 @@
       "title": "Climbing Shoe",
       "category": "Gear",
       "price": 9500,
-      "stock": 20,
+      "stock": 19,
       "image": "https://trekkit.in/cdn/shop/files/V6.png?v=1756449267&width=1800",
       "activity": "Climbing"
     },
@@ -636,6 +772,15 @@
       "stock": 20,
       "image": "https://trekkit.in/cdn/shop/files/QAH-39-BL-1.png?v=1758786946&width=1800",
       "activity": "Biking"
+    },
+    {
+      "id": "1760882934921",
+      "title": "Women's Insulated Jacket",
+      "category": "Clothing",
+      "price": 10000,
+      "stock": 19,
+      "image": "https://trekkit.in/cdn/shop/files/Womens_Nebula_Pro_Jacket_Sahara-1.png?v=1756448619&width=1800",
+      "activity": "Hiking"
     }
   ]
 }
