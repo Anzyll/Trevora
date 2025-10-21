@@ -271,7 +271,7 @@
           "address": "bridgeon",
           "paymentMethod": "razorpay",
           "date": "2025-10-20T10:24:33.225Z",
-          "status": "processing",
+          "status": "Processing",
           "razorpay_payment_id": "pay_RVh2gdy4agmnMU"
         }
       ],

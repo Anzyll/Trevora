@@ -66,7 +66,7 @@ const OrderManagement = () => {
 
   const statusCounts = {
     cancelled: orders.filter((order) => order.status === "cancelled").length,
-    processing: orders.filter((order) => order.status === "processing").length,
+    Processing: orders.filter((order) => order.status === "Processing").length,
     shipped: orders.filter((order) => order.status === "shipped").length,
     delivered: orders.filter((order) => order.status === "delivered").length,
   };
@@ -106,7 +106,7 @@ const OrderManagement = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6">
           {[
             { key: "cancelled", label: "Cancelled" },
-            { key: "processing", label: "Processing" },
+            { key: "Processing", label: "Processing" },
             { key: "shipped", label: "Shipped" },
             { key: "delivered", label: "Delivered" },
           ].map((status) => (
@@ -160,7 +160,7 @@ const OrderManagement = () => {
             >
               <option value="all">All Status</option>
               <option value="cancelled">Cancelled</option>
-              <option value="processing">Processing</option>
+              <option value="Processing">Processing</option>
               <option value="shipped">Shipped</option>
               <option value="delivered">Delivered</option>
             </select>
@@ -223,7 +223,7 @@ const OrderManagement = () => {
                           className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${
                             order.status === "cancelled"
                               ? "bg-red-100 text-red-800"
-                              : order.status === "confirmed"
+                              : order.status === "Processing"
                               ? "bg-yellow-100 text-yellow-800"
                               : order.status === "shipped"
                               ? "bg-blue-100 text-blue-800"
@@ -238,7 +238,7 @@ const OrderManagement = () => {
                       </td>
                       <td className="px-4 py-3">
                         <div className="flex gap-1">
-                          {order.status === "processing" && (
+                          {order.status === "Processing" && (
                             <button
                               onClick={() =>
                                 updateOrderStatus(order.id, "shipped")
@@ -284,7 +284,7 @@ const OrderManagement = () => {
                               </svg>
                             </button>
                           )}
-                          {order.status === "processing" && (
+                          {order.status === "Processing" && (
                             <button
                               onClick={() =>
                                 updateOrderStatus(order.id, "cancelled")
@@ -350,7 +350,7 @@ const OrderManagement = () => {
                         className={`inline-flex px-2 py-1 rounded-full text-xs font-medium ${
                           order.status === "cancelled"
                             ? "bg-red-100 text-red-800"
-                            : order.status === "confirmed"
+                            : order.status === "Processing"
                             ? "bg-yellow-100 text-yellow-800"
                             : order.status === "shipped"
                             ? "bg-blue-100 text-blue-800"
@@ -367,7 +367,7 @@ const OrderManagement = () => {
                       {new Date(order.date).toLocaleDateString()}
                     </div>
                     <div className="flex gap-2">
-                      {order.status === "confirmed" && (
+                      {order.status === "Processing" && (
                         <button
                           onClick={() => updateOrderStatus(order.id, "shipped")}
                           className="px-3 py-1.5 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors"
@@ -385,7 +385,7 @@ const OrderManagement = () => {
                           Mark Delivered
                         </button>
                       )}
-                      {order.status === "processing" && (
+                      {order.status === "Processing" && (
                         <button
                           onClick={() =>
                             updateOrderStatus(order.id, "cancelled")
@@ -424,7 +424,7 @@ const OrderManagement = () => {
                     className={`px-2 py-1 rounded-full text-xs font-medium ${
                       order.status === "cancelled"
                         ? "bg-red-100 text-red-800"
-                        : order.status === "confirmed"
+                        : order.status === "Processing"
                         ? "bg-yellow-100 text-yellow-800"
                         : order.status === "shipped"
                         ? "bg-blue-100 text-blue-800"
@@ -455,7 +455,7 @@ const OrderManagement = () => {
                     {new Date(order.date).toLocaleDateString()}
                   </div>
                   <div className="flex gap-1">
-                    {order.status === "confirmed" && (
+                    {order.status === "Processing" && (
                       <button
                         onClick={() => updateOrderStatus(order.id, "shipped")}
                         className="px-2 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700 transition-colors"
@@ -471,7 +471,7 @@ const OrderManagement = () => {
                         Deliver
                       </button>
                     )}
-                    {order.status === "processing" && (
+                    {order.status === "Processing" && (
                       <button
                         onClick={() => updateOrderStatus(order.id, "cancelled")}
                         className="px-2 py-1 bg-red-600 text-white text-xs rounded hover:bg-red-700 transition-colors"

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import {
   loadRazorpayScript,
-  initializeRazorpayPayment
+  initializeRazorpayPayment,
 } from "../utils/Razorpay";
 
 const Payment = () => {
@@ -31,7 +31,6 @@ const Payment = () => {
         return;
       }
 
-
       const user = JSON.parse(localStorage.getItem("currentUser"));
       if (!user || !user.id) {
         toast.error("Please login to continue");
@@ -45,8 +44,6 @@ const Payment = () => {
         cart,
         address,
         async (paymentResponse) => {
-                  console.log("Step 6: Payment successful:", paymentResponse);
-
           try {
             await createOrderInJSON(paymentResponse, user);
             toast.success("Payment successful! Order placed.");

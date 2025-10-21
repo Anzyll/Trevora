@@ -2,7 +2,7 @@
 import React from "react";
 const OrderStatusChart = ({ orders }) => {
   const statusData = {
-    processing: orders.filter(order => order.status === 'processing').length,
+    Processing: orders.filter(order => order.status === 'Processing').length,
     shipped: orders.filter(order => order.status === 'shipped').length,
     delivered: orders.filter(order => order.status === 'delivered').length,
     cancelled: orders.filter(order => order.status === 'cancelled').length,
@@ -72,10 +72,10 @@ const OrderStatusChart = ({ orders }) => {
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <ProgressRing
-          percentage={totalOrders > 0 ? ((statusData.processing / totalOrders) * 100).toFixed(1) : 0}
+          percentage={totalOrders > 0 ? ((statusData.Processing / totalOrders) * 100).toFixed(1) : 0}
           color="#F59E0B"
           label="Processing"
-          value={statusData.processing}
+          value={statusData.Processing}
           description="In progress"
         />
         <ProgressRing

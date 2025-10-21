@@ -24,7 +24,7 @@ const OrderSuccess = () => {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Order Confirmed!
+            Order Processing!
           </h1>
           <p className="text-gray-600">Thank you for your purchase</p>
         </div>
