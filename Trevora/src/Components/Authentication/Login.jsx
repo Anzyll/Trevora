@@ -62,7 +62,7 @@ const LoginForm = () => {
     }
     setErrors({});
     try {
-      const response = await axios.get("http://localhost:3001/users");
+      const response = await axios.get("https://trevora-2.onrender.com/users");
       const users = response.data;
       const user = users.find((user) => user.email === form.email);
       if (!user) {

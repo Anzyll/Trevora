@@ -7,7 +7,18 @@
       "password": "$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi",
       "isAdmin": true,
       "joinDate": "2025-10-16T18:50:23.103Z",
-      "cart": [],
+      "cart": [
+        {
+          "id": "1760779424247",
+          "title": "Balaclava",
+          "category": "Clothing",
+          "price": 3800,
+          "stock": 9,
+          "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw869e5c8f/images/hi-res/22501_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+          "activity": "Climbing",
+          "quantity": 1
+        }
+      ],
       "wishlist": [],
       "orders": [
         {
@@ -239,8 +250,29 @@
           "address": "bridgeon",
           "paymentMethod": "razorpay",
           "date": "2025-10-20T09:07:14.714Z",
-          "status": "Processing",
+          "status": "cancelled",
           "razorpay_payment_id": "pay_RVfj0fnd7YuJ24"
+        },
+        {
+          "id": "pay_RVh2gdy4agmnMU",
+          "items": [
+            {
+              "id": "1760778929208",
+              "title": "Sling Bag 8L",
+              "category": "Gear",
+              "price": 5900,
+              "stock": 12,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Hiking",
+              "quantity": 1
+            }
+          ],
+          "total": 6400,
+          "address": "bridgeon",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T10:24:33.225Z",
+          "status": "processing",
+          "razorpay_payment_id": "pay_RVh2gdy4agmnMU"
         }
       ],
       "isBlock": false
@@ -344,6 +376,137 @@
           "paymentMethod": "upi",
           "date": "2025-10-18T11:13:47.746Z",
           "status": "shipped"
+        },
+        {
+          "id": "pay_RVgadSW58OlE3s",
+          "items": [
+            {
+              "id": "1760778929208",
+              "title": "Sling Bag 8L",
+              "category": "Gear",
+              "price": 5900,
+              "stock": 13,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Hiking",
+              "quantity": 1
+            }
+          ],
+          "total": 6400,
+          "address": "Bridgeon",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T09:58:00.103Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVgadSW58OlE3s"
+        },
+        {
+          "id": "pay_RVhd0cAVeZNyQ8",
+          "items": [
+            {
+              "id": "1",
+              "title": "Men's Retro Pile Jacket",
+              "price": "₹12,000",
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwadf181a5/images/hi-res/27805_DKAS.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "men",
+              "activity": "Hiking",
+              "description": "A warm and durable fleece jacket made with 100% recycled polyester. Ideal for layering during hikes or everyday outdoor wear. Soft, breathable, and built for all-day comfort.",
+              "stock": 60,
+              "quantity": 1
+            },
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 25,
+              "quantity": 1
+            },
+            {
+              "id": "1760607952514",
+              "title": "Woodland Men's trekking Shoe",
+              "category": "clothing",
+              "price": 9500,
+              "stock": 5,
+              "image": "https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/f/0/f067d81OGC4000121OLIVEGREEN_1.jpg",
+              "activity": "trekking",
+              "quantity": 1
+            }
+          ],
+          "total": 20000,
+          "address": "csd",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T10:58:56.085Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVhd0cAVeZNyQ8"
+        },
+        {
+          "id": "cod_1760960438844",
+          "items": [
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 18,
+              "quantity": 1
+            }
+          ],
+          "total": 10500,
+          "address": "dcss",
+          "paymentMethod": "cod",
+          "date": "2025-10-20T11:40:38.844Z",
+          "status": "Processing"
+        },
+        {
+          "id": "cod_1760960465339",
+          "items": [
+            {
+              "id": "1760779424247",
+              "title": "Balaclava",
+              "category": "Clothing",
+              "price": 3800,
+              "stock": 8,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw869e5c8f/images/hi-res/22501_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Climbing",
+              "quantity": 1
+            }
+          ],
+          "total": 4300,
+          "address": "dcss",
+          "paymentMethod": "cod",
+          "date": "2025-10-20T11:41:05.339Z",
+          "status": "Processing"
+        },
+        {
+          "id": "pay_RVp5iGZBgKb4lW",
+          "items": [
+            {
+              "id": "2",
+              "title": "Women's Hiking Jacket",
+              "price": 10000,
+              "image": "https://eu.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dwcf015d05/images/hi-res/26685_COI.jpg?sw=1400&sh=1400&sfrm=png&q=90&bgcolor=f3f4ef",
+              "category": "clothing",
+              "gender": "female",
+              "activity": "Hiking",
+              "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
+              "stock": 17,
+              "quantity": 1
+            }
+          ],
+          "total": 10500,
+          "address": "dedc",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T18:16:58.184Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVp5iGZBgKb4lW"
         }
       ],
       "isAdmin": true
@@ -354,7 +517,7 @@
       "fullName": "irfan",
       "email": "irfan@gmail.com",
       "password": "$2b$10$pr/sOJYZejF2gbUzxoIhVOPGhiwjH7WL7nWDVurcAsQTJ4uYXnr.2",
-      "isBlock": false,
+      "isBlock": true,
       "cart": [],
       "wishlist": [],
       "orders": [
@@ -467,9 +630,30 @@
           "paymentMethod": "cod",
           "date": "2025-10-18T11:15:22.699Z",
           "status": "cancelled"
+        },
+        {
+          "id": "pay_RVhzDhrTooWlsS",
+          "items": [
+            {
+              "id": "1760779424247",
+              "title": "Balaclava",
+              "category": "Clothing",
+              "price": 3800,
+              "stock": 9,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw869e5c8f/images/hi-res/22501_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Climbing",
+              "quantity": 1
+            }
+          ],
+          "total": 4300,
+          "address": "dsadvc",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T11:19:58.105Z",
+          "status": "Processing",
+          "razorpay_payment_id": "pay_RVhzDhrTooWlsS"
         }
       ],
-      "isAdmin": false
+      "isAdmin": true
     },
     {
       "id": "6a4b",
@@ -554,6 +738,50 @@
           "status": "delivered"
         }
       ]
+    },
+    {
+      "id": "074a",
+      "joinDate": "2025-10-20T11:32:45.516Z",
+      "fullName": "anzil",
+      "email": "anzil3@gmail.com",
+      "password": "$2b$10$lX2KppurRCsr8PokRQp4pOGvEsiRqDupyFwxtr8bmLycsOPQ//6My",
+      "isBlock": false,
+      "cart": [
+        {
+          "id": "1760778929208",
+          "title": "Sling Bag 8L",
+          "category": "Gear",
+          "price": 5900,
+          "stock": 11,
+          "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+          "activity": "Hiking",
+          "quantity": 1
+        }
+      ],
+      "wishlist": [],
+      "orders": [
+        {
+          "id": "pay_RViFCGMmDMmOm5",
+          "items": [
+            {
+              "id": "1760778929208",
+              "title": "Sling Bag 8L",
+              "category": "Gear",
+              "price": 5900,
+              "stock": 11,
+              "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
+              "activity": "Hiking",
+              "quantity": 1
+            }
+          ],
+          "total": 6400,
+          "address": "hnd",
+          "paymentMethod": "razorpay",
+          "date": "2025-10-20T11:35:05.531Z",
+          "status": "cancelled",
+          "razorpay_payment_id": "pay_RViFCGMmDMmOm5"
+        }
+      ]
     }
   ],
   "products": [
@@ -566,14 +794,14 @@
       "gender": "female",
       "activity": "Hiking",
       "description": "A lightweight, water-resistant hiking jacket designed for unpredictable weather. Features adjustable cuffs and a breathable mesh lining for comfort during long treks.",
-      "stock": 19
+      "stock": 16
     },
     {
       "id": "1760778929208",
       "title": "Sling Bag 8L",
       "category": "Gear",
       "price": 5900,
-      "stock": 13,
+      "stock": 11,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw4f6f5fb1/images/hi-res/48262_SRPO.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
       "activity": "Hiking"
     },
@@ -582,7 +810,7 @@
       "title": "Balaclava",
       "category": "Clothing",
       "price": 3800,
-      "stock": 9,
+      "stock": 7,
       "image": "https://www.patagonia.com/dw/image/v2/BDJB_PRD/on/demandware.static/-/Sites-patagonia-master/default/dw869e5c8f/images/hi-res/22501_BLK.jpg?sw=1920&sh=1920&sfrm=png&q=90&bgcolor=f3f4ef",
       "activity": "Climbing"
     },
@@ -798,7 +1026,7 @@
       "title": "Hiking Poles",
       "category": "Gear",
       "price": 7000,
-      "stock": 3,
+      "stock": 4,
       "image": "https://trekkit.in/cdn/shop/files/JD_CUX0077_Z9P_AnodisedRedAnodisedGrey_1.png_1.png?v=1756449122&width=1800",
       "activity": "Hiking"
     },
@@ -854,6 +1082,15 @@
       "price": 10000,
       "stock": 19,
       "image": "https://trekkit.in/cdn/shop/files/Womens_Nebula_Pro_Jacket_Sahara-1.png?v=1756448619&width=1800",
+      "activity": "Hiking"
+    },
+    {
+      "id": "1760960693075",
+      "title": "jacket",
+      "category": "Clothing",
+      "price": 8000,
+      "stock": 22,
+      "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTTVQV68fgZ3X0qWcC8n0LMcNoEXR1bZz6UsRzFbEaGOa87HRuraH5Bvo22k7XfTdj17Y0LjlqSaTjbE6DLaM7RLYSOdiVGv3ZbNKV4VG-aSIc7jV6YGUOr4Q",
       "activity": "Hiking"
     }
   ]

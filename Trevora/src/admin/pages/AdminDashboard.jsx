@@ -16,8 +16,8 @@ const AdminDashboard = () => {
     const fetchData = async () => {
       try {
         const [userRes, productRes] = await Promise.all([
-          axios.get("http://localhost:3001/users"),
-          axios.get("http://localhost:3001/products"),
+          axios.get("https://trevora-2.onrender.com/users"),
+          axios.get("https://trevora-2.onrender.com/products"),
         ]);
         setUsers(userRes.data);
         setProducts(productRes.data);

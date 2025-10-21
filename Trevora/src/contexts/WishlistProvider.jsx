@@ -48,7 +48,7 @@ const WishlistProvider = ({ children }) => {
       const updatedUser = { ...user, wishlist: newWishlist };
       localStorage.setItem("currentUser", JSON.stringify(updatedUser));
 
-      axios.patch(`http://localhost:3001/users/${user.id}`, {
+      axios.patch(`https://trevora-2.onrender.com/users/${user.id}`, {
         wishlist: newWishlist,
       });
     } catch (error) {

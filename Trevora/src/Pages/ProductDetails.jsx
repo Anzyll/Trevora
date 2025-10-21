@@ -15,7 +15,7 @@ const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/products/${id}`
+          `https://trevora-2.onrender.com/products/${id}`
         );
         setProduct(response.data);
         setLoading(false);

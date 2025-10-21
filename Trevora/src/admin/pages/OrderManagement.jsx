@@ -14,7 +14,7 @@ const OrderManagement = () => {
 
   const fetchOrders = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/users");
+      const response = await axios.get("https://trevora-2.onrender.com/users");
       setOrders(
         response.data.flatMap((user) =>
           (user.orders || []).map((order) => ({
@@ -31,9 +31,9 @@ const OrderManagement = () => {
     }
   };
 
-      const updateOrderStatus = async (orderId, newStatus) => {
+  const updateOrderStatus = async (orderId, newStatus) => {
     try {
-      const usersResponse = await axios.get("http://localhost:3001/users");
+      const usersResponse = await axios.get("https://trevora-2.onrender.com/users");
       const users = usersResponse.data;
 
       for (const user of users) {
@@ -47,7 +47,7 @@ const OrderManagement = () => {
             status: newStatus,
           };
 
-          await axios.patch(`http://localhost:3001/users/${user.id}`, {
+          await axios.patch(`https://trevora-2.onrender.com/users/${user.id}`, {
             orders: updatedOrders,
           });
           break;
@@ -77,8 +77,7 @@ const OrderManagement = () => {
       order.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.customerEmail.toLowerCase().includes(searchTerm.toLowerCase());
 
-    const statusMatch =
-      statusFilter === "all" || order.status === statusFilter;
+    const statusMatch = statusFilter === "all" || order.status === statusFilter;
     return searchMatch && statusMatch;
   });
 
@@ -285,30 +284,29 @@ const OrderManagement = () => {
                               </svg>
                             </button>
                           )}
-                          {order.status === "processing" &&
-                             (
-                              <button
-                                onClick={() =>
-                                  updateOrderStatus(order.id, "cancelled")
-                                }
-                                className="p-1.5 text-red-600 hover:bg-red-50 rounded transition-colors"
-                                title="Cancel Order"
+                          {order.status === "processing" && (
+                            <button
+                              onClick={() =>
+                                updateOrderStatus(order.id, "cancelled")
+                              }
+                              className="p-1.5 text-red-600 hover:bg-red-50 rounded transition-colors"
+                              title="Cancel Order"
+                            >
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
                               >
-                                <svg
-                                  className="w-4 h-4"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M6 18L18 6M6 6l12 12"
-                                  />
-                                </svg>
-                              </button>
-                            )}
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M6 18L18 6M6 6l12 12"
+                                />
+                              </svg>
+                            </button>
+                          )}
                         </div>
                       </td>
                     </tr>
@@ -387,17 +385,16 @@ const OrderManagement = () => {
                           Mark Delivered
                         </button>
                       )}
-                      {order.status === "processing" &&
-                        (
-                          <button
-                            onClick={() =>
-                              updateOrderStatus(order.id, "cancelled")
-                            }
-                            className="px-3 py-1.5 bg-red-600 text-white text-xs rounded hover:bg-red-700 transition-colors"
-                          >
-                            Cancel
-                          </button>
-                        )}
+                      {order.status === "processing" && (
+                        <button
+                          onClick={() =>
+                            updateOrderStatus(order.id, "cancelled")
+                          }
+                          className="px-3 py-1.5 bg-red-600 text-white text-xs rounded hover:bg-red-700 transition-colors"
+                        >
+                          Cancel
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -474,17 +471,14 @@ const OrderManagement = () => {
                         Deliver
                       </button>
                     )}
-                    {order.status === "processing" &&
-                     (
-                        <button
-                          onClick={() =>
-                            updateOrderStatus(order.id, "cancelled")
-                          }
-                          className="px-2 py-1 bg-red-600 text-white text-xs rounded hover:bg-red-700 transition-colors"
-                        >
-                          Cancel
-                        </button>
-                      )}
+                    {order.status === "processing" && (
+                      <button
+                        onClick={() => updateOrderStatus(order.id, "cancelled")}
+                        className="px-2 py-1 bg-red-600 text-white text-xs rounded hover:bg-red-700 transition-colors"
+                      >
+                        Cancel
+                      </button>
+                    )}
                   </div>
                 </div>
               </div>

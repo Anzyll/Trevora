@@ -14,7 +14,7 @@ const UserManagement = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/users`
+        `https://trevora-2.onrender.com/users`
       );
       setUsers(response.data);
       setLoading(false);
@@ -26,7 +26,7 @@ const UserManagement = () => {
 
   const toggleBlockUser = async (userId, currentStatus) => {
     try {
-      axios.patch(`http://localhost:3001/users/${userId}`, {
+      axios.patch(`https://trevora-2.onrender.com/users/${userId}`, {
         isBlock: !currentStatus,
       });
       setUsers(
@@ -41,7 +41,7 @@ const UserManagement = () => {
 
   const toggleAdminOrUser = async (userId, currentStatus) => {
     try {
-      axios.patch(`http://localhost:3001/users/${userId}`, {
+      axios.patch(`https://trevora-2.onrender.com/users/${userId}`, {
         isAdmin: !currentStatus,
       });
       setUsers(

@@ -1,5 +1,5 @@
 import React from "react";
-import  { useState } from "react";
+import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useCart } from "../contexts/CartProvider";
 import toast from "react-hot-toast";
@@ -25,7 +25,7 @@ const Payment = () => {
     }
     setIsProcessing(true);
     try {
-      const scriptLoaded =await loadRazorpayScript();
+      const scriptLoaded = await loadRazorpayScript();
       if (!scriptLoaded) {
         toast.error("Failed to load payment gateway");
         return;
@@ -78,13 +78,16 @@ const Payment = () => {
       for (const item of cart) {
         try {
           const response = await axios.get(
-            `http://localhost:3001/products/${item.id}`
+            `https://trevora-2.onrender.com/products/${item.id}`
           );
           const latestProduct = response.data;
           const newStock = latestProduct.stock - item.quantity;
-          await axios.patch(`http://localhost:3001/products/${item.id}`, {
-            stock: newStock,
-          });
+          await axios.patch(
+            `https://trevora-2.onrender.com/products/${item.id}`,
+            {
+              stock: newStock,
+            }
+          );
         } catch (error) {
           console.error(
             `Failed to update stock for product ${item.id}:`,
@@ -106,14 +109,17 @@ const Payment = () => {
       };
 
       const userResponse = await axios.get(
-        `http://localhost:3001/users/${user.id}`
+        `https://trevora-2.onrender.com/users/${user.id}`
       );
       const currentUser = userResponse.data;
       const updatedUser = {
         ...currentUser,
         orders: [...(currentUser.orders || []), order],
       };
-      await axios.patch(`http://localhost:3001/users/${user.id}`, updatedUser);
+      await axios.patch(
+        `https://trevora-2.onrender.com/users/${user.id}`,
+        updatedUser
+      );
       const updatedLocalUser = {
         ...user,
         orders: updatedUser.orders,
@@ -138,23 +144,24 @@ const Payment = () => {
     try {
       const user = JSON.parse(localStorage.getItem("currentUser"));
 
-      // Update product stock (same as your existing code)
       for (const item of cart) {
         try {
           const response = await axios.get(
-            `http://localhost:3001/products/${item.id}`
+            `https://trevora-2.onrender.com/products/${item.id}`
           );
           const latestProduct = response.data;
           const newStock = latestProduct.stock - item.quantity;
-          await axios.patch(`http://localhost:3001/products/${item.id}`, {
-            stock: newStock,
-          });
+          await axios.patch(
+            `https://trevora-2.onrender.com/products/${item.id}`,
+            {
+              stock: newStock,
+            }
+          );
         } catch (error) {
           console.error(`Failed to update stock:`, error);
         }
       }
 
-      // Create COD order (matches your existing order structure)
       const order = {
         id: `cod_${Date.now()}`,
         items: [...cart],
@@ -162,19 +169,21 @@ const Payment = () => {
         address: address,
         paymentMethod: "cod",
         date: new Date().toISOString(),
-        status: "Processing", // Using "processing" for COD as in your existing data
+        status: "Processing",
       };
 
-      // Update user in JSON Server
       const userResponse = await axios.get(
-        `http://localhost:3001/users/${user.id}`
+        `https://trevora-2.onrender.com/users/${user.id}`
       );
       const currentUser = userResponse.data;
       const updatedUser = {
         ...currentUser,
         orders: [...(currentUser.orders || []), order],
       };
-      await axios.patch(`http://localhost:3001/users/${user.id}`, updatedUser);
+      await axios.patch(
+        `https://trevora-2.onrender.com/users/${user.id}`,
+        updatedUser
+      );
 
       const updatedLocalUser = {
         ...user,

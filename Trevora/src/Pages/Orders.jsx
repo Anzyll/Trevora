@@ -20,10 +20,10 @@ const OrderHistory = () => {
       for (const item of cancelledOrder.items) {
         try {
           const response = await axios.get(
-            `http://localhost:3001/products/${item.id}`
+            `https://trevora-2.onrender.com/products/${item.id}`
           );
           const latestProduct = response.data;
-          await axios.patch(`http://localhost:3001/products/${item.id}`, {
+          await axios.patch(`https://trevora-2.onrender.com/products/${item.id}`, {
             stock: latestProduct.stock + item.quantity,
           });
         } catch (error) {
@@ -34,7 +34,7 @@ const OrderHistory = () => {
         order.id === orderId ? { ...order, status: "cancelled" } : order
       );
       const updatedUser = { ...user, orders: updatedOrders };
-      await axios.patch(`http://localhost:3001/users/${user.id}`, {
+      await axios.patch(`https://trevora-2.onrender.com/users/${user.id}`, {
         orders: updatedOrders,
       });
       localStorage.setItem("currentUser", JSON.stringify(updatedUser));
@@ -84,7 +84,7 @@ const OrderHistory = () => {
               <p className="font-semibold">₹{order.total}</p>
               <p
                 className={`text-sm ${
-                  order.status === "confirmed"
+                  order.status === "Processing"
                     ? "text-green-600"
                     : order.status === "cancelled"
                     ? "text-red-600"
@@ -115,7 +115,7 @@ const OrderHistory = () => {
                 : "Paid Online"}
             </div>
 
-            {order.status === "processing" && canCancelOrder(order.date) && (
+            {order.status === "Processing" && canCancelOrder(order.date) && (
               <button
                 onClick={() => cancelOrder(order.id)}
                 className="bg-red-500 text-white px-3 py-1 rounded text-sm hover:bg-red-600"
@@ -128,7 +128,7 @@ const OrderHistory = () => {
               <span className="text-red-500 text-sm">Cancelled</span>
             )}
 
-            {order.status === "confirmed" && !canCancelOrder(order.date) && (
+            {order.status === "Processing" && !canCancelOrder(order.date) && (
               <span className="text-gray-500 text-sm">Cannot cancel</span>
             )}
           </div>

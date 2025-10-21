@@ -1,5 +1,4 @@
-
-
+import React from "react";
 const ActivityProgressChart = ({ orders }) => {
   const calculateActivityData = () => {
     const activityData = {};

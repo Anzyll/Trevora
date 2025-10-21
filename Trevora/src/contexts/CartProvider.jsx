@@ -47,7 +47,7 @@ export const CartProvider = ({ children }) => {
     }
     const user = JSON.parse(userData);
     try {
-      await axios.patch(`http://localhost:3001/users/${user.id}`, {
+      await axios.patch(`https://trevora-2.onrender.com/users/${user.id}`, {
         cart: newCart,
       });
       setCart(newCart);

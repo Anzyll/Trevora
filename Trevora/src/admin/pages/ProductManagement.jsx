@@ -24,7 +24,7 @@ const ProductManagement = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/products");
+      const response = await axios.get("https://trevora-2.onrender.com/products");
       setProducts(response.data);
       setLoading(false);
     } catch (error) {
@@ -44,7 +44,7 @@ const ProductManagement = () => {
         image: newProduct.image,
       };
 
-      await axios.post("http://localhost:3001/products", productData);
+      await axios.post("https://trevora-2.onrender.com/products", productData);
       setShowAddForm(false);
       setNewProduct({
         title: "",
@@ -65,7 +65,7 @@ const ProductManagement = () => {
   const handleEditProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3001/products/${editingProduct.id}`, {
+      await axios.put(`https://trevora-2.onrender.com/products/${editingProduct.id}`, {
         ...editingProduct,
         price: Number(editingProduct.price),
         stock: Number(editingProduct.stock),
@@ -83,7 +83,7 @@ const handleDeleteProduct = (productId) => {
   toast.confirm("Are you sure you want to delete this product?", {
     onConfirm: async () => {
       try {
-        await axios.delete(`http://localhost:3001/products/${productId}`);
+        await axios.delete(`https://trevora-2.onrender.com/products/${productId}`);
         fetchProducts();
         toast.success("Product deleted successfully");
       } catch (error) {

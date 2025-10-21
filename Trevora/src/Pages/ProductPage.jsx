@@ -32,7 +32,7 @@ const ProductPage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get(`http://localhost:3001/products`);
+      const response = await axios.get(`https://trevora-2.onrender.com/products`);
       setProducts(response.data);
       setLoading(false);
     } catch (err) {

@@ -31,7 +31,7 @@ const Signup = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  // Validate form input before submitting
+
   const validateSignup = () => {
     const newErrors = {};
     if (!form.fullName.trim()) newErrors.fullName = "name is required";
@@ -63,7 +63,7 @@ const Signup = () => {
       setForm({ fullName: "", email: "", password: "", confirmPassword: "" });
     if (Object.keys(newErrors).length === 0) {
       try {
-        const existingUsers = await axios.get("http://localhost:3001/users");
+        const existingUsers = await axios.get("https://trevora-2.onrender.com/users");
         if (existingUsers.data.some((user) => user.email === form.email)) {
           setError({ email: "Email already exists" });
           return;
@@ -80,7 +80,7 @@ const Signup = () => {
           wishlist: [],
           orders: [],
         };
-        await axios.post("http://localhost:3001/users", newUser);
+        await axios.post("https://trevora-2.onrender.com/users", newUser);
         toast.success("Registered successful!");
         setError({});
         navigate("/login");
