@@ -4,8 +4,8 @@ export const loadRazorpayScript = () => {
       resolve(true);
       return;
     }
-    const script = document.createElement('script');
-    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.onload = () => {
       resolve(true);
     };
@@ -16,44 +16,43 @@ export const loadRazorpayScript = () => {
   });
 };
 
-export const createRazorpayOrder = async (amount) => {
-  return {
-    id: `order_${Date.now()}`,
-    amount: amount * 100, 
-    currency: 'INR'
-  };
-};
 
-export const initializeRazorpayPayment = (orderData, userData, cart, address, onSuccess, onError) => {
+export const initializeRazorpayPayment = (
+  totalAmount,
+  userData,
+  cart,
+  address,
+  onSuccess,
+  onError
+) => {
+  const amountInPaise = totalAmount * 100;
   const options = {
-    key: 'rzp_test_RVPZP2EvLXA1j8', 
-    amount: orderData.amount,
-    currency: orderData.currency,
-    name: 'Trevora',
-    description: `Payment for Order #${orderData.id}`,
-    order_id: orderData.id,
+    key: "rzp_test_RVPZP2EvLXA1j8",
+    amount: amountInPaise,
+    currency: "INR",
+    name: "Trevora",
+    description: `Payment for Order`,
     handler: function (response) {
       onSuccess({
         ...response,
-        orderData,
         userData,
         cart,
-        address
+        address,
       });
     },
     prefill: {
-      name: userData?.name || 'Customer',
-      email: userData?.email || 'customer@example.com',
-      contact: userData?.phone || '9999999999'
+      name: userData?.name || "Customer",
+      email: userData?.email || "customer@example.com",
+      contact: userData?.phone || "9999999999",
     },
     theme: {
-      color: '#000000'
+      color: "#000000",
     },
     modal: {
-      ondismiss: function() {
-        onError('Payment cancelled by user');
-      }
-    }
+      ondismiss: function () {
+        onError("Payment cancelled by user");
+      },
+    },
   };
 
   const razorpay = new window.Razorpay(options);
