@@ -22,18 +22,20 @@ const Hero = () => {
           backgroundPosition: "center",
         }}
       />
-      <video
-       ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-        preload="auto"
-        onLoadedData={handleVideoLoad}
-      >
-        <source src="/videos/hero-bg-vid.mp4" type="video/mp4" />
-      </video>
+      {showVideo && (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          onLoadedData={handleVideoLoad}
+        >
+          <source src="/videos/hero-bg-vid.mp4" type="video/mp4" />
+        </video>
+      )}
       <div className="max-w-3xl mx-auto px-6 text-center z-10">
         <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-none ">
           Adventure Awaits,
