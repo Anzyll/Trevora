@@ -3,12 +3,17 @@ import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();
-  const [videoLoaded, setVideoLoaded] = useState(false);
+   const [showVideo, setShowVideo] = useState(false);
   const videoRef = useRef(null);
 
-  const handleVideoLoad = () => {
-    setVideoLoaded(true);
-  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center py-20 bg-no-repeat bg-cover bg-center">
