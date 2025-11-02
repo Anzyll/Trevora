@@ -1,5 +1,5 @@
 // src/components/Hero/WarmUpHero.jsx (Pixel Perfect)
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();
@@ -16,13 +16,11 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center py-20 bg-no-repeat bg-cover bg-center">
+      <section className="relative min-h-screen flex items-center justify-center py-20 bg-no-repeat bg-cover bg-center">
       <div
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-          videoLoaded ? "opacity-0" : "opacity-100"
-        }`}
+        className="absolute inset-0 w-full h-full object-cover"
         style={{
-          backgroundImage: "/videos/hero_poster.jpeg)",
+          backgroundImage: "url(/videos/hero_poster.jpeg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -36,7 +34,6 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           preload="auto"
-          onLoadedData={handleVideoLoad}
         >
           <source src="/videos/hero-bg-vid.mp4" type="video/mp4" />
         </video>
