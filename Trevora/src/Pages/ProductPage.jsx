@@ -79,14 +79,14 @@ const ProductPage = () => {
     .sort((a, b) => {
       if (sortBy === "lowtohigh") {
         return (
-          parseInt(a.price.replace(/[^\d]/g, "")) -
-          parseInt(b.price.replace(/[^\d]/g, ""))
+          parseInt(a.price) -
+          parseInt(b.price)
         );
       }
       if (sortBy === "hightolow") {
         return (
-          parseInt(b.price.replace(/[^\d]/g, "")) -
-          parseInt(a.price.replace(/[^\d]/g, ""))
+          parseInt(b.price) -
+          parseInt(a.price)
         );
       }
       return 0;
