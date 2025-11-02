@@ -1,5 +1,5 @@
 // src/components/Hero/WarmUpHero.jsx (Pixel Perfect)
-import React, { useRef, useState,useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 const Hero = () => {
   const navigate = useNavigate();

@@ -60,7 +60,7 @@ const total = cart.reduce((sum, item) => {
         <textarea
           value={address}
           name="address"
-          className="w-90 h-40 border-2 p-3 border-black focus:outline-black "
+          className="w-90 h-40 border-2 p-3 border-gray-500 focus:outline-gray-500 "
           placeholder="Enter your complete shipping address..."
           onChange={(e) => setAddress(e.target.value)}
         ></textarea>
