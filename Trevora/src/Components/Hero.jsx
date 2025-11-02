@@ -1,18 +1,36 @@
 // src/components/Hero/WarmUpHero.jsx (Pixel Perfect)
-import React from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 const Hero = () => {
-  const navigate =useNavigate()
+  const navigate = useNavigate();
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  const videoRef = useRef(null);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center py-20 bg-no-repeat bg-cover bg-center">
+      <div
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+          videoLoaded ? "opacity-0" : "opacity-100"
+        }`}
+        style={{
+          backgroundImage: "/videos/hero_poster.jpeg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
       <video
+       ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
         preload="auto"
-        poster="/videos/hero.jpeg"
+        onLoadedData={handleVideoLoad}
       >
         <source src="/videos/hero-bg-vid.mp4" type="video/mp4" />
       </video>
@@ -24,21 +42,27 @@ const Hero = () => {
         </h1>
 
         <p className="text-lg md:text-xl text-white mb-16 max-w-md mx-auto leading-snug">
-         Adventure is calling. answer it with trevora.
+          Adventure is calling. answer it with trevora.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-          <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40"
-          onClick={()=>navigate("/products?category=gear")}>
+          <button
+            className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40"
+            onClick={() => navigate("/products?category=gear")}
+          >
             Gear
           </button>
-          <button className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40"
-          onClick={()=>navigate("/products?category=clothing")}>
+          <button
+            className="bg-white text-text px-12 py-4 text-base font-normal hover:bg-gray-300 transition-colors w-40"
+            onClick={() => navigate("/products?category=clothing")}
+          >
             Clothing
           </button>
-          <button onClick={()=>navigate("/products")} className="border border-white text-white px-8 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40 text-nowrap">
+          <button
+            onClick={() => navigate("/products")}
+            className="border border-white text-white px-8 py-4 text-base font-normal hover:bg-white hover:text-black transition-colors w-40 text-nowrap"
+          >
             All Products
-
           </button>
         </div>
       </div>
